@@ -66,15 +66,16 @@ void Arrays()
 	//1.1.2.3
 	const int m = 8;
 	char charArray[10];
-	cout << "Enter array of 8 chars: \n";
+	cout << "Enter array of 8 chars:" << endl;
 	for (int i = 0; i < m; i++)
 	{
 		cout << i << ": ";
 		cin >> charArray[i];
 		cout << endl;
 	}
+	cout << endl;
 
-	cout << "All letters in array is:\n";
+	cout << "All letters in array is:" << endl;
 	for (int i = 0; i < m; i++)
 	{
 		if ((int)charArray[i] > 97 && (int)charArray[i] < 122)

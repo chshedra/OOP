@@ -128,7 +128,7 @@ void Breakpoint()
 		cout << endl;
 	}
 
-	cout << "All letters in array is:\n";
+	cout << "All letters in array is:" << endl;
 	for (int i = 0; i < m; i++)
 	{
 		if ((int)charArray[i] > 97 && (int)charArray[i] < 122)
@@ -137,4 +137,5 @@ void Breakpoint()
 		}
 
 	}
+	cout << endl;
 }

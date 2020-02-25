@@ -145,6 +145,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pointers.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Array.h" />
+    <ClInclude Include="Breakpoints.h" />
+    <ClInclude Include="DynamicMemory.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="Pointers.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
