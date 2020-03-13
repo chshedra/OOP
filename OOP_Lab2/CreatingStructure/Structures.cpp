@@ -2,6 +2,7 @@
 #include "Structures.h"
 #include "FunctionsForStructures.h"
 #include "FunctionConstructors.h"
+#include "Enums.h"
 
 using namespace std;
 
@@ -49,7 +50,7 @@ void DemoRectangle()
 void  DemoFilm()
 {
 	Movie newFilm;
-	newFilm.Genre = DRAMA;
+	newFilm.MovieGenre = DRAMA;
 	newFilm.Name = "Requiem to the dream";
 	newFilm.Raiting = 8.6;
 	newFilm.ReleaseYear = 2001;
@@ -65,19 +66,19 @@ void  DemoFilm()
 	cin >> newFilm.ReleaseYear;
 	cout << "Enter the timing: ";
 	cin >> newFilm.Timing;
-	cout << newFilm.Genre << " " << newFilm.Name << " "
+	cout << newFilm.MovieGenre << " " << newFilm.Name << " "
 		<< newFilm.Raiting << " " << newFilm.ReleaseYear
 		<< " " << newFilm.Timing << endl;
 
 	//2.2.4
 	Movie* pointer = &newFilm;
 	cout << "Pointer" << endl
-		<< pointer->Genre << " "
+		<< pointer->MovieGenre << " "
 		<< pointer->Name << " "
 		<< pointer->Raiting << endl
 		<< pointer->ReleaseYear << endl
 		<<pointer->Timing << endl;
-	pointer->Genre = ACTION;
+	pointer->MovieGenre = ACTION;
 	pointer->Name= "Superman";
 	pointer->Raiting = 4.7;
 	pointer->ReleaseYear = 2011;
@@ -175,12 +176,12 @@ void AutoFilm()
 	Movie array[size];
 	for (int i = 0; i < size; i++)
 	{
-		array[i].Genre = HORROR;
+		array[i].MovieGenre = HORROR;
 		array[i].Name = "Film " + i;
 		array[i].Raiting = 5.6 + i;
 		array[i].ReleaseYear = 2000 + i * 2;
 		array[i].Timing = 10 * (i + 5);
-		cout << array[i].Genre << " " << array[i].Name
+		cout << array[i].MovieGenre << " " << array[i].Name
 			<< " " << array[i].Raiting << " " << array[i].ReleaseYear
 			<< " " << array[i].Timing << endl;
 	}
@@ -230,7 +231,7 @@ void WrongPointers()
 void DemoMovieWithGenre()
 {
 	Movie movie;
-	movie.Genre = ACTION;
+	movie.MovieGenre = ACTION;
 	movie.Name = "Folm";
 	movie.Raiting = 9.5;
 	movie.ReleaseYear = 2019;
@@ -246,17 +247,7 @@ void DemoMovieWithGenre()
 	delete movie2;
 }
 
-int CountMoviesByGenre(Movie* movies, int count, Genre findGenre)
-{
-	int countMovie = 0;
-	for (int i = 0; i < count; i++)
-	{
-		if (movies[i].Genre == findGenre)
-		{
-			countMovie++;
-		}
-	}
-}
+
 
 Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 {
@@ -265,7 +256,7 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 	bool isFound = false;
 	for (int i = 0; i < count; i++)
 	{
-		if (movies[i].Genre == findGenre)
+		if (movies[i].MovieGenre == findGenre)
 		{
 			if (movies->Raiting > maxRaitngMovie.Raiting)
 			{
@@ -282,4 +273,17 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 	{
 		return nullptr;
 	}
+}
+
+int CountMoviesByGenre(Movie* movies, int count, Genre findGenre)
+{
+	int countMovie = 0;
+	for (int i = 0; i < count; i++)
+	{
+		if (movies[i].MovieGenre == findGenre)
+		{
+			countMovie++;
+		}
+	}
+	return countMovie;
 }

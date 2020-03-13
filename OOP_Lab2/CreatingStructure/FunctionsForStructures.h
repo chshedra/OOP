@@ -1,5 +1,6 @@
 #pragma once
 
+//2.2.5
 void ReadRectangle(Rectangle& rectangle);
 void WriteRectangle(Rectangle& rectangle);
 void DemoWriteAndReadRectangle(Rectangle& rectangle);

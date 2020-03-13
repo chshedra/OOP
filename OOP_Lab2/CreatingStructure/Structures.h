@@ -1,9 +1,11 @@
 #pragma once
 #include <iostream>
+#include "Structures.h"
 #include "Enums.h"
 
 using namespace std;
 
+//2.2.2.1
 struct Rectangle
 {
 	double Length;
@@ -18,12 +20,23 @@ struct Flight
 	int FlightTime;
 };
 
+//2.2.9.
+enum Genre
+{
+	COMEDY,
+	DRAMA,
+	THRILLER,
+	ACTION,
+	HORROR,
+	BLOCKBUSTER
+};
+
 struct Movie
 {
 	string Name;
 	int Timing;
 	int ReleaseYear;
-	Genre Genre;
+	Genre MovieGenre;
 	double Raiting;
 };
 
@@ -34,6 +47,7 @@ struct Time
 	int Seconds;
 };
 
+//2.2.2.2
 struct Contact
 {
 	string Name;
@@ -57,9 +71,9 @@ struct Subject
 };
 
 
-
+//2.2.3
 void DemoRectangle();
-void  DemoFilm();
+void DemoFilm();
 void DemoFlight();
 void DemoTime();
 
@@ -69,3 +83,4 @@ void AutoFlight();
 void AutoTime();
 
 void WrongPointers();
+int CountMoviesByGenre(Movie* movies, int count, Genre findGenre);

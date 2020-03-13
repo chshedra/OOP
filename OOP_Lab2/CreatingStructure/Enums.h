@@ -1,5 +1,7 @@
 #pragma once
+#include "Structures.h"
 
+//2.2.8
 enum Colors
 {
 	RED,
@@ -21,15 +23,7 @@ enum DaysOfTheWeek
 	SUNDAY
 };
 
-enum Genre
-{
-	COMEDY,
-	DRAMA, 
-	THRILLER,
-	ACTION, 
-	HORROR,
-	BLOCKBUSTER
-};
+
 
 enum StudyForm
 {
@@ -56,7 +50,7 @@ enum Smartphones
 	HUAWAI
 };
 
+//2.2.9
 void WriteColor(Colors color);
 Colors ReadColor();
 int CountColor(Colors* colors, int count, Colors findedColor);
-int CountMoviesByGenre(Movie* movies, int count, Genre findGenre);

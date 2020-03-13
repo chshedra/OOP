@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
+#include "Structures.h"
 using namespace std;
 
+//2.2.7
 struct Circle
 {
 	double X;

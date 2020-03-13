@@ -75,7 +75,7 @@ Movie* MakeMovie(Genre genre, string name, int timing, int releaseYear, double r
 {
 	Movie* movie = new Movie();
 
-	movie->Genre = genre;
+	movie->MovieGenre = genre;
 	movie->Name = name;
 	movie->Raiting = raiting;
 	movie->ReleaseYear = releaseYear;
@@ -88,7 +88,7 @@ Movie* CopyMovie(Movie& movie)
 {
 	Movie* copiedMovie= new Movie();
 
-	copiedMovie->Genre = movie.Genre;
+	copiedMovie->MovieGenre = movie.MovieGenre;
 	copiedMovie->Name = movie.Name;
 	copiedMovie->Raiting = movie.Raiting;
 	copiedMovie->ReleaseYear = movie.ReleaseYear;
@@ -102,11 +102,11 @@ void DemoMakeCopyMovie()
 	Movie* movie = MakeMovie(ACTION, "Fast&Furios", 120, 2012, 6.8);
 	Movie* copiedMovie = CopyMovie(*movie);
 
-	cout << movie->Genre << " " << movie->Name << " "
+	cout << movie->MovieGenre << " " << movie->Name << " "
 		<< movie->Raiting << " " << movie->ReleaseYear << " "
 		<< movie->Timing << endl;
 
-	cout << copiedMovie->Genre << " " << copiedMovie->Name << " "
+	cout << copiedMovie->MovieGenre << " " << copiedMovie->Name << " "
 		<< copiedMovie->Raiting << " " << copiedMovie->ReleaseYear << " "
 		<< copiedMovie->Timing << endl;
 }
