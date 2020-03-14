@@ -1,27 +1,16 @@
 #include <iostream>
+
 #include <exception>
 
 using namespace std;
 
-void DemoSort();
-void Sort(double* values, int count);
-
-int main()
-{
-	DemoSort();
-	return 0;
-}
-
 void Sort(double* values, int count)
 {
-	if (count < 0)
-	{
-		throw count;
-	}
 	double swap;
+
 	for (int i = 0; i < count; i++)
 	{
-		for (int j = 0; i < count; j++)
+		for (int j = 0; j < count; j++)
 		{
 			if (values[i] < values[j])
 			{
@@ -31,20 +20,33 @@ void Sort(double* values, int count)
 			}
 		}
 	}
+
+	if (count < 0)
+	{
+		throw count;
+	}
+
 }
 
 void DemoSort()
 {
-	int count = 5;
-	double* values = new double[count];
-	count = -1;
 	try
 	{
+		int count = 5;
+		double* values = new double[count] {100.0, 249.0, 12.0, 45.0, 23.5};
+		Sort(values, count);
+		count = -1;
 		Sort(values, count);
 	}
-	catch(int)
+
+	catch (int count)
 	{
-		cout << "Exception caught!" << endl;
+		cout << "count is smaller then 0: " << count <<endl;
 	}
+}
+
+int main()
+{
+	DemoSort();
 }
 
