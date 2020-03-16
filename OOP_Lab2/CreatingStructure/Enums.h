@@ -1,6 +1,8 @@
 #pragma once
 #include "Structures.h"
 
+//TODO: Каждую сущность вместе с использующими её функциями в отдельный файл.
+//TODO: RSDN
 //2.2.8
 enum Colors
 {
@@ -12,6 +14,7 @@ enum Colors
 	PURPLE
 };
 
+//TODO: RSDN
 enum DaysOfTheWeek
 {
 	MONDAY,
@@ -24,7 +27,7 @@ enum DaysOfTheWeek
 };
 
 
-
+//TODO: RSDN
 enum StudyForm
 {
 	FULLTIME,
@@ -33,6 +36,7 @@ enum StudyForm
 	DISTANCE
 };
 
+//TODO: RSDN
 enum Seasons
 {
 	WINTER,

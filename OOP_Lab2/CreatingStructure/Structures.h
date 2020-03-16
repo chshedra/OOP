@@ -4,7 +4,7 @@
 #include "Enums.h"
 
 using namespace std;
-
+//TODO: Каждую сущность вместе с использующими её функциями в отдельный файл.
 //2.2.2.1
 struct Rectangle
 {
@@ -20,6 +20,7 @@ struct Flight
 	int FlightTime;
 };
 
+//TODO: RSDN
 //2.2.9.
 enum Genre
 {

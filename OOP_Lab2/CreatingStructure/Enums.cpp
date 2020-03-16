@@ -8,9 +8,11 @@ void DemoEnums()
 	Colors color = RED;
 	Genre genre = HORROR;
 	DaysOfTheWeek day = MONDAY;
-
+	//TODO: RSDN
 	Colors colors[6] = { RED, GREEN, BLUE, PURPLE, YELLOW, ORANGE };
+	//TODO: RSDN
 	Genre genres[6] = { COMEDY, DRAMA, HORROR, ACTION, BLOCKBUSTER, THRILLER };
+	//TODO: RSDN
 	DaysOfTheWeek days[7] = { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, 
 							FRIDAY, SATURDAY, SUNDAY };
 }
@@ -50,6 +52,7 @@ Colors ReadColor()
 	cin >> numColor;
 	switch (numColor)
 	{
+		//TODO: RSDN
 	case RED:
 		cout << "Red color" << endl;
 		return RED;

@@ -20,6 +20,7 @@ void DemoDynamicFlight()
 
 void DemoDynamicFlights()
 {
+	//TODO: const?
 	int count = 3;
 	Flight* dynamicFlights = new Flight[count];
 

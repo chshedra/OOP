@@ -31,6 +31,7 @@ int main()
 		int choice = InputValidation();
 		switch (choice)
 		{
+			//TODO: RSDN
 		case 1:
 		{
 			AutoStructuresMenu();
@@ -83,6 +84,7 @@ void AutoStructuresMenu()
 		int choiceManually = InputValidation();
 		switch (choiceManually)
 		{
+			//TODO: RSDN
 		case 1:
 		{
 			DemoRectangle();
@@ -129,6 +131,7 @@ void ManuallyStructuresMenu()
 		int choiceManually = InputValidation();
 		switch (choiceManually)
 		{
+			//TODO: RSDN
 		case 1:
 		{
 			AutoRectangle();
@@ -175,6 +178,7 @@ void FunctionsMenu()
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
+			//TODO: RSDN
 		case 1:
 		{
 			ReadRectangle(rectangle);
@@ -220,6 +224,7 @@ void DynamicStructuresMenu()
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
+			//TODO: RSDN
 		case 1:
 		{
 			DemoDynamicFlight();
@@ -256,6 +261,7 @@ void FunctionsConstructorsMenu()
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
+			//TODO: RSDN
 		case 1:
 		{
 			DemoMakeCopyFlight();
@@ -297,6 +303,7 @@ void EnumsMenu()
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
+			//TODO: RSDN
 		case 1:
 		{
 			WriteColor(RED);

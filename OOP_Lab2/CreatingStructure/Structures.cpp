@@ -236,11 +236,13 @@ void DemoMovieWithGenre()
 	movie.Raiting = 9.5;
 	movie.ReleaseYear = 2019;
 	movie.Timing = 120;
+	//TODO: RSDN
 	Movie* movie2 = MakeMovie(HORROR, "Stranges", 5.8, 1999, 90);
 	int count = 5;
 	Movie** movies = new Movie*[count];
 	for (int i = 0; i < count; i++)
 	{
+		//TODO: RSDN
 		movies[i] = MakeMovie(ACTION, "name" + i, 3.5 + i, 2010 + i, 120);
 	}
 	int countMovie = CountMoviesByGenre(*movies, count, ACTION);
@@ -261,10 +263,12 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 			if (movies->Raiting > maxRaitngMovie.Raiting)
 			{
 				maxRaitngMovie = movies[i];
+				//TODO: ?
 				isFound == true;
 			}
 		}
 	}
+	//TODO: зачем сравнение с true?
 	if (isFound == true)
 	{
 		return &maxRaitngMovie;
