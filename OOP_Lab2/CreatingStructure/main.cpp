@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Structures.h"
-#include "FunctionsForStructures.h"
-#include "StructuresAndDynamicMemory.h"
-#include "FunctionConstructors.h"
-#include "Enums.h"
+#include "Flight.h"
+#include "Movie.h"
+#include "Color.h"
+#include "Rectangle.h"
+#include "Time.h"
 #include "Common.h"
 
 using namespace std;
@@ -17,8 +17,6 @@ void EnumsMenu();
 
 int main()
 {
-	WrongPointers();
-
 	while (true)
 	{
 		cout << "Enter the point from the menu:" << endl
@@ -31,41 +29,40 @@ int main()
 		int choice = InputValidation();
 		switch (choice)
 		{
-			//TODO: RSDN
-		case 1:
-		{
-			AutoStructuresMenu();
-			break;
-		}
-		case 2:
-		{
-			ManuallyStructuresMenu();
-			break;
-		}
-		case 3:
-		{
-			FunctionsMenu();
-			break;
-		}
-		case 4:
-		{
-			DynamicStructuresMenu();
-			break;
-		}
-		case 5:
-		{
-			FunctionsConstructorsMenu();
-			break;
-		}
-		case 6:
-		{
-			EnumsMenu();
-			break;
-		}
-		default:
-		{
-			cout << "Enter the correct point!" << endl;
-		}
+			case 1:
+			{
+				AutoStructuresMenu();
+				break;
+			}
+			case 2:
+			{
+				ManuallyStructuresMenu();
+				break;
+			}
+			case 3:
+			{
+				FunctionsMenu();
+				break;
+			}
+			case 4:
+			{
+				DynamicStructuresMenu();
+				break;
+			}
+			case 5:
+			{
+				FunctionsConstructorsMenu();
+				break;
+			}
+			case 6:
+			{
+				EnumsMenu();
+				break;
+			}
+			default:
+			{
+				cout << "Enter the correct point!" << endl;
+			}
 		}
 	}
 }
@@ -84,36 +81,34 @@ void AutoStructuresMenu()
 		int choiceManually = InputValidation();
 		switch (choiceManually)
 		{
-			//TODO: RSDN
-		case 1:
-		{
-			DemoRectangle();
-			break;
-		}
-		case 2:
-		{
-			DemoFilm();
-			break;
-		}
-		case 3:
-		{
-			DemoFlight();
-			break;
-		}
-		case 4:
-		{
-			DemoTime();
-			break;
-		}
-		case 5:
-		{
-			return;
-		}
-		default:
-		{
-			cout << "Enter the correct point!" << endl;
-		}
-
+			case 1:
+			{
+				DemoRectangle();
+				break;
+			}
+			case 2:
+			{
+				DemoMovie();
+				break;
+			}
+			case 3:
+			{
+				DemoFlight();
+				break;
+			}
+			case 4:
+			{
+				DemoTime();
+				break;
+			}
+			case 5:
+			{
+				return;
+			}
+			default:
+			{
+				cout << "Enter the correct point!" << endl;
+			}
 		}
 	}
 }
@@ -131,35 +126,34 @@ void ManuallyStructuresMenu()
 		int choiceManually = InputValidation();
 		switch (choiceManually)
 		{
-			//TODO: RSDN
-		case 1:
-		{
-			AutoRectangle();
-			break;
-		}
-		case 2:
-		{
-			AutoFilm();
-			break;
-		}
-		case 3:
-		{
-			AutoFlight();
-			break;
-		}
-		case 4:
-		{
-			AutoTime();
-			break;
-		}
-		case 5:
-		{
-			return;
-		}
-		default:
-		{
-			cout << "Enter the correct point!" << endl;
-		}
+			case 1:
+			{
+				AutoRectangle();
+				break;
+			}
+			case 2:
+			{
+				AutoMovie();
+				break;
+			}
+			case 3:
+			{
+				AutoFlight();
+				break;
+			}
+			case 4:
+			{
+				AutoTime();
+				break;
+			}
+			case 5:
+			{
+				return;
+			}
+			default:
+			{
+				cout << "Enter the correct point!" << endl;
+			}
 		}
 	}
 }
@@ -178,37 +172,36 @@ void FunctionsMenu()
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
-			//TODO: RSDN
-		case 1:
-		{
-			ReadRectangle(rectangle);
-			cout << endl;
-			break;
-		}
-		case 2:
-		{
-			WriteRectangle(rectangle);
-			cout << endl;
-			break;
-		}
-		case 3:
-		{
-			DemoWriteAndReadRectangle(rectangle);
-			break;
-		}
-		case 4:
-		{
-			AutoTime();
-			break;
-		}
-		case 5:
-		{
-			return;
-		}
-		default:
-		{
-			cout << "Enter the correct point!" << endl;
-		}
+			case 1:
+			{
+				ReadRectangle(rectangle);
+				cout << endl;
+				break;
+			}
+			case 2:
+			{
+				WriteRectangle(rectangle);
+				cout << endl;
+				break;
+			}
+			case 3:
+			{
+				DemoWriteAndReadRectangle(rectangle);
+				break;
+			}
+			case 4:
+			{
+				AutoTime();
+				break;
+			}
+			case 5:
+			{
+				return;
+			}
+			default:
+			{
+				cout << "Enter the correct point!" << endl;
+			}
 		}
 	}
 }
@@ -224,27 +217,26 @@ void DynamicStructuresMenu()
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
-			//TODO: RSDN
-		case 1:
-		{
-			DemoDynamicFlight();
-			cout << endl;
-			break;
-		}
-		case 2:
-		{
-			DemoDynamicFlights();
-			cout << endl;
-			break;
-		}
-		case 3:
-		{
-			return;
-		}
-		default:
-		{
-			cout << "Enter the correct point!" << endl;
-		}
+			case 1:
+			{
+				DemoDynamicFlight();
+				cout << endl;
+				break;
+			}
+			case 2:
+			{
+				DemoDynamicFlights();
+				cout << endl;
+				break;
+			}
+			case 3:
+			{
+				return;
+			}
+			default:
+			{
+				cout << "Enter the correct point!" << endl;
+			}
 		}
 	}
 }
@@ -261,33 +253,32 @@ void FunctionsConstructorsMenu()
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
-			//TODO: RSDN
-		case 1:
-		{
-			DemoMakeCopyFlight();
-			cout << endl;
-			break;
-		}
-		case 2:
-		{
-			DemoMakeCopyMovie();
-			cout << endl;
-			break;
-		}
-		case 3:
-		{
-			DemoMakeCopyTime();
-			cout << endl;
-			break;
-		}
-		case 4:
-		{
-			return;
-		}
-		default:
-		{
-			cout << "Enter the correct point!" << endl;
-		}
+			case 1:
+			{
+				DemoMakeCopyFlight();
+				cout << endl;
+				break;
+			}
+			case 2:
+			{
+				DemoMakeCopyMovie();
+				cout << endl;
+				break;
+			}
+			case 3:
+			{
+				DemoMakeCopyTime();
+				cout << endl;
+				break;
+			}
+			case 4:
+			{
+				return;
+			}
+			default:
+			{
+				cout << "Enter the correct point!" << endl;
+			}
 		}
 	}
 }
@@ -303,30 +294,29 @@ void EnumsMenu()
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
-			//TODO: RSDN
-		case 1:
-		{
-			WriteColor(RED);
-			cout << endl;
-			break;
-		}
-		case 2:
-		{
-			const int count = 7;
-			Colors colors[count] = { RED, BLUE, YELLOW, GREEN, RED,
-								RED, PURPLE };
-			cout << "Red is " << CountColor(colors, count, RED) << endl;
-			cout << endl;
-			break;
-		}
-		case 3:
-		{
-			return;
-		}
-		default:
-		{
-			cout << "Enter the correct point!" << endl;
-		}
+			case 1:
+			{
+				WriteColor(Red);
+				cout << endl;
+				break;
+			}
+			case 2:
+			{
+				const int count = 7;
+				Colors colors[count] = { Red, Blue, Yellow, Green, Red,
+									Red, Purple };
+				cout << "Red is " << CountColor(colors, count, Red) << endl;
+				cout << endl;
+				break;
+			}
+			case 3:
+			{
+				return;
+			}
+			default:
+			{
+				cout << "Enter the correct point!" << endl;
+			}
 		}
 	}
 }

@@ -1,6 +1,16 @@
 #pragma once
+#include <iostream>
+using namespace std;
 
-//2.2.5
+struct Rectangle
+{
+	double Length;
+	double Width;
+	string Color;
+};
+
+void DemoRectangle();
+void AutoRectangle();
 void ReadRectangle(Rectangle& rectangle);
 void WriteRectangle(Rectangle& rectangle);
 void DemoWriteAndReadRectangle(Rectangle& rectangle);

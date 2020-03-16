@@ -1,42 +1,42 @@
 #include <iostream>
-#include "Enums.h"
+#include "Genre.h"
+#include "Color.h"
+#include "DaysOfTheWeek.h"
+
 
 using namespace std;
 
 void DemoEnums()
 {
-	Colors color = RED;
-	Genre genre = HORROR;
-	DaysOfTheWeek day = MONDAY;
-	//TODO: RSDN
-	Colors colors[6] = { RED, GREEN, BLUE, PURPLE, YELLOW, ORANGE };
-	//TODO: RSDN
-	Genre genres[6] = { COMEDY, DRAMA, HORROR, ACTION, BLOCKBUSTER, THRILLER };
-	//TODO: RSDN
-	DaysOfTheWeek days[7] = { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, 
-							FRIDAY, SATURDAY, SUNDAY };
+	Colors color = Red;
+	Genre genre = Horror;
+	DaysOfTheWeek day = Monday;
+	Colors colors[6] = { Red, Green, Blue, Purple, Yellow, Orange };
+	Genre genres[6] = { Comedy, Drama, Horror, Action, Blockbuster, Thriller };
+	DaysOfTheWeek days[7] = { Monday, Tuesday, Wednesday, Thursday, 
+							Friday, Saturday, Sunday };
 }
 
 void WriteColor(Colors color)
 {
 	switch (color)
 	{
-		case RED:
+		case Red:
 			cout << "Red color" << endl;
 			break;
-		case ORANGE:
+		case Orange:
 			cout << "Orange color" << endl;
 			break;
-		case BLUE:
+		case Blue:
 			cout << "Blue color" << endl;
 			break;
-		case YELLOW:
+		case Yellow:
 			cout << "Yellowcolor" << endl;
 			break;
-		case PURPLE:
+		case Purple:
 			cout << "Purple color" << endl;
 			break;
-		case GREEN:
+		case Green:
 			cout << "Green color" << endl;
 			break;
 		default:
@@ -52,34 +52,33 @@ Colors ReadColor()
 	cin >> numColor;
 	switch (numColor)
 	{
-		//TODO: RSDN
-	case RED:
-		cout << "Red color" << endl;
-		return RED;
-		break;
-	case ORANGE:
-		cout << "Orange color" << endl;
-		return ORANGE;
-		break;
-	case BLUE:
-		cout << "Blue color" << endl;
-		return BLUE;
-		break;
-	case YELLOW:
-		cout << "Yellowcolor" << endl;
-		return YELLOW;
-		break;
-	case PURPLE:
-		cout << "Purple color" << endl;
-		return PURPLE;
-		break;
-	case GREEN:
-		cout << "Green color" << endl;
-		return GREEN;
-		break;
-	default:
-		cout << "Error" << endl;
-		break;
+		case Red:
+			cout << "Red color" << endl;
+			return Red;
+			break;
+		case Orange:
+			cout << "Orange color" << endl;
+			return Orange;
+			break;
+		case Blue:
+			cout << "Blue color" << endl;
+			return Blue;
+			break;
+		case Yellow:
+			cout << "Yellowcolor" << endl;
+			return Yellow;
+			break;
+		case Purple:
+			cout << "Purple color" << endl;
+			return Purple;
+			break;
+		case Green:
+			cout << "Green color" << endl;
+			return Green;
+			break;
+		default:
+			cout << "Error" << endl;
+			break;
 	}
 }
 
@@ -87,7 +86,7 @@ int CountRed(Colors* colors, int count)
 {
 	for (int i = 0; i < count; i++)
 	{
-		if (colors[i] == RED)
+		if (colors[i] == Red)
 		{
 			count++;
 		}
