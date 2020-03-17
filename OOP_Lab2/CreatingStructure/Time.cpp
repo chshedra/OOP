@@ -4,11 +4,13 @@ using namespace std;
 
 void DemoTime()
 {
-	//TODO: Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
+	//TODO:+Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
 	Time newTime;
+
 	newTime.Hours = 4;
 	newTime.Minutes = 45;
 	newTime.Seconds = 3;
+
 	cout << "TIME" << endl;
 	cout << "Enter the hour: ";
 	cin >> newTime.Hours;
@@ -16,6 +18,7 @@ void DemoTime()
 	cin >> newTime.Minutes;
 	cout << "Enter the seconds: ";
 	cin >> newTime.Seconds;
+
 	cout << newTime.Hours << ":" << newTime.Minutes
 		<< ":" << newTime.Seconds << endl;
 
@@ -25,9 +28,11 @@ void DemoTime()
 		<< pointer->Hours << " "
 		<< pointer->Minutes << " "
 		<< pointer->Seconds << endl;
+
 	pointer->Hours = 10;
 	pointer->Minutes = 34;
 	pointer->Seconds = 56;
+
 	Time* pointer2 = &newTime;
 
 	cout << "Pointer 1: " << pointer << endl

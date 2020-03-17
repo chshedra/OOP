@@ -8,7 +8,7 @@ void DemoFlight()
 	newFlight.DeparturePoint = "Moscow";
 	newFlight.FinalDestination = "Seul";
 	newFlight.FlightTime = 346;
-	//TODO: Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
+	//TODO: +Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
 	cout << "FLIGHT" << endl;
 	cout << "Enter the departure point: ";
 	cin >> newFlight.DeparturePoint;
@@ -16,18 +16,22 @@ void DemoFlight()
 	cin >> newFlight.FinalDestination;
 	cout << "Enter the flight time: ";
 	cin >> newFlight.FlightTime;
+
 	cout << newFlight.DeparturePoint << " "
 		<< newFlight.FinalDestination << " "
 		<< newFlight.FlightTime << endl;
 	//2.2.4
 	Flight* pointer = &newFlight;
+
 	cout << "Pointer" << endl
 		<< pointer->DeparturePoint << " "
 		<< pointer->FinalDestination << " "
 		<< pointer->FlightTime << endl;
+
 	pointer->DeparturePoint = "Tomsk";
 	pointer->FinalDestination = "Dublin";
 	pointer->FlightTime = 230;
+
 	Flight* pointer2 = &newFlight;
 
 	cout << "Pointer 1: " << pointer << endl
@@ -48,8 +52,9 @@ void AutoFlight()
 	}
 }
 
-//TODO: передача по значению, насколько правильно?
-Flight* MakeFlight(string departurePoint, string finalDestination, int time)
+//TODO:+ передача по значению, насколько правильно?
+Flight* MakeFlight(const string &departurePoint, 
+	const string &finalDestination, int time)
 {
 	Flight* flight = new Flight();
 
@@ -73,6 +78,7 @@ Flight* CopyFlight(Flight& flight)
 
 void DemoMakeCopyFlight()
 {
+	
 	Flight* flight = MakeFlight("Moscow", "Paris", 126);
 
 	Flight* copyFlight1 = CopyFlight(*flight);
@@ -98,8 +104,8 @@ void DemoDynamicFlight()
 
 void DemoDynamicFlights()
 {
-	//TODO: const?
-	int count = 3;
+	//TODO: +const?
+	const int count = 3;
 	Flight* dynamicFlights = new Flight[count];
 
 	dynamicFlights[0].DeparturePoint = "Moscow";

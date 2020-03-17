@@ -13,7 +13,7 @@ struct Movie
 };
 
 int CountMoviesByGenre(Movie* movies, int count, Genre findGenre);
-Movie* MakeMovie(Genre genre, string name, int timing,
+Movie* MakeMovie(Genre genre, const string &name, int timing,
 	int releaseYear, double raiting);
 void DemoMakeCopyMovie();
 void DemoMovie();

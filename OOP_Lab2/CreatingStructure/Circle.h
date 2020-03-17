@@ -10,4 +10,8 @@ struct Circle
 	string Color;
 };
 
-//TODO: Нужны сигнатуры методов
+//TODO:+ Нужны сигнатуры методов
+Circle* MakeCircle(double x, double y, double radius, 
+	const string &color);
+Circle* CopyCircle(Circle& circle);
+void DemoCircle();

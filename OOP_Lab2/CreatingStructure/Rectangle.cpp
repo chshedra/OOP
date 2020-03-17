@@ -8,8 +8,9 @@ void DemoRectangle()
 	object.Length = 3.5;
 	object.Width = 7.99;
 	object.Color = "Red";
-	//TODO: Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
+	//TODO: +Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
 	Rectangle newRectangle;
+
 	cout << "RECTANGLE" << endl;
 	cout << "Enter the length: ";
 	cin >> newRectangle.Length;
@@ -17,22 +18,27 @@ void DemoRectangle()
 	cin >> newRectangle.Width;
 	cout << "Enter the colour: ";
 	cin >> newRectangle.Color;
+
 	cout << object.Length << " " << object.Width
 		<< " " << object.Color << endl;
 	cout << endl;
+
 	//2.2.4
 	Rectangle* pointer = &object;
 	cout << "Pointer" << endl
 		<< pointer->Length << " "
 		<< pointer->Width << " "
 		<< pointer->Color << endl;
+
 	pointer->Length = 10.9;
 	pointer->Width = 34.7;
 	pointer->Color = "Blue";
+
 	Rectangle* pointer2 = &object;
 
 	cout << "Pointer 1: " << pointer << endl
 		<< "Pointer 2: " << pointer2 << endl;
+
 	WriteRectangle(object);
 	WriteRectangle(newRectangle);
 
@@ -40,7 +46,6 @@ void DemoRectangle()
 
 	WriteRectangle(object);
 	WriteRectangle(newRectangle);
-
 }
 
 void AutoRectangle()
@@ -77,8 +82,8 @@ void ReadRectangle(Rectangle& rectangle)
 
 void DemoWriteAndReadRectangle(Rectangle& rectangle)
 {
-	//TODO: const?
-	int count = 3;
+	//TODO:+ const?
+	const int count = 3;
 	for (int i = 0; i < count; i++)
 	{
 		ReadRectangle(rectangle);
@@ -121,8 +126,8 @@ void FindRectangle(Rectangle* rectangles, int count)
 void FindMaxRectangle(Rectangle* rectangles, int count)
 {
 	Rectangle max;
-	//TODO: const?
-	double maxSquare = 0;
+	//TODO: +const?
+	const double maxSquare = 0;
 	for (int i = 0; i < count; i++)
 	{
 		if (rectangles[i].Length * rectangles[i].Width > maxSquare)

@@ -2,8 +2,9 @@
 #include "Circle.h"
 using namespace std;
 
-//TODO: передача по значению, насколько правильно?
-Circle* MakeCircle(double x, double y, double radius, string color)
+//TODO: +передача по значению, насколько правильно?
+Circle* MakeCircle(double x, double y, double radius, 
+	const string &color)
 {
 	Circle* circle = new Circle();
 	circle->X = x;

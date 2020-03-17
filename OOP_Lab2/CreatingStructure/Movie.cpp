@@ -4,16 +4,18 @@ using namespace std;
 
 void  DemoMovie()
 {
-	//TODO: ‘орматирование кода, сгруппированные логические части кода лучше раздел€ть пустыми строками
+	//TODO: +‘орматирование кода, сгруппированные логические части кода лучше раздел€ть пустыми строками
 	Movie newFilm;
+
 	newFilm.MovieGenre = Drama;
 	newFilm.Name = "Requiem to the dream";
 	newFilm.Raiting = 8.6;
 	newFilm.ReleaseYear = 2001;
 	newFilm.Timing = 124;
+
 	cout << "FILM" << endl;
 	cout << "Enter the genre: ";
-	//cin >> newFilm.Genre;
+	newFilm.MovieGenre = Action;
 	cout << "Enter the name: ";
 	cin >> newFilm.Name;
 	cout << "Enter the raiting: ";
@@ -22,23 +24,27 @@ void  DemoMovie()
 	cin >> newFilm.ReleaseYear;
 	cout << "Enter the timing: ";
 	cin >> newFilm.Timing;
+
 	cout << newFilm.MovieGenre << " " << newFilm.Name << " "
 		<< newFilm.Raiting << " " << newFilm.ReleaseYear
 		<< " " << newFilm.Timing << endl;
 
 	//2.2.4
 	Movie* pointer = &newFilm;
+
 	cout << "Pointer" << endl
 		<< pointer->MovieGenre << " "
 		<< pointer->Name << " "
 		<< pointer->Raiting << endl
 		<< pointer->ReleaseYear << endl
 		<< pointer->Timing << endl;
+
 	pointer->MovieGenre = Action;
 	pointer->Name = "Superman";
 	pointer->Raiting = 4.7;
 	pointer->ReleaseYear = 2011;
 	pointer->Timing = 160;
+
 	Movie* pointer2 = &newFilm;
 
 	cout << "Pointer 1: " << pointer << endl
@@ -62,8 +68,9 @@ void AutoMovie()
 	}
 }
 
-//TODO: передача по значению, насколько правильно?
-Movie* MakeMovie(Genre genre, string name, int timing, int releaseYear, double raiting)
+//TODO: +передача по значению, насколько правильно?
+Movie* MakeMovie(Genre genre, const string &name, int timing, 
+	int releaseYear, double raiting)
 {
 	Movie* movie = new Movie();
 
@@ -113,8 +120,8 @@ void DemoMovieWithGenre()
 	movie.Timing = 120;
 
 	Movie* newMovie = MakeMovie(Horror, "Stranges", 5.8, 1999, 90);
-	//TODO: const?
-	int count = 5;
+	//TODO: +const?
+	const int count = 5;
 	Movie** movies = new Movie * [count];
 	for (int i = 0; i < count; i++)
 	{
@@ -123,8 +130,8 @@ void DemoMovieWithGenre()
 	}
 	int countMovie = CountMoviesByGenre(*movies, count, Action);
 	delete newMovie;
-	//TODO: delete над одним указателем, а над вторыми указател€ми?
-	delete movies;
+	//TODO: +delete над одним указателем, а над вторыми указател€ми?
+	delete *movies;
 }
 
 Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
