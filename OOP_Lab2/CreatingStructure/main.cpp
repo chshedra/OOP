@@ -26,6 +26,7 @@ int main()
 			<< "4.Dynamic structures" << endl
 			<< "5.Functions-constructors" << endl
 			<< "6.Enums" << endl;
+		//TODO: const?
 		int choice = InputValidation();
 		switch (choice)
 		{
@@ -78,6 +79,7 @@ void AutoStructuresMenu()
 			<< "3.Flight" << endl
 			<< "4.Time" << endl
 			<< "5.Back to the main menu" << endl;
+		//TODO: const?
 		int choiceManually = InputValidation();
 		switch (choiceManually)
 		{
@@ -123,6 +125,7 @@ void ManuallyStructuresMenu()
 			<< "3.Flight" << endl
 			<< "4.Time" << endl
 			<< "5.Back to the main menu" << endl;
+		//TODO: const?
 		int choiceManually = InputValidation();
 		switch (choiceManually)
 		{
@@ -169,6 +172,7 @@ void FunctionsMenu()
 			<< "3.Read and write rectangle" << endl
 			<< "4.Time" << endl
 			<< "5.Back to the main menu" << endl;
+		//TODO: const?
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
@@ -214,6 +218,7 @@ void DynamicStructuresMenu()
 			<< "1.DemoDynamicFlight" << endl
 			<< "2.DemoDynamicFlights" << endl
 			<< "3.Back to the main menu" << endl;
+		//TODO: const?
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
@@ -250,6 +255,7 @@ void FunctionsConstructorsMenu()
 			<< "2.DemoMakeCopyMovie" << endl
 			<< "3.DemoMakeCopyTime" << endl
 			<< "4. Back to the main menu" << endl;
+		//TODO: const?
 		int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{

@@ -8,7 +8,7 @@ void DemoRectangle()
 	object.Length = 3.5;
 	object.Width = 7.99;
 	object.Color = "Red";
-
+	//TODO: Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
 	Rectangle newRectangle;
 	cout << "RECTANGLE" << endl;
 	cout << "Enter the length: ";
@@ -77,6 +77,7 @@ void ReadRectangle(Rectangle& rectangle)
 
 void DemoWriteAndReadRectangle(Rectangle& rectangle)
 {
+	//TODO: const?
 	int count = 3;
 	for (int i = 0; i < count; i++)
 	{
@@ -120,6 +121,7 @@ void FindRectangle(Rectangle* rectangles, int count)
 void FindMaxRectangle(Rectangle* rectangles, int count)
 {
 	Rectangle max;
+	//TODO: const?
 	double maxSquare = 0;
 	for (int i = 0; i < count; i++)
 	{

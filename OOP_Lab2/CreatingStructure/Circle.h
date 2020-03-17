@@ -9,3 +9,5 @@ struct Circle
 	double Radius;
 	string Color;
 };
+
+//TODO: Нужны сигнатуры методов

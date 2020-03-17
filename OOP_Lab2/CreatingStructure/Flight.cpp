@@ -8,6 +8,7 @@ void DemoFlight()
 	newFlight.DeparturePoint = "Moscow";
 	newFlight.FinalDestination = "Seul";
 	newFlight.FlightTime = 346;
+	//TODO: Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
 	cout << "FLIGHT" << endl;
 	cout << "Enter the departure point: ";
 	cin >> newFlight.DeparturePoint;
@@ -47,6 +48,7 @@ void AutoFlight()
 	}
 }
 
+//TODO: передача по значению, насколько правильно?
 Flight* MakeFlight(string departurePoint, string finalDestination, int time)
 {
 	Flight* flight = new Flight();
