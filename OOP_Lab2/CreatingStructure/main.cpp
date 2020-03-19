@@ -250,8 +250,8 @@ void FunctionsConstructorsMenu()
 			<< "2.DemoMakeCopyMovie" << endl
 			<< "3.DemoMakeCopyTime" << endl
 			<< "4. Back to the main menu" << endl;
-		//TODO: -const?
-		int choiceFunction = InputValidation();
+		//TODO: +const?
+		const int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
 			case 1:
@@ -292,8 +292,8 @@ void EnumsMenu()
 			<< "1.WriteColor" << endl
 			<< "2.CountColor" << endl
 			<< "3.Exit" << endl;
-		//TODO: const?
-		int choiceFunction = InputValidation();
+		//TODO: +const?
+		const int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
 			case 1:
@@ -305,11 +305,12 @@ void EnumsMenu()
 			case 2:
 			{
 				const int count = 7;
-					//TODO: RSDN
+					//TODO: +RSDN
 				Colors colors[count] = { Red, Blue, Yellow, Green, Red,
-									Red, Purple };
-					//TODO: RSDN
-				cout << "Red is " << CountColor(colors, count, Red) << endl;
+					Red, Purple };
+					//TODO: +RSDN
+				cout << "Red is " << CountColor(colors, 
+					count, Red) << endl;
 				cout << endl;
 				break;
 			}

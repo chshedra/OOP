@@ -132,24 +132,26 @@ void DemoMovieWithGenre()
 
 Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 {
-	Movie maxRaitngMovie;
-	maxRaitngMovie.Raiting = 0;
+	Movie *maxRaitngMovie = new Movie;
+	maxRaitngMovie->Raiting = 0;
 	bool isFound = false;
 	for (int i = 0; i < count; i++)
 	{
 		if (movies[i].MovieGenre == findGenre)
 		{
-			if (movies->Raiting > maxRaitngMovie.Raiting)
+			if (movies->Raiting > maxRaitngMovie->Raiting)
 			{
-				maxRaitngMovie = movies[i];
+				*maxRaitngMovie = movies[i];
 				isFound = true;
 			}
 		}
 	}
 	if (isFound)
 	{
-		//TODO: Вернётся адрес стековой памяти, это чревато перетиранием в дальнейшем
-		return &maxRaitngMovie;
+		//TODO: +Вернётся адрес стековой памяти, это чревато перетиранием в дальнейшем
+		/*очистка памяти поисходит после вызова функции, однако, по заданию, данная функция 
+		нигде в программе не вызывается (если вознкнет вопрос об отсутствии delete)*/
+		return maxRaitngMovie;
 	}
 	else
 	{
