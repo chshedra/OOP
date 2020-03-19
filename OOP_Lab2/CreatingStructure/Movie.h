@@ -15,6 +15,7 @@ struct Movie
 int CountMoviesByGenre(Movie* movies, int count, Genre findGenre);
 Movie* MakeMovie(Genre genre, const string &name, int timing,
 	int releaseYear, double raiting);
+Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre);
 void DemoMakeCopyMovie();
 void DemoMovie();
 void AutoMovie();

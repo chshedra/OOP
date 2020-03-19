@@ -65,6 +65,8 @@ void AutoMovie()
 			<< " " << array[i].Raiting << " " << array[i].ReleaseYear
 			<< " " << array[i].Timing << endl;
 	}
+	Movie *newMovie = FindBestGenreMovie(array, 3, Horror);
+	cout << newMovie->Name << endl;
 }
 
 Movie* MakeMovie(Genre genre, const string &name, int timing, 
@@ -132,22 +134,22 @@ void DemoMovieWithGenre()
 
 Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 {
-	Movie *maxRaitngMovie = nullptr;
-	//BUG
-	maxRaitngMovie->Raiting = 0;
-	//TODO:?
-	bool isFound = false;
+	Movie maxRatingMovie;
+	Movie *maxRaitngMoviePointer = nullptr;
+	//+BUG
+	maxRatingMovie.Raiting = 0;
 	for (int i = 0; i < count; i++)
 	{
 		if (movies[i].MovieGenre == findGenre)
 		{
-			if (movies[i].Raiting > maxRaitngMovie->Raiting)
+			if (movies[i].Raiting > maxRatingMovie.Raiting)
 			{
-				*maxRaitngMovie = movies[i];
+				maxRatingMovie.Raiting = movies[i].Raiting;
+				maxRaitngMoviePointer = &movies[i];
 			}
 		}
 	}
-	return maxRaitngMovie;
+	return maxRaitngMoviePointer;
 }
 
 int CountMoviesByGenre(Movie* movies, int count, Genre findGenre)
