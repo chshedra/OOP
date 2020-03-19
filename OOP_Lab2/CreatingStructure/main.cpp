@@ -250,7 +250,6 @@ void FunctionsConstructorsMenu()
 			<< "2.DemoMakeCopyMovie" << endl
 			<< "3.DemoMakeCopyTime" << endl
 			<< "4. Back to the main menu" << endl;
-		//TODO: +const?
 		const int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{
@@ -305,10 +304,8 @@ void EnumsMenu()
 			case 2:
 			{
 				const int count = 7;
-					//TODO: +RSDN
 				Colors colors[count] = { Red, Blue, Yellow, Green, Red,
 					Red, Purple };
-					//TODO: +RSDN
 				cout << "Red is " << CountColor(colors, 
 					count, Red) << endl;
 				cout << endl;

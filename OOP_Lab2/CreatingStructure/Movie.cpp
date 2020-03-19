@@ -132,6 +132,7 @@ void DemoMovieWithGenre()
 
 Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 {
+	//TODO: Зачем новый экземпляр создавать, если можно хранить указатель равный nullptr, если что-то найдётся - его вернуть сразу и всё. Тогда isFound не нужен
 	Movie *maxRaitngMovie = new Movie;
 	maxRaitngMovie->Raiting = 0;
 	bool isFound = false;
@@ -139,6 +140,7 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 	{
 		if (movies[i].MovieGenre == findGenre)
 		{
+			//TODO: Кстати, а почему тут сравнение происходит с первым кино из переданных, а не с i-ым?
 			if (movies->Raiting > maxRaitngMovie->Raiting)
 			{
 				*maxRaitngMovie = movies[i];
@@ -148,9 +150,6 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 	}
 	if (isFound)
 	{
-		//TODO: +Вернётся адрес стековой памяти, это чревато перетиранием в дальнейшем
-		/*очистка памяти поисходит после вызова функции, однако, по заданию, данная функция 
-		нигде в программе не вызывается (если вознкнет вопрос об отсутствии delete)*/
 		return maxRaitngMovie;
 	}
 	else
