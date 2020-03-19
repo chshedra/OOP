@@ -4,7 +4,6 @@ using namespace std;
 
 void  DemoMovie()
 {
-	//TODO: +Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
 	Movie newFilm;
 
 	newFilm.MovieGenre = Drama;
@@ -68,7 +67,6 @@ void AutoMovie()
 	}
 }
 
-//TODO: +передача по значению, насколько правильно?
 Movie* MakeMovie(Genre genre, const string &name, int timing, 
 	int releaseYear, double raiting)
 {
@@ -120,7 +118,6 @@ void DemoMovieWithGenre()
 	movie.Timing = 120;
 
 	Movie* newMovie = MakeMovie(Horror, "Stranges", 5.8, 1999, 90);
-	//TODO: +const?
 	const int count = 5;
 	Movie** movies = new Movie * [count];
 	for (int i = 0; i < count; i++)
@@ -130,7 +127,6 @@ void DemoMovieWithGenre()
 	}
 	int countMovie = CountMoviesByGenre(*movies, count, Action);
 	delete newMovie;
-	//TODO: +delete над одним указателем, а над вторыми указателями?
 	delete *movies;
 }
 
@@ -152,6 +148,7 @@ Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 	}
 	if (isFound)
 	{
+		//TODO: Вернётся адрес стековой памяти, это чревато перетиранием в дальнейшем
 		return &maxRaitngMovie;
 	}
 	else

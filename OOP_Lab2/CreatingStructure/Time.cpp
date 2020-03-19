@@ -4,7 +4,6 @@ using namespace std;
 
 void DemoTime()
 {
-	//TODO:+Форматирование кода, сгруппированные логические части кода лучше разделять пустыми строками
 	Time newTime;
 
 	newTime.Hours = 4;
