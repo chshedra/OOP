@@ -133,6 +133,7 @@ void DemoMovieWithGenre()
 Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 {
 	Movie *maxRaitngMovie = nullptr;
+	//BUG
 	maxRaitngMovie->Raiting = 0;
 	//TODO:?
 	bool isFound = false;
