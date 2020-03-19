@@ -291,7 +291,6 @@ void EnumsMenu()
 			<< "1.WriteColor" << endl
 			<< "2.CountColor" << endl
 			<< "3.Exit" << endl;
-		//TODO: +const?
 		const int choiceFunction = InputValidation();
 		switch (choiceFunction)
 		{

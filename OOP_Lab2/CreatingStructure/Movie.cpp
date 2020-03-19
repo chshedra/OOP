@@ -132,22 +132,21 @@ void DemoMovieWithGenre()
 
 Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 {
-	//TODO:+ Зачем новый экземпляр создавать, если можно хранить указатель равный nullptr, если что-то найдётся - его вернуть сразу и всё. Тогда isFound не нужен
 	Movie *maxRaitngMovie = nullptr;
 	maxRaitngMovie->Raiting = 0;
+	//TODO:?
 	bool isFound = false;
 	for (int i = 0; i < count; i++)
 	{
 		if (movies[i].MovieGenre == findGenre)
 		{
-			//TODO:+ Кстати, а почему тут сравнение происходит с первым кино из переданных, а не с i-ым?
 			if (movies[i].Raiting > maxRaitngMovie->Raiting)
 			{
 				*maxRaitngMovie = movies[i];
 			}
 		}
 	}
-		return maxRaitngMovie;
+	return maxRaitngMovie;
 }
 
 int CountMoviesByGenre(Movie* movies, int count, Genre findGenre)
