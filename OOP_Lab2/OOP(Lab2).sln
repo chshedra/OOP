@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OOP(Lab2)", "OOP(Lab2)\OOP(Lab2).vcxproj", "{421026C4-13A3-4A9C-AE04-81A76E3CD695}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Exception", "Exception\Exception.vcxproj", "{C52BF466-B67C-4B28-A713-B3354B42F382}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreatingStructure", "CreatingStructure\CreatingStructure.vcxproj", "{F13F8A41-1A95-4619-ACBA-93499162EC3B}"
@@ -23,14 +21,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{421026C4-13A3-4A9C-AE04-81A76E3CD695}.Debug|x64.ActiveCfg = Debug|x64
-		{421026C4-13A3-4A9C-AE04-81A76E3CD695}.Debug|x64.Build.0 = Debug|x64
-		{421026C4-13A3-4A9C-AE04-81A76E3CD695}.Debug|x86.ActiveCfg = Debug|Win32
-		{421026C4-13A3-4A9C-AE04-81A76E3CD695}.Debug|x86.Build.0 = Debug|Win32
-		{421026C4-13A3-4A9C-AE04-81A76E3CD695}.Release|x64.ActiveCfg = Release|x64
-		{421026C4-13A3-4A9C-AE04-81A76E3CD695}.Release|x64.Build.0 = Release|x64
-		{421026C4-13A3-4A9C-AE04-81A76E3CD695}.Release|x86.ActiveCfg = Release|Win32
-		{421026C4-13A3-4A9C-AE04-81A76E3CD695}.Release|x86.Build.0 = Release|Win32
 		{C52BF466-B67C-4B28-A713-B3354B42F382}.Debug|x64.ActiveCfg = Debug|x64
 		{C52BF466-B67C-4B28-A713-B3354B42F382}.Debug|x64.Build.0 = Debug|x64
 		{C52BF466-B67C-4B28-A713-B3354B42F382}.Debug|x86.ActiveCfg = Debug|Win32
