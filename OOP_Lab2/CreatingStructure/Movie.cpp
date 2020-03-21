@@ -134,14 +134,22 @@ void DemoMovieWithGenre()
 
 Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 {
+	//TODO: Эту переменную можно убрать, т.к. это костыль
 	Movie maxRatingMovie;
 	Movie *maxRaitngMoviePointer = nullptr;
-	//+BUG
 	maxRatingMovie.Raiting = 0;
 	for (int i = 0; i < count; i++)
 	{
 		if (movies[i].MovieGenre == findGenre)
 		{
+			// if (maxRaitingMoviePointer == nullptr)
+			// {
+			//		maxRaitingMoviePoinweter = movies[i];
+			// }
+			// else
+			// {
+			//		вторая ветка с проверками
+			// }
 			if (movies[i].Raiting > maxRatingMovie.Raiting)
 			{
 				maxRatingMovie.Raiting = movies[i].Raiting;
