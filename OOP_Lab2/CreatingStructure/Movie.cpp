@@ -134,7 +134,6 @@ void DemoMovieWithGenre()
 
 Movie* FindBestGenreMovie(Movie* movies, int count, Genre findGenre)
 {
-	//TODO: +Эту переменную можно убрать, т.к. это костыль
 	Movie *maxRatingMovie = nullptr;
 	for (int i = 0; i < count; i++)
 	{
