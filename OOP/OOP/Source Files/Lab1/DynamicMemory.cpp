@@ -98,7 +98,6 @@ void DynamicMemory()
 		}
 		cout << endl;
 	}
-	cout << endl;
 }
 
 void SortArray(double arr[], int size)
@@ -134,7 +133,8 @@ void CountLetter(char arr[], int size)
 	int count = 0;
 	for (int i = 0; i < size; i++)
 	{
-		if ((int)arr[i] > 96 && (int)arr < 123)
+
+		if ((int)arr[i] > 'a' && (int)arr < 'z')
 		{
 			count++;
 		}

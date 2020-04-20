@@ -18,10 +18,25 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Arrays.h" />
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Breakpoints.h" />
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\DynamicMemory.h" />
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Functions.h" />
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Pointers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Arrays.cpp" />
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Breakpoints.cpp" />
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\DynamicMemory.cpp" />
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Functions.cpp" />
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\main.cpp" />
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Pointers.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{D299D2CB-DD0D-4DBF-9849-0C8FDE92A42C}</ProjectGuid>
-    <RootNamespace>OOPLab1</RootNamespace>
+    <ProjectGuid>{1FF52ECE-1873-4C42-959A-6F09B67D3F18}</ProjectGuid>
+    <RootNamespace>OOP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -137,21 +152,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Arrays.cpp" />
-    <ClCompile Include="Breakpoints.cpp" />
-    <ClCompile Include="DynamicMemory.cpp" />
-    <ClCompile Include="Functions.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Pointers.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Array.h" />
-    <ClInclude Include="Breakpoints.h" />
-    <ClInclude Include="DynamicMemory.h" />
-    <ClInclude Include="Functions.h" />
-    <ClInclude Include="Pointers.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

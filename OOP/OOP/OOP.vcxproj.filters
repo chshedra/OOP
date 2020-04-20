@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Lab1">
+      <UniqueIdentifier>{fd462f8b-c352-4fda-b46f-13107545df79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab1">
+      <UniqueIdentifier>{5f04b012-5cd9-48a3-a7c9-58ea2bf571c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Arrays.h">
+      <Filter>Header Files\Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Breakpoints.h">
+      <Filter>Header Files\Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\DynamicMemory.h">
+      <Filter>Header Files\Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Functions.h">
+      <Filter>Header Files\Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Pointers.h">
+      <Filter>Header Files\Lab1</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Arrays.cpp">
+      <Filter>Source Files\Lab1</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Breakpoints.cpp">
+      <Filter>Source Files\Lab1</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\DynamicMemory.cpp">
+      <Filter>Source Files\Lab1</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Functions.cpp">
+      <Filter>Source Files\Lab1</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\main.cpp">
+      <Filter>Source Files\Lab1</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Pointers.cpp">
+      <Filter>Source Files\Lab1</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
