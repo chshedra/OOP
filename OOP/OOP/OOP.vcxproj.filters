@@ -14,47 +14,137 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Header Files\Lab1">
-      <UniqueIdentifier>{36b32afc-908c-4b4d-a32c-a59ef5404a4c}</UniqueIdentifier>
+      <UniqueIdentifier>{c12d6e43-1d77-41f5-b4f3-b00da631e1b2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Lab1">
-      <UniqueIdentifier>{d4061466-6c04-404e-b677-a786ff2b5027}</UniqueIdentifier>
+      <UniqueIdentifier>{c9d7f89e-4e2e-4d34-935d-76ae71926fe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lab2">
+      <UniqueIdentifier>{16372c41-c8cd-45fd-8370-5c233cb97348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab2">
+      <UniqueIdentifier>{cbcd561a-e00d-4c81-931b-d18ce522dcb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Common">
+      <UniqueIdentifier>{5cc6a7d7-c105-40de-91d7-7445d6ee6554}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{da4d35c2-0fc8-43a7-89a7-b19827d4c518}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Breakpoints.h">
+    <ClInclude Include="Lab1\Arrays.h">
       <Filter>Header Files\Lab1</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\DynamicMemory.h">
+    <ClInclude Include="Lab1\Breakpoints.h">
       <Filter>Header Files\Lab1</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Functions.h">
+    <ClInclude Include="Lab1\DynamicMemory.h">
       <Filter>Header Files\Lab1</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Arrays.h">
+    <ClInclude Include="Lab1\Functions.h">
       <Filter>Header Files\Lab1</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Pointers.h">
+    <ClInclude Include="Lab1\Pointers.h">
+      <Filter>Header Files\Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Circle.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Color.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Contact.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\DaysOfTheWeek.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Flight.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Genre.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Movie.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Rectangle.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Seasons.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Smartphones.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Song.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\StudyForm.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Subject.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\Time.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Common.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2Menu.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab1Menu.h">
       <Filter>Header Files\Lab1</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Arrays.cpp">
+    <ClCompile Include="Lab1\Arrays.cpp">
       <Filter>Source Files\Lab1</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Breakpoints.cpp">
+    <ClCompile Include="Lab1\Breakpoints.cpp">
       <Filter>Source Files\Lab1</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\DynamicMemory.cpp">
+    <ClCompile Include="Lab1\DynamicMemory.cpp">
       <Filter>Source Files\Lab1</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Functions.cpp">
+    <ClCompile Include="Lab1\Functions.cpp">
       <Filter>Source Files\Lab1</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\main.cpp">
+    <ClCompile Include="Lab1\Pointers.cpp">
       <Filter>Source Files\Lab1</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Pointers.cpp">
+    <ClCompile Include="Lab2\Circle.cpp">
+      <Filter>Source Files\Lab2</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Enums.cpp">
+      <Filter>Source Files\Lab2</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Flight.cpp">
+      <Filter>Source Files\Lab2</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Movie.cpp">
+      <Filter>Source Files\Lab2</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Common.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Lab2Menu.cpp">
+      <Filter>Source Files\Lab2</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab1\Lab1Menu.cpp">
       <Filter>Source Files\Lab1</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Rectangle.cpp">
+      <Filter>Source Files\Lab2</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\Time.cpp">
+      <Filter>Source Files\Lab2</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

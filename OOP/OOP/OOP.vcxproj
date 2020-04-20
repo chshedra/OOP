@@ -18,6 +18,47 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\Common.h" />
+    <ClInclude Include="Lab1\Arrays.h" />
+    <ClInclude Include="Lab1\Breakpoints.h" />
+    <ClInclude Include="Lab1\DynamicMemory.h" />
+    <ClInclude Include="Lab1\Functions.h" />
+    <ClInclude Include="Lab1\Pointers.h" />
+    <ClInclude Include="Lab2Menu.h" />
+    <ClInclude Include="Lab2\Circle.h" />
+    <ClInclude Include="Lab2\Color.h" />
+    <ClInclude Include="Lab2\Contact.h" />
+    <ClInclude Include="Lab2\DaysOfTheWeek.h" />
+    <ClInclude Include="Lab2\Flight.h" />
+    <ClInclude Include="Lab2\Genre.h" />
+    <ClInclude Include="Lab2\Movie.h" />
+    <ClInclude Include="Lab2\Rectangle.h" />
+    <ClInclude Include="Lab2\Seasons.h" />
+    <ClInclude Include="Lab2\Smartphones.h" />
+    <ClInclude Include="Lab2\Song.h" />
+    <ClInclude Include="Lab2\StudyForm.h" />
+    <ClInclude Include="Lab2\Subject.h" />
+    <ClInclude Include="Lab2\Time.h" />
+    <ClInclude Include="Lab1Menu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\Common.cpp" />
+    <ClCompile Include="Lab1\Arrays.cpp" />
+    <ClCompile Include="Lab1\Breakpoints.cpp" />
+    <ClCompile Include="Lab1\DynamicMemory.cpp" />
+    <ClCompile Include="Lab1\Functions.cpp" />
+    <ClCompile Include="Lab1\Lab1Menu.cpp" />
+    <ClCompile Include="Lab1\Pointers.cpp" />
+    <ClCompile Include="Lab2\Circle.cpp" />
+    <ClCompile Include="Lab2\Enums.cpp" />
+    <ClCompile Include="Lab2\Flight.cpp" />
+    <ClCompile Include="Lab2\Lab2Menu.cpp" />
+    <ClCompile Include="Lab2\Movie.cpp" />
+    <ClCompile Include="Lab2\Rectangle.cpp" />
+    <ClCompile Include="Lab2\Time.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{3C24210F-7982-4F85-A386-85097161182F}</ProjectGuid>
@@ -137,21 +178,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Arrays.h" />
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Breakpoints.h" />
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\DynamicMemory.h" />
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Functions.h" />
-    <ClInclude Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Pointers.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Arrays.cpp" />
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Breakpoints.cpp" />
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\DynamicMemory.cpp" />
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Functions.cpp" />
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\main.cpp" />
-    <ClCompile Include="C:\Users\user\source\repos\OOP(Lab1)\OOP(Lab1)\Pointers.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

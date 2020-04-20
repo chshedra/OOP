@@ -4,11 +4,12 @@
 #include "Functions.h"
 #include "Pointers.h"
 #include "DynamicMemory.h"
+#include "Menu.h"
+#include "../Common/Common.h"
 using namespace std;
 
-int InputValidation();
 
-void main()
+void Lab1Menu()
 {
 	while (true)
 	{
@@ -49,26 +50,4 @@ void main()
 		}
 		}
 	}
-}
-
-int InputValidation()
-{
-	int number = 0;
-
-	while (true)
-	{
-		cin >> number;
-		if (cin.fail())
-		{
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Try again!\n";
-		}
-		else
-		{
-			break;
-		}
-	}
-
-	return number;
 }
