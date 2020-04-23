@@ -1,8 +1,7 @@
-#include "Lab2/Lab2Menu.h"
-//#include "Lab1/Lab1Menu.cpp"
-//#include "Lab2/Lab2Menu.cpp"
+#include "Lab3/Lab3Menu.h"
 
 int main()
 {
-	Lab2Menu();
+	Lab3Menu();
+	return 0;
 }

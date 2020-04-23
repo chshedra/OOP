@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Common">
       <UniqueIdentifier>{da4d35c2-0fc8-43a7-89a7-b19827d4c518}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Lab3">
+      <UniqueIdentifier>{28e68fc0-29a2-4832-874b-56478b15c0e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab3">
+      <UniqueIdentifier>{1e875b2a-37c0-4030-8de7-e6ba80eab6e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab1\Arrays.h">
@@ -60,16 +66,10 @@
     <ClInclude Include="Lab2\DaysOfTheWeek.h">
       <Filter>Header Files\Lab2</Filter>
     </ClInclude>
-    <ClInclude Include="Lab2\Flight.h">
-      <Filter>Header Files\Lab2</Filter>
-    </ClInclude>
     <ClInclude Include="Lab2\Genre.h">
       <Filter>Header Files\Lab2</Filter>
     </ClInclude>
     <ClInclude Include="Lab2\Movie.h">
-      <Filter>Header Files\Lab2</Filter>
-    </ClInclude>
-    <ClInclude Include="Lab2\Rectangle.h">
       <Filter>Header Files\Lab2</Filter>
     </ClInclude>
     <ClInclude Include="Lab2\Seasons.h">
@@ -87,9 +87,6 @@
     <ClInclude Include="Lab2\Subject.h">
       <Filter>Header Files\Lab2</Filter>
     </ClInclude>
-    <ClInclude Include="Lab2\Time.h">
-      <Filter>Header Files\Lab2</Filter>
-    </ClInclude>
     <ClInclude Include="Common\Common.h">
       <Filter>Header Files\Common</Filter>
     </ClInclude>
@@ -98,6 +95,39 @@
     </ClInclude>
     <ClInclude Include="Lab1Menu.h">
       <Filter>Header Files\Lab1</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Book.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Lab3Menu.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Route.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Point.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Rectangle.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\RectangleStruct.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\TimeStruct.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Time.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab2\FlightStruct.h">
+      <Filter>Header Files\Lab2</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Flight.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\SongGenre.h">
+      <Filter>Header Files\Lab3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -122,9 +152,6 @@
     <ClCompile Include="Lab2\Enums.cpp">
       <Filter>Source Files\Lab2</Filter>
     </ClCompile>
-    <ClCompile Include="Lab2\Flight.cpp">
-      <Filter>Source Files\Lab2</Filter>
-    </ClCompile>
     <ClCompile Include="Lab2\Movie.cpp">
       <Filter>Source Files\Lab2</Filter>
     </ClCompile>
@@ -140,11 +167,32 @@
     <ClCompile Include="Lab1\Lab1Menu.cpp">
       <Filter>Source Files\Lab1</Filter>
     </ClCompile>
-    <ClCompile Include="Lab2\Rectangle.cpp">
+    <ClCompile Include="Lab3\Book.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Lab3Menu.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Route.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Rectangle.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\RectangleStruct.cpp">
       <Filter>Source Files\Lab2</Filter>
     </ClCompile>
-    <ClCompile Include="Lab2\Time.cpp">
+    <ClCompile Include="Lab2\TimeStruct.cpp">
       <Filter>Source Files\Lab2</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Time.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab2\FlightStruct.cpp">
+      <Filter>Source Files\Lab2</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Flight.cpp">
+      <Filter>Source Files\Lab3</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

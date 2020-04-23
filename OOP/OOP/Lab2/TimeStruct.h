@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-struct Time
+struct TimeStruct
 {
 	int Hours;
 	int Minutes;

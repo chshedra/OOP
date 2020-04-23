@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-struct Flight
+struct Flights
 {
 	string DeparturePoint;
 	string FinalDestination;
@@ -14,4 +14,4 @@ void AutoFlight();
 void DemoMakeCopyFlight();
 void DemoDynamicFlight();
 void DemoDynamicFlights();
-void FindShortestFlight(Flight* flights, int count);
+void FindShortestFlight(Flights* flights, int count);

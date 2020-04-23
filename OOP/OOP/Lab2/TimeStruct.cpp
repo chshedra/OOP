@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Time.h"
+#include "TimeStruct.h"
 using namespace std;
 
 void DemoTime()
 {
-	Time newTime;
+	TimeStruct newTime;
 
 	newTime.Hours = 4;
 	newTime.Minutes = 45;
@@ -22,7 +22,7 @@ void DemoTime()
 		<< ":" << newTime.Seconds << endl;
 
 	//2.2.4
-	Time* pointer = &newTime;
+	TimeStruct* pointer = &newTime;
 	cout << "Pointer" << endl
 		<< pointer->Hours << " "
 		<< pointer->Minutes << " "
@@ -32,7 +32,7 @@ void DemoTime()
 	pointer->Minutes = 34;
 	pointer->Seconds = 56;
 
-	Time* pointer2 = &newTime;
+	TimeStruct* pointer2 = &newTime;
 
 	cout << "Pointer 1: " << pointer << endl
 		<< "Pointer 2: " << pointer2 << endl;
@@ -41,7 +41,7 @@ void DemoTime()
 void AutoTime()
 {
 	const int size = 3;
-	Time array[size];
+	TimeStruct array[size];
 	for (int i = 0; i < size; i++)
 	{
 		array[i].Hours = 10 + i;
@@ -52,9 +52,9 @@ void AutoTime()
 	}
 }
 
-Time* MakeTime(int hours, int minutes, int seconds)
+TimeStruct* MakeTime(int hours, int minutes, int seconds)
 {
-	Time* time = new Time;
+	TimeStruct* time = new TimeStruct;
 
 	time->Hours = hours;
 	time->Minutes = minutes;
@@ -63,9 +63,9 @@ Time* MakeTime(int hours, int minutes, int seconds)
 	return time;
 }
 
-Time* CopyTime(Time& time)
+TimeStruct* CopyTime(TimeStruct& time)
 {
-	Time* copiedTime = new Time;
+	TimeStruct* copiedTime = new TimeStruct;
 
 	copiedTime->Hours = time.Hours;
 	copiedTime->Minutes = time.Minutes;
@@ -76,9 +76,9 @@ Time* CopyTime(Time& time)
 
 void DemoMakeCopyTime()
 {
-	Time* time = MakeTime(20, 45, 23);
+	TimeStruct* time = MakeTime(20, 45, 23);
 
-	Time* copiedTime = CopyTime(*time);
+	TimeStruct* copiedTime = CopyTime(*time);
 
 	cout << time->Hours << ":" << time->Minutes << ":"
 		<< time->Seconds << endl;

@@ -1,11 +1,12 @@
 #include <iostream>
-#include "Flight.h"
+#include "FlightStruct.h"
 #include "Movie.h"
 #include "Color.h"
-#include "Rectangle.h"
-#include "Time.h"
+#include "RectangleStruct.h"
+#include "TimeStruct.h"
 #include "Lab2Menu.h"
 #include "../Common/Common.h"
+
 
 using namespace std;
 

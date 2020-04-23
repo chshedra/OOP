@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Rectangle.h"
+#include "RectangleStruct.h"
 using namespace std;
 
 void DemoRectangle()

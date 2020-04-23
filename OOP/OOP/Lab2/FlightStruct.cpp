@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Flight.h"
+#include "FlightStruct.h"
 using namespace std;
 
 void DemoFlight()
 {
-	Flight newFlight;
+	Flights newFlight;
 	newFlight.DeparturePoint = "Moscow";
 	newFlight.FinalDestination = "Seul";
 	newFlight.FlightTime = 346;
@@ -21,7 +21,7 @@ void DemoFlight()
 		<< newFlight.FinalDestination << " "
 		<< newFlight.FlightTime << endl;
 	//2.2.4
-	Flight* pointer = &newFlight;
+	Flights* pointer = &newFlight;
 
 	cout << "Pointer" << endl
 		<< pointer->DeparturePoint << " "
@@ -32,7 +32,7 @@ void DemoFlight()
 	pointer->FinalDestination = "Dublin";
 	pointer->FlightTime = 230;
 
-	Flight* pointer2 = &newFlight;
+	Flights* pointer2 = &newFlight;
 
 	cout << "Pointer 1: " << pointer << endl
 		<< "Pointer 2: " << pointer2 << endl;
@@ -41,7 +41,7 @@ void DemoFlight()
 void AutoFlight()
 {
 	const int size = 3;
-	Flight array[size];
+	Flights array[size];
 	for (int i = 0; i < size; i++)
 	{
 		array[i].DeparturePoint = "Point " + i;
@@ -52,10 +52,10 @@ void AutoFlight()
 	}
 }
 
-Flight* MakeFlight(const string &departurePoint, 
+Flights* MakeFlight(const string &departurePoint, 
 	const string &finalDestination, int time)
 {
-	Flight* flight = new Flight();
+	Flights* flight = new Flights();
 
 	flight->DeparturePoint = departurePoint;
 	flight->FinalDestination = finalDestination;
@@ -64,9 +64,9 @@ Flight* MakeFlight(const string &departurePoint,
 	return flight;
 }
 
-Flight* CopyFlight(Flight& flight)
+Flights* CopyFlight(Flights& flight)
 {
-	Flight* copiedFlight = new Flight();
+	Flights* copiedFlight = new Flights();
 
 	copiedFlight->DeparturePoint = flight.DeparturePoint;
 	copiedFlight->FinalDestination = flight.FinalDestination;
@@ -78,9 +78,9 @@ Flight* CopyFlight(Flight& flight)
 void DemoMakeCopyFlight()
 {
 	
-	Flight* flight = MakeFlight("Moscow", "Paris", 126);
+	Flights* flight = MakeFlight("Moscow", "Paris", 126);
 
-	Flight* copyFlight1 = CopyFlight(*flight);
+	Flights* copyFlight1 = CopyFlight(*flight);
 
 	cout << flight->DeparturePoint << "->"
 		<< flight->FinalDestination << " : "
@@ -89,7 +89,7 @@ void DemoMakeCopyFlight()
 
 void DemoDynamicFlight()
 {
-	Flight* dynamicFlight = new Flight;
+	Flights* dynamicFlight = new Flights;
 	dynamicFlight->DeparturePoint = "London";
 	dynamicFlight->FinalDestination = "Dubai";
 	dynamicFlight->FlightTime = 245;
@@ -104,7 +104,7 @@ void DemoDynamicFlight()
 void DemoDynamicFlights()
 {
 	const int count = 3;
-	Flight* dynamicFlights = new Flight[count];
+	Flights* dynamicFlights = new Flights[count];
 
 	dynamicFlights[0].DeparturePoint = "Moscow";
 	dynamicFlights[0].FinalDestination = "Saint-Peterburg";
@@ -130,9 +130,9 @@ void DemoDynamicFlights()
 	delete[] dynamicFlights;
 }
 
-void FindShortestFlight(Flight* flights, int count)
+void FindShortestFlight(Flights* flights, int count)
 {
-	Flight shortFlight;
+	Flights shortFlight;
 	shortFlight.FlightTime = 0;
 	for (int i = 0; i < count; i++)
 	{
