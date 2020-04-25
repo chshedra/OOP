@@ -11,10 +11,12 @@ public:
 	{
 		this->_x = x;
 	}
+
 	void SetY(int y)
 	{
 		this->_y = y;
 	}
+
 	double GetX()
 	{
 		return this->_x;

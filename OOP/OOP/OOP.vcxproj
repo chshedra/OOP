@@ -41,12 +41,15 @@
     <ClInclude Include="Lab2\Subject.h" />
     <ClInclude Include="Lab2\TimeStruct.h" />
     <ClInclude Include="Lab1Menu.h" />
+    <ClInclude Include="Lab3\Album.h" />
+    <ClInclude Include="Lab3\Band.h" />
     <ClInclude Include="Lab3\Book.h" />
     <ClInclude Include="Lab3\Flight.h" />
     <ClInclude Include="Lab3\Lab3Menu.h" />
     <ClInclude Include="Lab3\Point.h" />
     <ClInclude Include="Lab3\Rectangle.h" />
     <ClInclude Include="Lab3\Route.h" />
+    <ClInclude Include="Lab3\Song.h" />
     <ClInclude Include="Lab3\SongGenre.h" />
     <ClInclude Include="Lab3\Time.h" />
   </ItemGroup>
@@ -65,11 +68,15 @@
     <ClCompile Include="Lab2\Movie.cpp" />
     <ClCompile Include="Lab2\RectangleStruct.cpp" />
     <ClCompile Include="Lab2\TimeStruct.cpp" />
+    <ClCompile Include="Lab3\Album.cpp" />
+    <ClCompile Include="Lab3\Band.cpp" />
     <ClCompile Include="Lab3\Book.cpp" />
     <ClCompile Include="Lab3\Flight.cpp" />
     <ClCompile Include="Lab3\Lab3Menu.cpp" />
+    <ClCompile Include="Lab3\Point.cpp" />
     <ClCompile Include="Lab3\Rectangle.cpp" />
     <ClCompile Include="Lab3\Route.cpp" />
+    <ClCompile Include="Lab3\Song.cpp" />
     <ClCompile Include="Lab3\Time.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

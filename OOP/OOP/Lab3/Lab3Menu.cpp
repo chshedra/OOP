@@ -8,7 +8,8 @@ void Lab3Menu()
 		cout << "1.DemoBook" << endl
 			<< "2.DemoRoute" << endl
 			<< "3.DemoRectangleWithPoint" << endl
-			<< "4.DemoFlightWithTime" << endl;
+			<< "4.DemoFlightWithTime" << endl
+			<< "5.DemoBand" << endl;
 		int choice = InputValidation();
 		switch (choice)
 		{
@@ -30,6 +31,11 @@ void Lab3Menu()
 			case 4:
 			{
 				DemoFlightWithTime();
+				break;
+			}
+			case 5:
+			{
+				DemoBand();
 				break;
 			}
 			default:

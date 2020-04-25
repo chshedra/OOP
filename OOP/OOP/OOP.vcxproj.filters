@@ -129,6 +129,15 @@
     <ClInclude Include="Lab3\SongGenre.h">
       <Filter>Header Files\Lab3</Filter>
     </ClInclude>
+    <ClInclude Include="Lab3\Song.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Album.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Band.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab1\Arrays.cpp">
@@ -192,6 +201,18 @@
       <Filter>Source Files\Lab2</Filter>
     </ClCompile>
     <ClCompile Include="Lab3\Flight.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Song.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Album.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Band.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Point.cpp">
       <Filter>Source Files\Lab3</Filter>
     </ClCompile>
   </ItemGroup>

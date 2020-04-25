@@ -1,5 +1,5 @@
 #include "Flight.h"
-
+#include <string>
 
 void Flight::SetFlightNumber(string flightNumber)
 {
@@ -83,10 +83,10 @@ void DemoFlightWithTime()
 
 	for (int i = 0; i < size; i++)
 	{
-		
-		flights[i].SetFlightNumber("S105");
-		flights[i].SetDeparturePoint("Moscow" + i);
-		flights[i].SetDestination("Tomsk" + i);
+		string writeI = std::to_string(i);
+		flights[i].SetFlightNumber("S105" + writeI);
+		flights[i].SetDeparturePoint("Moscow" + writeI);
+		flights[i].SetDestination("Tomsk" + writeI);
 		Time departureTime(2020, 1 + i, 10 + i, 12 + i, 30 + i);
 		flights[i].SetDepartureTime(departureTime);
 		Time arriveTime(2020, 1 + i, 10 + i, 16 + i, 59 - i);

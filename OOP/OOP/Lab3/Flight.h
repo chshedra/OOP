@@ -11,6 +11,7 @@ private:
 	string _destination;
 	Time _arriveTime;
 	Time _departureTime;
+
 public:
 	void SetFlightNumber(string flightNumber);
 	void SetDeparturePoint(string departurePoint);
@@ -24,11 +25,11 @@ public:
 	Time GetDepartureTime();
 	Time GetArriveTime();
 
+	Time GetFlightTimeMinutes();
 
 	Flight();
 	Flight(string flightNumber, string departurePoint, string destination,
 		Time arriveTime, Time departureTime);
-	Time GetFlightTimeMinutes();
 };
 
 void DemoFlightWithTime();
