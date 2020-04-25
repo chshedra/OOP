@@ -1,4 +1,6 @@
 #include "Rectangle.h"
+#include <iostream>
+using namespace std;
 
 void Rectangle::SetLength(double length)
 {
@@ -18,13 +20,40 @@ void Rectangle::SetWidth(double width)
 	this->_width = width;
 }
 
-
 void Rectangle::SetCenter(double x, double y)
 {
-	_center.SetX(x);
-	_center.SetY(y);
+	this->_center.SetX(x);
+	this->_center.SetY(y);
 }
 
+double Rectangle::GetLength()
+{
+	return this->_length;
+}
+
+double Rectangle::GetWidth()
+{
+	return this->_width;
+}
+
+Point Rectangle::GetCenter()
+{
+	return this->_center;
+}
+
+Rectangle::Rectangle()
+{
+	this->SetLength(0.0);
+	this->SetWidth(0.0);
+	this->SetCenter(0.0, 0.0);
+}
+
+Rectangle::Rectangle(double length, double width, double x, double y)
+{
+	this->SetLength(length);
+	this->SetWidth(width);
+	this->SetCenter(x, y);
+}
 
 void DemoRectangleWithPoint()
 {
@@ -40,18 +69,18 @@ void DemoRectangleWithPoint()
 
 	for (int i = 0; i < size; i++)
 	{
-		cout << "X:" << rectangles[i].GetX() << "; "
-			<< "Y:" << rectangles[i].GetY() << "; ";
-		cout << "Length:" << rectangles[i].GetLength() << "; ";
-		cout << "Width:" << rectangles[i].GetWidth() << endl;
+		cout << "X:" << rectangles[i].GetCenter().GetX() << "; "
+			 << "Y:" << rectangles[i].GetCenter().GetY() << "; "
+			 << "Length:" << rectangles[i].GetLength() << "; "
+			 << "Width:" << rectangles[i].GetWidth() << endl;
 	}
 
 	double averageCenterX = 0;
 	double averageCenterY = 0;
 	for (int i = 0; i < size; i++)
 	{
-		averageCenterX += rectangles[i].GetX();
-		averageCenterY += rectangles[i].GetY();
+		averageCenterX += rectangles[i].GetCenter().GetX();
+		averageCenterY += rectangles[i].GetCenter().GetY();
 	}
 
 	cout << "Xcenter = " << averageCenterX / size

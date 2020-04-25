@@ -38,8 +38,6 @@ Band::Band(string bandName, string description, Album* albums)
 	this->SetBandName(bandName);
 	this->SetDescription(description);
 	this->SetAlbums(albums);
-
-
 }
 
 Song* Band::FindSong(string songTitle)
@@ -82,21 +80,23 @@ Song* Band::GetAllSongs(Band* band, int& allSongsCount)
 	{
 		return nullptr;
 	}
+
 	allSongsCount = 0;
-	for (int i = 0; i < this->GetCountAlbum(); i++)
+	for (int i = 0; i < this->GetCountAlbum(); i++)//подсчет всех песен
 	{
 		allSongsCount += this->_albums->GetCountSongs();
 	}
 
 	Song* allSongs = new Song[allSongsCount];
-	for (int i = 0; i < this->GetCountAlbum(); i++)
+	for (int i = 0; i < this->GetCountAlbum(); i++)//копирование значений в одномерный массив
 	{
 		for (int j = 0; j < this->_albums->GetCountSongs(); j++)
 		{
-			allSongs[i * this->_albums->GetCountSongs() + j] = 
+			allSongs[i * this->_albums->GetCountSongs() + j] =  
 				this->_albums[i].GetSongs()[j];
 		}
 	}
+
 	return allSongs;
 }
 
@@ -105,7 +105,7 @@ void DemoBand()
 	const int countAlbum = 3;
 	const int countSong = 4;
 	Song** songs = new Song*[countAlbum];
-
+	// двумерный массив песен, i-кол-во альбомов, j-кол-во песен в i-том альбоме
 	for (int i = 0; i < countAlbum; i++)
 	{
 		songs[i] = new Song[countSong];
@@ -118,6 +118,7 @@ void DemoBand()
 			songs[i][j].SetGenre(Rock);
 		}
 	}
+
 	Album* albums = new Album[countAlbum];
 	albums->SetCountSongs(countSong);
 	for (int i = 0; i < countAlbum; i++)
@@ -133,6 +134,7 @@ void DemoBand()
 	band->SetDescription("LinkinPark - description");
 	band->SetAlbums(albums);
 	band->SetCountAlbum(countAlbum);
+
 	cout << "Введите название искомой песни: ";
 	string songTitle;
 	cin >> songTitle;
@@ -141,7 +143,7 @@ void DemoBand()
 	{
 		cout << findedSong->GetSongTitle() << " time:"
 			<< findedSong->GetTiming() << " minutes; genre:";
-			WriteSongGenre(findedSong->GetSongGenre());
+		WriteSongGenre(findedSong->GetSongGenre());
 		cout << endl;
 	}
 	else
@@ -160,13 +162,13 @@ void DemoBand()
 		cout << "Альбом с данной песней  не найден";
 	}
 
-	
 	int countAllSongs = 0;
 	Song* allSongs = band->GetAllSongs(band, countAllSongs);
 	for (int i = 0; i < countAllSongs; i++)
 	{
 		cout << allSongs[i].GetSongTitle() << endl;
 	}
+
 	delete[] songs;
 	delete[] allSongs;
 }

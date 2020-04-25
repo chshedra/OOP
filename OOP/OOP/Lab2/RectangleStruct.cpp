@@ -4,11 +4,11 @@ using namespace std;
 
 void DemoRectangle()
 {
-	Rectangle object;
+	RectangleStruct object;
 	object.Length = 3.5;
 	object.Width = 7.99;
 	object.Color = "Red";
-	Rectangle newRectangle;
+	RectangleStruct newRectangle;
 
 	cout << "RECTANGLE" << endl;
 	cout << "Enter the length: ";
@@ -23,7 +23,7 @@ void DemoRectangle()
 	cout << endl;
 
 	//2.2.4
-	Rectangle* pointer = &object;
+	RectangleStruct* pointer = &object;
 	cout << "Pointer" << endl
 		<< pointer->Length << " "
 		<< pointer->Width << " "
@@ -33,7 +33,7 @@ void DemoRectangle()
 	pointer->Width = 34.7;
 	pointer->Color = "Blue";
 
-	Rectangle* pointer2 = &object;
+	RectangleStruct* pointer2 = &object;
 
 	cout << "Pointer 1: " << pointer << endl
 		<< "Pointer 2: " << pointer2 << endl;
@@ -50,7 +50,7 @@ void DemoRectangle()
 void AutoRectangle()
 {
 	const int size = 3;
-	Rectangle array[size];
+	RectangleStruct array[size];
 	for (int i = 0; i < size; i++)
 	{
 		array[i].Length = 1.5 + i;
@@ -65,13 +65,13 @@ void AutoRectangle()
 	FindMaxRectangle(array, size);
 }
 
-void WriteRectangle(Rectangle& rectangle)
+void WriteRectangle(RectangleStruct& rectangle)
 {
 	cout << "Length: " << rectangle.Length << endl
 		<< "Width: " << rectangle.Width << endl;
 }
 
-void ReadRectangle(Rectangle& rectangle)
+void ReadRectangle(RectangleStruct& rectangle)
 {
 	cout << "Enter the length: ";
 	cin >> rectangle.Length;
@@ -79,7 +79,7 @@ void ReadRectangle(Rectangle& rectangle)
 	cin >> rectangle.Width;
 }
 
-void DemoWriteAndReadRectangle(Rectangle& rectangle)
+void DemoWriteAndReadRectangle(RectangleStruct& rectangle)
 {
 	const int count = 3;
 	for (int i = 0; i < count; i++)
@@ -93,9 +93,9 @@ void DemoWriteAndReadRectangle(Rectangle& rectangle)
 	}
 }
 
-void Exchange(Rectangle& rectangle1, Rectangle& rectangle2)
+void Exchange(RectangleStruct& rectangle1, RectangleStruct& rectangle2)
 {
-	Rectangle exchange;
+	RectangleStruct exchange;
 	exchange.Length = rectangle1.Length;
 	exchange.Width = rectangle1.Width;
 
@@ -106,9 +106,9 @@ void Exchange(Rectangle& rectangle1, Rectangle& rectangle2)
 	rectangle2.Width = exchange.Width;
 }
 
-void FindRectangle(Rectangle* rectangles, int count)
+void FindRectangle(RectangleStruct* rectangles, int count)
 {
-	Rectangle max;
+	RectangleStruct max;
 	max.Length = 0;
 	for (int i = 0; i < count; i++)
 	{
@@ -121,9 +121,9 @@ void FindRectangle(Rectangle* rectangles, int count)
 	WriteRectangle(max);
 }
 
-void FindMaxRectangle(Rectangle* rectangles, int count)
+void FindMaxRectangle(RectangleStruct* rectangles, int count)
 {
-	Rectangle max;
+	RectangleStruct max;
 	const double maxSquare = 0;
 	for (int i = 0; i < count; i++)
 	{

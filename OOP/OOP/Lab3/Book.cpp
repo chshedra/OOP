@@ -2,7 +2,7 @@
 
 void DemoBook()
 {
-	const int size = 3;
+	const int size = 1;
 	Book books[size];
 	for (int i = 0; i < size; i++)
 	{
@@ -12,6 +12,7 @@ void DemoBook()
 	{
 		WriteBookToConsole(books[i]);
 	}
+
 	cout << "Введите автора для поиска книги: ";
 	string author;
 	cin >> author;
@@ -29,7 +30,8 @@ void DemoBook()
 void ReadBookFromConsole(Book& book)
 {
 	cout << "Введите название книги: ";
-	cin.ignore();
+	cin.ignore(); //игнорируетя /n 
+	//используется getline для возможности вводитьстроку с пробелом
 	getline(cin, book.Title);
 	cout << "Введите год издания: ";
 	cin >> book.PublicationYear;
@@ -43,8 +45,9 @@ void ReadBookFromConsole(Book& book)
 			<< " Попробуйте ещё раз: ";
 		cin >> book.AuthorNumber;
 	}
+
 	book.Authors = new string[book.AuthorNumber];
-	cin.ignore();
+	cin.ignore(); 
 	for (int i = 0; i < book.AuthorNumber; i++)
 	{
 		cout << "Введите автора №" << i + 1 << ":";
@@ -57,6 +60,7 @@ void WriteBookToConsole(Book& book)
 	for (int i = 0; i < book.AuthorNumber; i++)
 	{
 		cout << book.Authors[i];
+		// после последнего автора ставим "."
 		if (i + 1 != book.AuthorNumber)
 		{
 			cout << ", ";

@@ -1,6 +1,5 @@
 #include "Album.h"
 
-
 void Album::SetAlbumTitle(string AlbumTitle)
 {
 	this->_albumTitle = AlbumTitle;

@@ -34,8 +34,6 @@ SongGenre Song::GetSongGenre()
 	return this->_genre;
 }
 
-
-
 Song::Song()
 {
 	this->SetSongTitle(" ");
@@ -50,6 +48,7 @@ Song::Song(string songTitle, double songTiming, SongGenre genre)
 	this->SetGenre(genre);
 }
 
+// вывод значений перечисления на экран
 void WriteSongGenre(SongGenre genre)
 {
 	switch (genre)

@@ -29,12 +29,15 @@ void DemoRoute()
 void ReadRouteFromConsole(Route& route)
 {
 	cout << "Введите номер маршрута: ";
-	cin.ignore();
+	cin.ignore(); // игнорируется /n
 	getline(cin, route.Number);
+
 	cout << "Введите время пути: ";
 	cin >> route.Timing;
+
 	cout << "Введите частоту выезда: ";
 	cin >> route.Frequency;
+
 	cout << "Введите количество остановок: ";
 	cin >> route.StopsNumber;
 
@@ -49,14 +52,13 @@ void ReadRouteFromConsole(Route& route)
 
 void WriteRouteToConsole(Route& route)
 {
-	cout << "Маршрут №" << route.Number;
-	cout << ", время в пути:" << route.Timing;
-	cout << ", частота следования: " << route.Frequency << endl;
+	cout << "Маршрут №" << route.Number
+		 << ", время в пути:" << route.Timing
+		 << ", частота следования: " << route.Frequency << endl;
 	cout << "Остановки: ";
 	for (int i = 0; i < route.StopsNumber; i++)
 	{
 		cout << route.BusStops[i] << endl;
-		
 	}
 	
 }

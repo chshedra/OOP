@@ -155,7 +155,7 @@ void ManuallyStructuresMenu()
 
 void FunctionsMenu()
 {
-	Rectangle rectangle;
+	RectangleStruct rectangle;
 	while (true)
 	{
 		cout << "Enter the point from the menu:" << endl

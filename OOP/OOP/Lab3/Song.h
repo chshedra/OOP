@@ -12,19 +12,14 @@ private:
 	
 public:
 	void SetSongTitle(string songTitle);
-
 	void SetSongTiming(double songTiming);
-
 	void SetGenre(SongGenre genre);
 
 	double GetTiming();
-
 	string GetSongTitle();
-
 	SongGenre GetSongGenre();
 
 	Song();
-
 	Song(string songTitle, double songTiming, SongGenre genre);
 };
 

@@ -9,7 +9,8 @@ void Lab3Menu()
 			<< "2.DemoRoute" << endl
 			<< "3.DemoRectangleWithPoint" << endl
 			<< "4.DemoFlightWithTime" << endl
-			<< "5.DemoBand" << endl;
+			<< "5.DemoBand" << endl
+			<< "6. Выход" << endl;
 		int choice = InputValidation();
 		switch (choice)
 		{
@@ -38,13 +39,14 @@ void Lab3Menu()
 				DemoBand();
 				break;
 			}
+			case 6:
+			{
+				exit(0);
+			}
 			default:
 			{
 				cout << "Выберите правильный пункт меню!" << endl;
 			}
-		}
-			
-			
-				
+		}			
 	}
 }

@@ -21,9 +21,8 @@ public:
 	int GetHour();
 	int GetMinute();
 
-	bool operator>(Time) const;
-
-	Time operator-(Time) const;
+	bool operator>(Time) const; //перегруженный оператор сравнения для сеттера SetArriveTime
+	Time operator-(Time) const; //перегруженный оператор вычитания для функции GetFlightTimeMinutes
 
 	Time();
 	Time(int year, int month, int day, int hour, int minute);

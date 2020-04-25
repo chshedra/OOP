@@ -35,7 +35,7 @@ Flight::Flight()
 	this->SetFlightNumber(" ");
 	this->SetDeparturePoint(" ");
 	this->SetDestination(" ");
-	Time arriveTime;
+	Time arriveTime; // вызов конструктора без параметров
 	this->SetArriveTime(arriveTime);
 	Time departureTime;
 	this->SetDepartureTime(departureTime);
