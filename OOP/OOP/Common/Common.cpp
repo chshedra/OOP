@@ -13,7 +13,7 @@ int InputValidation()
 		{
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "try again!\n";
+			cout << "Try again!\n";
 		}
 		else
 		{
@@ -22,3 +22,4 @@ int InputValidation()
 	}
 	return number;
 }
+

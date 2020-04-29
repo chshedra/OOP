@@ -141,10 +141,7 @@ void DemoBand()
 	Song* findedSong = band->FindSong(songTitle);
 	if (findedSong)
 	{
-		cout << findedSong->GetSongTitle() << " time:"
-			<< findedSong->GetTiming() << " minutes; genre:";
-		WriteSongGenre(findedSong->GetSongGenre());
-		cout << endl;
+		cout << *findedSong << endl;
 	}
 	else
 	{
@@ -164,10 +161,6 @@ void DemoBand()
 
 	int countAllSongs = 0;
 	Song* allSongs = band->GetAllSongs(band, countAllSongs);
-	for (int i = 0; i < countAllSongs; i++)
-	{
-		cout << allSongs[i].GetSongTitle() << endl;
-	}
 
 	delete[] songs;
 	delete[] allSongs;

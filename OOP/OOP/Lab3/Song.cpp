@@ -48,6 +48,14 @@ Song::Song(string songTitle, double songTiming, SongGenre genre)
 	this->SetGenre(genre);
 }
 
+ostream& operator<<(ostream& writeSong, Song& song)
+{
+	writeSong << song._songTitle << " Time:"
+		<< song._songTiming << "; Genre:";
+	WriteSongGenre(song._genre);
+	return writeSong;
+}
+
 // вывод значений перечисления на экран
 void WriteSongGenre(SongGenre genre)
 {

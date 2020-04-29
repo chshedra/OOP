@@ -21,6 +21,9 @@ public:
 
 	Song();
 	Song(string songTitle, double songTiming, SongGenre genre);
+
+	//оператор вывода песни на экран
+	friend ostream& operator<<(ostream& writeSong, Song& song);  
 };
 
 void WriteSongGenre(SongGenre genre);

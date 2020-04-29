@@ -29,14 +29,17 @@ void DemoBook()
 
 void ReadBookFromConsole(Book& book)
 {
-	cout << "¬ведите название книги: ";
 	cin.ignore(); //игнорирует€ /n 
+	cout << "¬ведите название книги: ";
 	//используетс€ getline дл€ возможности вводитьстроку с пробелом
 	getline(cin, book.Title);
+	cin.clear();
 	cout << "¬ведите год издани€: ";
 	cin >> book.PublicationYear;
+	cin.clear();
 	cout << "¬ведите количество страниц: ";
 	cin >> book.Page;
+	cin.clear();
 	cout << "¬ведите количество авторов: ";
 	cin >> book.AuthorNumber;
 	while (book.AuthorNumber > 10 || book.AuthorNumber < 1)
@@ -51,7 +54,8 @@ void ReadBookFromConsole(Book& book)
 	for (int i = 0; i < book.AuthorNumber; i++)
 	{
 		cout << "¬ведите автора є" << i + 1 << ":";
-		getline(cin, book.Authors[i]);
+		//getline(cin, book.Authors[i]);
+		cin >> book.Authors[i];
 	}
 }
 
