@@ -95,27 +95,23 @@ void DemoFlightWithTime()
 
 	for (int i = 0; i < size; i++)
 	{
-		cout << flights[i].GetFlightNumber() << " "
-			<< flights[i].GetDeparturePoint() << "-"
-
-			<< flights[i].GetDestination() << " Вылет: "
-			<< flights[i].GetDepartureTime().GetDay() << "."
-			<< flights[i].GetDepartureTime().GetMonth() << "."
-			<< flights[i].GetDepartureTime().GetYear() << "  "
-			<< flights[i].GetDepartureTime().GetHour() << ":"
-			<< flights[i].GetDepartureTime().GetMinute() << " Прилет: "
-
-			<< flights[i].GetArriveTime().GetDay() << "."
-			<< flights[i].GetArriveTime().GetMonth() << "."
-			<< flights[i].GetArriveTime().GetYear() << "  "
-			<< flights[i].GetArriveTime().GetHour() << ":"
-			<< flights[i].GetArriveTime().GetMinute() << " Время в пути: "
-			<< flights[i].GetFlightTimeMinutes().GetHour() << "ч"
-			<< flights[i].GetFlightTimeMinutes().GetMinute() << "мин" << endl;
+		cout << flights[i] << endl;
 	}
 }
 
 Time Flight::GetFlightTimeMinutes()
 {
 	return  _arriveTime - _departureTime;
+}
+
+ostream& operator<<(ostream& writeFlight, Flight& flight)
+{
+	Time getTime = flight.GetFlightTimeMinutes();
+	writeFlight << flight._flightNumber << " " << flight._departurePoint
+		<< "-" << flight._destination
+		<< " Вылет: " << flight._departureTime
+		<< "  Прилет: " << flight._arriveTime
+		<< "  Время полета: " << getTime ;
+
+	return writeFlight;
 }

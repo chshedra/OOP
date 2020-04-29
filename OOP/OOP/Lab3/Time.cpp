@@ -143,3 +143,11 @@ Time Time::operator-(Time time) const
 	return Time(year, month, day, hour, minute);
 }
 
+ostream& operator<<(ostream& writeTime, Time& time)
+{
+	writeTime << time._day << "/" << time._month << "/"
+		<< time._year << " " << time._hour << ":" << time._minute;
+
+	return writeTime;
+}
+

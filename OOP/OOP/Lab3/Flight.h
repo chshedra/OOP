@@ -27,6 +27,8 @@ public:
 
 	Time GetFlightTimeMinutes();
 
+	friend ostream& operator<<(ostream& writeFlight, Flight& flight);
+
 	Flight();
 	Flight(string flightNumber, string departurePoint, string destination,
 		Time arriveTime, Time departureTime);

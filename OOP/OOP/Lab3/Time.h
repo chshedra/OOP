@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using namespace std;
 
 class Time
 {
@@ -21,8 +23,12 @@ public:
 	int GetHour();
 	int GetMinute();
 
-	bool operator>(Time) const; //перегруженный оператор сравнения для сеттера SetArriveTime
-	Time operator-(Time) const; //перегруженный оператор вычитания для функции GetFlightTimeMinutes
+	//перегруженный оператор сравнения для сеттера SetArriveTime
+	bool operator>(Time) const;
+	//перегруженный оператор вычитания для функции GetFlightTimeMinutes
+	Time operator-(Time) const; 
+	//перегруженный оператор вывода объекта класса Time
+	friend ostream& operator<<(ostream& writeTime, Time& time);
 
 	Time();
 	Time(int year, int month, int day, int hour, int minute);
