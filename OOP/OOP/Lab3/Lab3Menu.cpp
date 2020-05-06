@@ -10,7 +10,7 @@ void Lab3Menu()
 			<< "3.DemoRectangleWithPoint" << endl
 			<< "4.DemoFlightWithTime" << endl
 			<< "5.DemoBand" << endl
-			<< "6. Âûõîä" << endl;
+			<< "6. Ð’Ñ‹Ñ…Ð¾Ð´" << endl;
 		int choice = InputValidation();
 		switch (choice)
 		{
@@ -45,7 +45,7 @@ void Lab3Menu()
 			}
 			default:
 			{
-				cout << "Âûáåðèòå ïðàâèëüíûé ïóíêò ìåíþ!" << endl;
+				cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ð¹ Ð¿ÑƒÐ½ÐºÑ‚ Ð¼ÐµÐ½ÑŽ!" << endl;
 			}
 		}			
 	}

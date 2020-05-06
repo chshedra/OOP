@@ -22,7 +22,7 @@ public:
 	Song();
 	Song(string songTitle, double songTiming, SongGenre genre);
 
-	//оператор вывода песни на экран
+	//РѕРїРµСЂР°С‚РѕСЂ РІС‹РІРѕРґР° РїРµСЃРЅРё РЅР° СЌРєСЂР°РЅ
 	friend ostream& operator<<(ostream& writeSong, Song& song);  
 };
 

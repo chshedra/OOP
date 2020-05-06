@@ -12,13 +12,13 @@ void DemoRoute()
 	{
 		WriteRouteToConsole(routes[i]);
 	}
-	cout << "Ââåäèòå îñòàíîâêó äëÿ ïîèñêà ìàðøðóòà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÑƒ Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ° Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð°: ";
 	string author;
 	cin >> author;
 	int index = FindRouteByStop(routes, size, author);
 	if (index == -1)
 	{
-		cout << "Ìàðøðóò íå íàéäåí" << endl;
+		cout << "ÐœÐ°Ñ€ÑˆÑ€ÑƒÑ‚ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½" << endl;
 	}
 	else
 	{
@@ -28,34 +28,34 @@ void DemoRoute()
 
 void ReadRouteFromConsole(Route& route)
 {
-	cout << "Ââåäèòå íîìåð ìàðøðóòà: ";
-	cin.ignore(); // èãíîðèðóåòñÿ /n
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚Ð°: ";
+	cin.ignore(); // Ð¸Ð³Ð½Ð¾Ñ€Ð¸Ñ€ÑƒÐµÑ‚ÑÑ /n
 	getline(cin, route.Number);
 
-	cout << "Ââåäèòå âðåìÿ ïóòè: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ€ÐµÐ¼Ñ Ð¿ÑƒÑ‚Ð¸: ";
 	cin >> route.Timing;
 
-	cout << "Ââåäèòå ÷àñòîòó âûåçäà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ñƒ Ð²Ñ‹ÐµÐ·Ð´Ð°: ";
 	cin >> route.Frequency;
 
-	cout << "Ââåäèòå êîëè÷åñòâî îñòàíîâîê: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¾ÑÑ‚Ð°Ð½Ð¾Ð²Ð¾Ðº: ";
 	cin >> route.StopsNumber;
 
 	route.BusStops = new string[route.StopsNumber];
 	cin.ignore();
 	for (int i = 0; i < route.StopsNumber; i++)
 	{
-		cout << "Ââåäèòå àâòîðà ¹" << i + 1 << ":";
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ð²Ñ‚Ð¾Ñ€Ð° â„–" << i + 1 << ":";
 		getline(cin, route.BusStops[i]);
 	}
 }
 
 void WriteRouteToConsole(Route& route)
 {
-	cout << "Ìàðøðóò ¹" << route.Number
-		 << ", âðåìÿ â ïóòè:" << route.Timing
-		 << ", ÷àñòîòà ñëåäîâàíèÿ: " << route.Frequency << endl;
-	cout << "Îñòàíîâêè: ";
+	cout << "ÐœÐ°Ñ€ÑˆÑ€ÑƒÑ‚ â„–" << route.Number
+		 << ", Ð²Ñ€ÐµÐ¼Ñ Ð² Ð¿ÑƒÑ‚Ð¸:" << route.Timing
+		 << ", Ñ‡Ð°ÑÑ‚Ð¾Ñ‚Ð° ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ð½Ð¸Ñ: " << route.Frequency << endl;
+	cout << "ÐžÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ¸: ";
 	for (int i = 0; i < route.StopsNumber; i++)
 	{
 		cout << route.BusStops[i] << endl;

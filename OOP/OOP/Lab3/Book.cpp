@@ -13,13 +13,13 @@ void DemoBook()
 		WriteBookToConsole(books[i]);
 	}
 
-	cout << "Ââåäèòå àâòîðà äëÿ ïîèñêà êíèãè: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ð²Ñ‚Ð¾Ñ€Ð° Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ° ÐºÐ½Ð¸Ð³Ð¸: ";
 	string author;
 	cin >> author;
 	int index = FindBookByAuthor(books, size, author);
 	if (index == -1)
 	{
-		cout << "Êíèãà íå íàéäåíà" << endl;
+		cout << "ÐšÐ½Ð¸Ð³Ð° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°" << endl;
 	}
 	else
 	{
@@ -29,23 +29,23 @@ void DemoBook()
 
 void ReadBookFromConsole(Book& book)
 {
-	cin.ignore(); //èãíîðèðóåòÿ /n 
-	cout << "Ââåäèòå íàçâàíèå êíèãè: ";
-	//èñïîëüçóåòñÿ getline äëÿ âîçìîæíîñòè ââîäèòüñòðîêó ñ ïðîáåëîì
+	cin.ignore(); //Ð¸Ð³Ð½Ð¾Ñ€Ð¸Ñ€ÑƒÐµÑ‚Ñ /n 
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ ÐºÐ½Ð¸Ð³Ð¸: ";
+	//Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐµÑ‚ÑÑ getline Ð´Ð»Ñ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚Ð¸ Ð²Ð²Ð¾Ð´Ð¸Ñ‚ÑŒÑÑ‚Ñ€Ð¾ÐºÑƒ Ñ Ð¿Ñ€Ð¾Ð±ÐµÐ»Ð¾Ð¼
 	getline(cin, book.Title);
 	cin.clear();
-	cout << "Ââåäèòå ãîä èçäàíèÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´ Ð¸Ð·Ð´Ð°Ð½Ð¸Ñ: ";
 	cin >> book.PublicationYear;
 	cin.clear();
-	cout << "Ââåäèòå êîëè÷åñòâî ñòðàíèö: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†: ";
 	cin >> book.Page;
 	cin.clear();
-	cout << "Ââåäèòå êîëè÷åñòâî àâòîðîâ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€Ð¾Ð²: ";
 	cin >> book.AuthorNumber;
 	while (book.AuthorNumber > 10 || book.AuthorNumber < 1)
 	{
-		cout << "Êîëè÷åñòâî àâòîðîâ äîëæíî áûòü ìåíüøå 10!"
-			<< " Ïîïðîáóéòå åù¸ ðàç: ";
+		cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€Ð¾Ð² Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±Ñ‹Ñ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ 10!"
+			<< " ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ñ‘ Ñ€Ð°Ð·: ";
 		cin >> book.AuthorNumber;
 	}
 
@@ -53,9 +53,9 @@ void ReadBookFromConsole(Book& book)
 	cin.ignore(); 
 	for (int i = 0; i < book.AuthorNumber; i++)
 	{
-		cout << "Ââåäèòå àâòîðà ¹" << i + 1 << ":";
-		//getline(cin, book.Authors[i]);
-		cin >> book.Authors[i];
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð°Ð²Ñ‚Ð¾Ñ€Ð° â„–" << i + 1 << ":";
+		getline(cin, book.Authors[i]);
+
 	}
 }
 
@@ -64,7 +64,7 @@ void WriteBookToConsole(Book& book)
 	for (int i = 0; i < book.AuthorNumber; i++)
 	{
 		cout << book.Authors[i];
-		// ïîñëå ïîñëåäíåãî àâòîðà ñòàâèì "."
+		// Ð¿Ð¾ÑÐ»Ðµ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÐµÐ³Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€Ð° ÑÑ‚Ð°Ð²Ð¸Ð¼ "."
 		if (i + 1 != book.AuthorNumber)
 		{
 			cout << ", ";

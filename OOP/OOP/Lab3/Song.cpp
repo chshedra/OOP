@@ -9,7 +9,7 @@ void Song::SetSongTiming(double songTiming)
 {
 	if (songTiming < 0)
 	{
-		throw("Çíà÷åíèå âðåìåíè ïåñíè íå ìîæåò áûòü îòðèöàòåëüíûì");
+		throw("Ð—Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð²Ñ€ÐµÐ¼ÐµÐ½Ð¸ Ð¿ÐµÑÐ½Ð¸ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼");
 	}
 	this->_songTiming = songTiming;
 }
@@ -56,7 +56,7 @@ ostream& operator<<(ostream& writeSong, Song& song)
 	return writeSong;
 }
 
-// âûâîä çíà÷åíèé ïåðå÷èñëåíèÿ íà ýêðàí
+// Ð²Ñ‹Ð²Ð¾Ð´ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹ Ð¿ÐµÑ€ÐµÑ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ñ Ð½Ð° ÑÐºÑ€Ð°Ð½
 void WriteSongGenre(SongGenre genre)
 {
 	switch (genre)

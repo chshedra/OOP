@@ -6,7 +6,7 @@ void Rectangle::SetLength(double length)
 {
 	if (length < 0)
 	{
-		throw("Äëèíà íå ìîæåò áûòü îòðèöàòåëüíîé");
+		throw("Ð”Ð»Ð¸Ð½Ð° Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ð¹");
 	}
 	this->_length = length;
 }
@@ -15,7 +15,7 @@ void Rectangle::SetWidth(double width)
 {
 	if (width < 0)
 	{
-		throw("Øèðèíà íå ìîæåò áûòü îòðèöàòåëüíîé");
+		throw("Ð¨Ð¸Ñ€Ð¸Ð½Ð° Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ð¹");
 	}
 	this->_width = width;
 }

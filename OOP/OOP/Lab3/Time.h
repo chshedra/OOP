@@ -23,11 +23,11 @@ public:
 	int GetHour();
 	int GetMinute();
 
-	//перегруженный оператор сравнения для сеттера SetArriveTime
+	//РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ СЃСЂР°РІРЅРµРЅРёСЏ РґР»СЏ СЃРµС‚С‚РµСЂР° SetArriveTime
 	bool operator>(Time) const;
-	//перегруженный оператор вычитания для функции GetFlightTimeMinutes
+	//РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ РІС‹С‡РёС‚Р°РЅРёСЏ РґР»СЏ С„СѓРЅРєС†РёРё GetFlightTimeMinutes
 	Time operator-(Time) const; 
-	//перегруженный оператор вывода объекта класса Time
+	//РїРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ РІС‹РІРѕРґР° РѕР±СЉРµРєС‚Р° РєР»Р°СЃСЃР° Time
 	friend ostream& operator<<(ostream& writeTime, Time& time);
 
 	Time();

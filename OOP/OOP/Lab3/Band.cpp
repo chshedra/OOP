@@ -82,13 +82,13 @@ Song* Band::GetAllSongs(Band* band, int& allSongsCount)
 	}
 
 	allSongsCount = 0;
-	for (int i = 0; i < this->GetCountAlbum(); i++)//подсчет всех песен
+	for (int i = 0; i < this->GetCountAlbum(); i++)//РїРѕРґСЃС‡РµС‚ РІСЃРµС… РїРµСЃРµРЅ
 	{
 		allSongsCount += this->_albums->GetCountSongs();
 	}
 
 	Song* allSongs = new Song[allSongsCount];
-	for (int i = 0; i < this->GetCountAlbum(); i++)//копирование значений в одномерный массив
+	for (int i = 0; i < this->GetCountAlbum(); i++)//РєРѕРїРёСЂРѕРІР°РЅРёРµ Р·РЅР°С‡РµРЅРёР№ РІ РѕРґРЅРѕРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ
 	{
 		for (int j = 0; j < this->_albums->GetCountSongs(); j++)
 		{
@@ -105,7 +105,7 @@ void DemoBand()
 	const int countAlbum = 3;
 	const int countSong = 4;
 	Song** songs = new Song*[countAlbum];
-	// двумерный массив песен, i-кол-во альбомов, j-кол-во песен в i-том альбоме
+	// РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ РїРµСЃРµРЅ, i-РєРѕР»-РІРѕ Р°Р»СЊР±РѕРјРѕРІ, j-РєРѕР»-РІРѕ РїРµСЃРµРЅ РІ i-С‚РѕРј Р°Р»СЊР±РѕРјРµ
 	for (int i = 0; i < countAlbum; i++)
 	{
 		songs[i] = new Song[countSong];
@@ -124,7 +124,7 @@ void DemoBand()
 	for (int i = 0; i < countAlbum; i++)
 	{
 		string writeI = std::to_string(i + 1);
-		albums[i].SetAlbumTitle("Album №" + writeI);
+		albums[i].SetAlbumTitle("Album в„–" + writeI);
 		albums[i].SetReleaseYear(2010 + i);
 		albums[i].SetSongs(songs[i]);
 	}
@@ -135,7 +135,7 @@ void DemoBand()
 	band->SetAlbums(albums);
 	band->SetCountAlbum(countAlbum);
 
-	cout << "Введите название искомой песни: ";
+	cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РёСЃРєРѕРјРѕР№ РїРµСЃРЅРё: ";
 	string songTitle;
 	cin >> songTitle;
 	Song* findedSong = band->FindSong(songTitle);
@@ -145,7 +145,7 @@ void DemoBand()
 	}
 	else
 	{
-		cout << "Песня с таким названием не найдена" << endl;
+		cout << "РџРµСЃРЅСЏ СЃ С‚Р°РєРёРј РЅР°Р·РІР°РЅРёРµРј РЅРµ РЅР°Р№РґРµРЅР°" << endl;
 	}
 
 	Album* findedAlbum = band->FindAlbum(findedSong);
@@ -156,7 +156,7 @@ void DemoBand()
 	}
 	else
 	{
-		cout << "Альбом с данной песней  не найден";
+		cout << "РђР»СЊР±РѕРј СЃ РґР°РЅРЅРѕР№ РїРµСЃРЅРµР№  РЅРµ РЅР°Р№РґРµРЅ";
 	}
 
 	int countAllSongs = 0;

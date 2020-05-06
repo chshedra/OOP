@@ -25,7 +25,7 @@ void Flight::SetArriveTime(Time arriveTime)
 {
 	if (this->_departureTime > arriveTime)
 	{
-		throw("Âğåìÿ âûëåòà íå ìîæåò áûòü áîëüøå âğåìåíè ïğèáûòèÿ");
+		throw("Ğ’Ñ€ĞµĞ¼Ñ Ğ²Ñ‹Ğ»ĞµÑ‚Ğ° Ğ½Ğµ Ğ¼Ğ¾Ğ¶ĞµÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ Ğ²Ñ€ĞµĞ¼ĞµĞ½Ğ¸ Ğ¿Ñ€Ğ¸Ğ±Ñ‹Ñ‚Ğ¸Ñ");
 	}
 	this->_arriveTime = arriveTime;
 }
@@ -35,7 +35,7 @@ Flight::Flight()
 	this->SetFlightNumber(" ");
 	this->SetDeparturePoint(" ");
 	this->SetDestination(" ");
-	Time arriveTime; // âûçîâ êîíñòğóêòîğà áåç ïàğàìåòğîâ
+	Time arriveTime; // Ğ²Ñ‹Ğ·Ğ¾Ğ² ĞºĞ¾Ğ½ÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€Ğ° Ğ±ĞµĞ· Ğ¿Ğ°Ñ€Ğ°Ğ¼ĞµÑ‚Ñ€Ğ¾Ğ²
 	this->SetArriveTime(arriveTime);
 	Time departureTime;
 	this->SetDepartureTime(departureTime);
@@ -109,9 +109,9 @@ ostream& operator<<(ostream& writeFlight, Flight& flight)
 	Time getTime = flight.GetFlightTimeMinutes();
 	writeFlight << flight._flightNumber << " " << flight._departurePoint
 		<< "-" << flight._destination
-		<< " Âûëåò: " << flight._departureTime
-		<< "  Ïğèëåò: " << flight._arriveTime
-		<< "  Âğåìÿ ïîëåòà: " << getTime ;
+		<< " Ğ’Ñ‹Ğ»ĞµÑ‚: " << flight._departureTime
+		<< "  ĞŸÑ€Ğ¸Ğ»ĞµÑ‚: " << flight._arriveTime
+		<< "  Ğ’Ñ€ĞµĞ¼Ñ Ğ¿Ğ¾Ğ»ĞµÑ‚Ğ°: " << getTime ;
 
 	return writeFlight;
 }

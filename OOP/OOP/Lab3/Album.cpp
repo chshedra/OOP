@@ -9,7 +9,7 @@ void Album::SetReleaseYear(int releaseYear)
 {
 	if (releaseYear < 0)
 	{
-		throw("Ãîä âûïóñêà àëüáîìà íå ìîæåò áûòü îòðèöàòåëüíûì");
+		throw("Ð“Ð¾Ð´ Ð²Ñ‹Ð¿ÑƒÑÐºÐ° Ð°Ð»ÑŒÐ±Ð¾Ð¼Ð° Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼");
 	}
 	this->_releaseYear = releaseYear;
 }
