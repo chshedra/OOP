@@ -13,6 +13,7 @@ private:
 	Time _departureTime;
 
 public:
+	//TODO: Строку по ссылке?
 	void SetFlightNumber(string flightNumber);
 	void SetDeparturePoint(string departurePoint);
 	void SetDestination(string destination);
@@ -30,7 +31,9 @@ public:
 	friend ostream& operator<<(ostream& writeFlight, Flight& flight);
 
 	Flight();
+	//TODO: Строку по ссылке?
 	Flight(string flightNumber, string departurePoint, string destination,
+		//TODO: Почему не по указателю?
 		Time arriveTime, Time departureTime);
 };
 

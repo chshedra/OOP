@@ -36,6 +36,7 @@ SongGenre Song::GetSongGenre()
 
 Song::Song()
 {
+	//TODO: Делегирующий конструктор - описал в Album
 	this->SetSongTitle(" ");
 	this->SetSongTiming(0.0);
 	this->SetGenre(Rock);

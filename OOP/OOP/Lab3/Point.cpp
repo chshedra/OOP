@@ -21,7 +21,7 @@ double Point::GetY()
 }
 
 Point::Point()
-{
+{//TODO: Делегирующий конструктор - описал в Album
 	this->SetX(0.0);
 	this->SetY(0.0);
 }

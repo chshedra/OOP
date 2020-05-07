@@ -42,7 +42,7 @@ Point Rectangle::GetCenter()
 }
 
 Rectangle::Rectangle()
-{
+{//TODO: Делегирующий конструктор - описал в Album
 	this->SetLength(0.0);
 	this->SetWidth(0.0);
 	this->SetCenter(0.0, 0.0);
