@@ -43,6 +43,7 @@ void Time::SetMinute(int minute)
 
 Time::Time()
 {
+	//TODO: Делегирующий конструктор - описал в Album
 	this->SetYear(0);
 	this->SetMonth(0);
 	this->SetDay(0);

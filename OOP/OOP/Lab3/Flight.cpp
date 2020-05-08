@@ -31,7 +31,7 @@ void Flight::SetArriveTime(Time arriveTime)
 }
 
 Flight::Flight()
-{
+{//TODO: Делегирующий конструктор - описал в Album
 	this->SetFlightNumber(" ");
 	this->SetDeparturePoint(" ");
 	this->SetDestination(" ");
