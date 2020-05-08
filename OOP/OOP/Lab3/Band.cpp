@@ -28,6 +28,7 @@ int Band::GetCountAlbum()
 
 Band::Band()
 {
+	//TODO: Делегирующий конструктор - описал в Album
 	this->SetBandName(" ");
 	this->SetDescription(" ");
 	this->SetAlbums(nullptr);
@@ -82,12 +83,15 @@ Song* Band::GetAllSongs(Band* band, int& allSongsCount)
 	}
 
 	allSongsCount = 0;
+	//TODO: Во-первых комментарий надо писать над комментируемым блоком
+	//TODO: Если возникает необходимость поставить комментарий - может быть вынести это в метод и поименовать по-человечески?
 	for (int i = 0; i < this->GetCountAlbum(); i++)//подсчет всех песен
 	{
 		allSongsCount += this->_albums->GetCountSongs();
 	}
 
 	Song* allSongs = new Song[allSongsCount];
+	//TODO: Тоже, что и выше
 	for (int i = 0; i < this->GetCountAlbum(); i++)//копирование значений в одномерный массив
 	{
 		for (int j = 0; j < this->_albums->GetCountSongs(); j++)
@@ -105,6 +109,7 @@ void DemoBand()
 	const int countAlbum = 3;
 	const int countSong = 4;
 	Song** songs = new Song*[countAlbum];
+	//TODO: Опять же, почему i и j не поименовать по смыслу, чтобы не писать комментарии?
 	// двумерный массив песен, i-кол-во альбомов, j-кол-во песен в i-том альбоме
 	for (int i = 0; i < countAlbum; i++)
 	{
