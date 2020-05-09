@@ -41,19 +41,13 @@ Point Rectangle::GetCenter()
 	return this->_center;
 }
 
-Rectangle::Rectangle()
-{//TODO: Делегирующий конструктор - описал в Album
-	this->SetLength(0.0);
-	this->SetWidth(0.0);
-	this->SetCenter(0.0, 0.0);
-}
+//TODO:+ Делегирующий конструктор - описал в Album
+Rectangle::Rectangle() : _length(0.0), _width(0.0), _center(0.0, 0.0) {}
 
-Rectangle::Rectangle(double length, double width, double x, double y)
-{
-	this->SetLength(length);
-	this->SetWidth(width);
-	this->SetCenter(x, y);
-}
+
+Rectangle::Rectangle(double length, double width, double x, double y) :
+	_length(length), _width(width), _center(x, y) {}
+
 
 void DemoRectangleWithPoint()
 {

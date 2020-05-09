@@ -13,10 +13,10 @@ private:
 	Time _departureTime;
 
 public:
-	//TODO: Строку по ссылке?
-	void SetFlightNumber(string flightNumber);
-	void SetDeparturePoint(string departurePoint);
-	void SetDestination(string destination);
+	//TODO: +РЎС‚СЂРѕРєСѓ РїРѕ СЃСЃС‹Р»РєРµ?
+	void SetFlightNumber(const string &flightNumber);
+	void SetDeparturePoint(const string &departurePoint);
+	void SetDestination(const string &destination);
 	void SetArriveTime(Time arriveTime);
 	void SetDepartureTime(Time departureTime);
 
@@ -31,10 +31,11 @@ public:
 	friend ostream& operator<<(ostream& writeFlight, Flight& flight);
 
 	Flight();
-	//TODO: Строку по ссылке?
-	Flight(string flightNumber, string departurePoint, string destination,
-		//TODO: Почему не по указателю?
-		Time arriveTime, Time departureTime);
+	//TODO: +РЎС‚СЂРѕРєСѓ РїРѕ СЃСЃС‹Р»РєРµ?
+	Flight(const string &flightNumber, const string &departurePoint, 
+		const string &destination, Time *arriveTime, Time *departureTime);
+		//TODO: +РџРѕС‡РµРјСѓ РЅРµ РїРѕ СѓРєР°Р·Р°С‚РµР»СЋ?
+
 };
 
 void DemoFlightWithTime();

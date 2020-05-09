@@ -14,7 +14,7 @@ void Lab2Menu()
 {
 	while (true)
 	{
-		cout << "Enter the point from the menu:" << endl
+		cout << "Enter the point from the menu :" << endl
 			<< "1.Get structures manually" << endl
 			<< "2.Get structures auto" << endl
 			<< "3.Functions" << endl

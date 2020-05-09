@@ -1,12 +1,12 @@
 #include "Band.h"
 #include <string>
 
-void Band::SetBandName(string bandName)
+void Band::SetBandName(const string &bandName)
 {
 	this->_bandName = bandName;
 }
 
-void Band::SetDescription(string description)
+void Band::SetDescription(const string &description)
 {
 	this->_description = description;
 }
@@ -26,22 +26,14 @@ int Band::GetCountAlbum()
 	return this->_countAlbum;
 }
 
-Band::Band()
-{
-	//TODO: Делегирующий конструктор - описал в Album
-	this->SetBandName(" ");
-	this->SetDescription(" ");
-	this->SetAlbums(nullptr);
-}
+//TODO: +Делегирующий конструктор - описал в Album
+Band::Band() : _bandName(" "), _description(" "), _albums(nullptr) {}
 
-Band::Band(string bandName, string description, Album* albums)
-{
-	this->SetBandName(bandName);
-	this->SetDescription(description);
-	this->SetAlbums(albums);
-}
+Band::Band(string bandName, string description, Album* albums) :
+	_bandName(bandName), _description(description), _albums(albums) {}
 
-Song* Band::FindSong(string songTitle)
+
+Song* Band::FindSong(string &songTitle)
 {
 	for (int i = 0; i < this->GetCountAlbum(); i++)
 	{
@@ -75,31 +67,40 @@ Album* Band::FindAlbum (Song* song)
 	return nullptr;
 }
 
+void Band::CountAllSongs(int &countAllSongs)
+{
+	countAllSongs = 0;
+	for (int i = 0; i < this->GetCountAlbum(); i++)
+	{
+		countAllSongs += this->_albums->GetCountSongs();
+	}
+}
+
+void Band::CopyAllSongs(Song* allSongs)
+{
+	for (int i = 0; i < this->GetCountAlbum(); i++)
+	{
+		for (int j = 0; j < this->_albums->GetCountSongs(); j++)
+		{
+			allSongs[i * this->_albums->GetCountSongs() + j] =
+				this->_albums[i].GetSongs()[j];
+		}
+	}
+}
+
 Song* Band::GetAllSongs(Band* band, int& allSongsCount)
 {
 	if (band == nullptr)
 	{
 		return nullptr;
-	}
-
-	allSongsCount = 0;
-	//TODO: Во-первых комментарий надо писать над комментируемым блоком
-	//TODO: Если возникает необходимость поставить комментарий - может быть вынести это в метод и поименовать по-человечески?
-	for (int i = 0; i < this->GetCountAlbum(); i++)//подсчет всех песен
-	{
-		allSongsCount += this->_albums->GetCountSongs();
-	}
+	}	
+	//TODO: +Во-первых комментарий надо писать над комментируемым блоком
+	//TODO: +Если возникает необходимость поставить комментарий - может быть вынести это в метод и поименовать по-человечески?
+	CountAllSongs(allSongsCount);
 
 	Song* allSongs = new Song[allSongsCount];
-	//TODO: Тоже, что и выше
-	for (int i = 0; i < this->GetCountAlbum(); i++)//копирование значений в одномерный массив
-	{
-		for (int j = 0; j < this->_albums->GetCountSongs(); j++)
-		{
-			allSongs[i * this->_albums->GetCountSongs() + j] =  
-				this->_albums[i].GetSongs()[j];
-		}
-	}
+	//TODO: +Тоже, что и выше
+	CopyAllSongs(allSongs);
 
 	return allSongs;
 }
@@ -109,18 +110,18 @@ void DemoBand()
 	const int countAlbum = 3;
 	const int countSong = 4;
 	Song** songs = new Song*[countAlbum];
-	//TODO: Опять же, почему i и j не поименовать по смыслу, чтобы не писать комментарии?
-	// двумерный массив песен, i-кол-во альбомов, j-кол-во песен в i-том альбоме
-	for (int i = 0; i < countAlbum; i++)
+
+	//TODO: +Опять же, почему i и j не поименовать по смыслу, чтобы не писать комментарии?
+	for (int albumAmount = 0; albumAmount < countAlbum; albumAmount++)
 	{
-		songs[i] = new Song[countSong];
-		for (int j = 0; j < countSong; j++)
+		songs[albumAmount] = new Song[countSong];
+		for (int songAmount = 0; songAmount < countSong; songAmount++)
 		{	
-			string writeI = std::to_string(i + 1);
-			string writeJ = std::to_string(j + 1);
-			songs[i][j].SetSongTitle("song" + writeI+ writeJ);
-			songs[i][j].SetSongTiming(1.5 + j);
-			songs[i][j].SetGenre(Rock);
+			string writeI = std::to_string(albumAmount + 1);
+			string writeJ = std::to_string(songAmount + 1);
+			songs[albumAmount][songAmount].SetSongTitle("song" + writeI+ writeJ);
+			songs[albumAmount][songAmount].SetSongTiming(1.5 + songAmount);
+			songs[albumAmount][songAmount].SetGenre(Rock);
 		}
 	}
 
@@ -140,7 +141,7 @@ void DemoBand()
 	band->SetAlbums(albums);
 	band->SetCountAlbum(countAlbum);
 
-	cout << "Введите название искомой песни: ";
+	cout << "Введите название искомой песни (например, song23): ";
 	string songTitle;
 	cin >> songTitle;
 	Song* findedSong = band->FindSong(songTitle);
@@ -161,7 +162,7 @@ void DemoBand()
 	}
 	else
 	{
-		cout << "Альбом с данной песней  не найден";
+		cout << "Альбом с данной песней  не найден" << endl;
 	}
 
 	int countAllSongs = 0;

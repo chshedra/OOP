@@ -1,6 +1,6 @@
 #include "Album.h"
 
-void Album::SetAlbumTitle(string AlbumTitle)
+void Album::SetAlbumTitle(const string &AlbumTitle)
 {
 	this->_albumTitle = AlbumTitle;
 }
@@ -44,23 +44,11 @@ Song* Album::GetSongs()
 	return this->_songs;
 }
 
-Album::Album()
-{
-	//TODO: Для таких штук правильнее использовать делегирующие конструкции, чтобы сократить дублирование
-	// должно выглядеть примерно так
-	// Album::Album(): Album(" ", 0, nullptr) {}
-	//
-	// Тогда весь код из конструктора по-умолчанию можно убрать, а при
-	// его вызове будет вызываться делегирующий конструктор с нужными параметрами
-	this->SetAlbumTitle(" ");
-	this->SetReleaseYear(0);
-	this->SetSongs(nullptr);
-}
+//TODO: +Делегирующий конструктор - описал в Album
+Album::Album() : _albumTitle(" "), _releaseYear(0), 
+	_songs(nullptr), _countSongs(0) {}
 
-Album::Album(string albumTitle, int releaseYear, Song* songs)
-{
-	this->SetAlbumTitle(albumTitle);
-	this->SetReleaseYear(releaseYear);
-	this->SetSongs(songs);
-}
+Album::Album(const string& albumTitle, int releaseYear, Song* songs) :
+	_albumTitle(albumTitle), _releaseYear(releaseYear), 
+		_songs(songs), _countSongs(0) {}
 

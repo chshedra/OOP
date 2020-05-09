@@ -41,24 +41,13 @@ void Time::SetMinute(int minute)
 	this->_minute = minute;
 }
 
-Time::Time()
-{
-	//TODO: Делегирующий конструктор - описал в Album
-	this->SetYear(0);
-	this->SetMonth(0);
-	this->SetDay(0);
-	this->SetHour(0);
-	this->SetMinute(0);
-}
+//TODO:+Делегирующий конструктор - описал в Album
+Time::Time() : _year(0), _month(0), _day(0), _hour(0), _minute(0) {}
 
-Time::Time(int year, int month, int day, int hour, int minute)
-{
-	this->SetYear(year);
-	this->SetMonth(month);
-	this->SetDay(day);
-	this->SetHour(hour);
-	this->SetMinute(minute);
-}
+
+Time::Time(int year, int month, int day, int hour, int minute) :
+	_year(year), _month(month), _day(day), _hour(hour), _minute(minute) {}
+
 
 int Time::GetYear()
 {

@@ -1,6 +1,6 @@
 #include "Song.h"
 
-void Song::SetSongTitle(string songTitle)
+void Song::SetSongTitle(const string &songTitle)
 {
 	this->_songTitle = songTitle;
 }
@@ -34,20 +34,12 @@ SongGenre Song::GetSongGenre()
 	return this->_genre;
 }
 
-Song::Song()
-{
-	//TODO: Делегирующий конструктор - описал в Album
-	this->SetSongTitle(" ");
-	this->SetSongTiming(0.0);
-	this->SetGenre(Rock);
-}
+//TODO: +Делегирующий конструктор - описал в Album
+Song::Song() : _songTitle(" "), _songTiming(0.0), _genre(Rock) {}
 
-Song::Song(string songTitle, double songTiming, SongGenre genre)
-{
-	this->SetSongTitle(songTitle);
-	this->SetSongTiming(songTiming);
-	this->SetGenre(genre);
-}
+Song::Song(string &songTitle, double songTiming, SongGenre genre) :
+	_songTitle(songTitle), _songTiming(songTiming), _genre(genre) {}
+
 
 ostream& operator<<(ostream& writeSong, Song& song)
 {

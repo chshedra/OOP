@@ -4,6 +4,8 @@ void DemoRoute()
 {
 	const int size = 3;
 	Route routes[size];
+
+	cin.ignore(); // игнорируется /n
 	for (int i = 0; i < size; i++)
 	{
 		ReadRouteFromConsole(routes[i]);
@@ -29,7 +31,6 @@ void DemoRoute()
 void ReadRouteFromConsole(Route& route)
 {
 	cout << "Введите номер маршрута: ";
-	cin.ignore(); // игнорируется /n
 	getline(cin, route.Number);
 
 	cout << "Введите время пути: ";
@@ -45,7 +46,7 @@ void ReadRouteFromConsole(Route& route)
 	cin.ignore();
 	for (int i = 0; i < route.StopsNumber; i++)
 	{
-		cout << "Введите автора №" << i + 1 << ":";
+		cout << "Введите остановку №" << i + 1 << ":";
 		getline(cin, route.BusStops[i]);
 	}
 }
@@ -55,7 +56,7 @@ void WriteRouteToConsole(Route& route)
 	cout << "Маршрут №" << route.Number
 		 << ", время в пути:" << route.Timing
 		 << ", частота следования: " << route.Frequency << endl;
-	cout << "Остановки: ";
+	cout << "Остановки: " << endl;
 	for (int i = 0; i < route.StopsNumber; i++)
 	{
 		cout << route.BusStops[i] << endl;
@@ -63,7 +64,7 @@ void WriteRouteToConsole(Route& route)
 	
 }
 
-int FindRouteByStop(Route* routes, int stopsCount, string stop)
+int FindRouteByStop(Route* routes, int stopsCount, string &stop)
 {
 	for (int i = 0; i < stopsCount; i++)
 	{

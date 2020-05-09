@@ -20,6 +20,7 @@ int InputValidation()
 			break;
 		}
 	}
+	
 	return number;
 }
 

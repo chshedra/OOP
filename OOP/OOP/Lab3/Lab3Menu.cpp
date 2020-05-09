@@ -2,7 +2,6 @@
 
 void Lab3Menu()
 {
-	setlocale(LC_ALL, "rus");
 	while (true)
 	{
 		cout << "1.DemoBook" << endl

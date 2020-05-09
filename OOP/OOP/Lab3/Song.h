@@ -11,7 +11,7 @@ private:
 	SongGenre _genre;
 	
 public:
-	void SetSongTitle(string songTitle);
+	void SetSongTitle(const string &songTitle);
 	void SetSongTiming(double songTiming);
 	void SetGenre(SongGenre genre);
 
@@ -20,7 +20,7 @@ public:
 	SongGenre GetSongGenre();
 
 	Song();
-	Song(string songTitle, double songTiming, SongGenre genre);
+	Song(string &songTitle, double songTiming, SongGenre genre);
 
 	//оператор вывода песни на экран
 	friend ostream& operator<<(ostream& writeSong, Song& song);  

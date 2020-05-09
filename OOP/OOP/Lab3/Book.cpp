@@ -1,4 +1,5 @@
 #include "Book.h"
+#include "../Common/Common.h"
 
 void DemoBook()
 {
@@ -31,31 +32,30 @@ void ReadBookFromConsole(Book& book)
 {
 	cin.ignore(); //игнорируетя /n 
 	cout << "Введите название книги: ";
-	//используется getline для возможности вводитьстроку с пробелом
+	//используется getline для возможности вводить строку с пробелом
 	getline(cin, book.Title);
-	cin.clear();
+	//cin.ignore();
 	cout << "Введите год издания: ";
-	cin >> book.PublicationYear;
-	cin.clear();
+	book.PublicationYear = InputValidation();
+	//cin.ignore();
 	cout << "Введите количество страниц: ";
-	cin >> book.Page;
-	cin.clear();
+	book.Page = InputValidation();
+	//cin.ignore();
 	cout << "Введите количество авторов: ";
-	cin >> book.AuthorNumber;
+	book.AuthorNumber = InputValidation();
 	while (book.AuthorNumber > 10 || book.AuthorNumber < 1)
 	{
 		cout << "Количество авторов должно быть меньше 10!"
 			<< " Попробуйте ещё раз: ";
 		cin >> book.AuthorNumber;
 	}
-
+	
 	book.Authors = new string[book.AuthorNumber];
 	cin.ignore(); 
 	for (int i = 0; i < book.AuthorNumber; i++)
 	{
 		cout << "Введите автора №" << i + 1 << ":";
 		getline(cin, book.Authors[i]);
-
 	}
 }
 
@@ -79,7 +79,7 @@ void WriteBookToConsole(Book& book)
 	cout << book.Page << "c." << endl;
 }
 
-int FindBookByAuthor(Book* books, int booksCount, string author)
+int FindBookByAuthor(Book* books, int booksCount, string &author)
 {
 	for (int i = 0; i < booksCount; i++)
 	{

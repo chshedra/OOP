@@ -1,5 +1,5 @@
 #pragma once
-//#include "Rectangle.h"
+
 
 class Point 
 {

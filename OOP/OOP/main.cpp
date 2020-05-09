@@ -1,13 +1,17 @@
-#include <windows.h>
+//#include <windows.h>
 #include "Lab3/Lab3Menu.h"
+
+
 
 
 
 int main()
 {
-	//TODO: Комменты над строкой
-	SetConsoleCP(1251);// установка кодовой страницы win-cp 1251 в поток ввода
-	SetConsoleOutputCP(1251); // установка кодовой страницы win-cp 1251 в поток вывода
+	// СѓСЃС‚Р°РЅРѕРІРєР° РєРѕРґРѕРІРѕР№ СЃС‚СЂР°РЅРёС†С‹ win-cp 1251 РІ РїРѕС‚РѕРє РІРІРѕРґР°
+	SetConsoleCP(1251);
+	// СѓСЃС‚Р°РЅРѕРІРєР° РєРѕРґРѕРІРѕР№ СЃС‚СЂР°РЅРёС†С‹ win-cp 1251 РІ РїРѕС‚РѕРє РІС‹РІРѕРґР°
+	SetConsoleOutputCP(1251); 
+	setlocale(LC_ALL, "ru_Ru.UTF-8");
 	Lab3Menu();
 	return 0;
 }

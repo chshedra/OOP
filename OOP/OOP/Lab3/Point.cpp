@@ -20,14 +20,7 @@ double Point::GetY()
 	return this->_y;
 }
 
-Point::Point()
-{//TODO: Äåëåãèðóþùèé êîíñòðóêòîð - îïèñàë â Album
-	this->SetX(0.0);
-	this->SetY(0.0);
-}
+//TODO: +Ð”ÐµÐ»ÐµÐ³Ð¸Ñ€ÑƒÑŽÑ‰Ð¸Ð¹ ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ - Ð¾Ð¿Ð¸ÑÐ°Ð» Ð² Album
+Point::Point() : _x(0.0), _y(0.0) {}
 
-Point::Point(int x, int y)
-{
-	this->SetX(x);
-	this->SetY(y);
-}
+Point::Point(int x, int y) : _x(x), _y(y) {}

@@ -1,17 +1,17 @@
 #include "Flight.h"
 #include <string>
 
-void Flight::SetFlightNumber(string flightNumber)
+void Flight::SetFlightNumber(const string &flightNumber)
 {
 	this->_flightNumber = flightNumber;
 }
 
-void Flight::SetDeparturePoint(string departurePoint)
+void Flight::SetDeparturePoint(const string &departurePoint)
 {
 	this->_departurePoint = departurePoint;
 }
 
-void Flight::SetDestination(string destination)
+void Flight::SetDestination(const string &destination)
 {
 	this->_destination = destination;
 }
@@ -30,26 +30,19 @@ void Flight::SetArriveTime(Time arriveTime)
 	this->_arriveTime = arriveTime;
 }
 
-Flight::Flight()
-{//TODO: Делегирующий конструктор - описал в Album
-	this->SetFlightNumber(" ");
-	this->SetDeparturePoint(" ");
-	this->SetDestination(" ");
-	Time arriveTime; // вызов конструктора без параметров
+Flight::Flight() : _flightNumber(" "), _departurePoint(" "), _destination(" ")
+{
+	Time arriveTime; 
 	this->SetArriveTime(arriveTime);
 	Time departureTime;
 	this->SetDepartureTime(departureTime);
 }
 
-Flight::Flight(string flightNumber, string departurePoint, string destination,
-	Time arriveTime, Time departureTime)
-{
-	this->SetFlightNumber(flightNumber);
-	this->SetDeparturePoint(departurePoint);
-	this->SetDestination(destination);
-	this->SetArriveTime(arriveTime);
-	this->SetDepartureTime(departureTime);
-}
+Flight::Flight(const string& flightNumber, const string& departurePoint,
+	const string& destination, Time* arriveTime, Time* departureTime) :
+	_flightNumber(flightNumber), _departurePoint(departurePoint),
+	_destination(destination), _arriveTime(*arriveTime),
+	_departureTime(*departureTime) {}
 
 string Flight::GetFlightNumber()
 {
