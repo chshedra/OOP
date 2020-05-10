@@ -15,5 +15,4 @@ struct Route
 void DemoRoute();
 void ReadRouteFromConsole(Route& route);
 void WriteRouteToConsole(Route& route);
-//TODO: +Строку по ссылке?
 int FindRouteByStop(Route* routes, int stopsCount, string &stop);

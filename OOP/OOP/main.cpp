@@ -1,10 +1,6 @@
 //#include <windows.h>
 #include "Lab3/Lab3Menu.h"
 
-
-
-
-
 int main()
 {
 	// установка кодовой страницы win-cp 1251 в поток ввода

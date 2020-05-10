@@ -17,5 +17,4 @@ void DemoBook();
 void ReadBookFromConsole(Book& book);
 
 void WriteBookToConsole(Book& book);
-//TODO: +Строку по ссылке?
 int FindBookByAuthor(Book* books, int booksCount, string &author);

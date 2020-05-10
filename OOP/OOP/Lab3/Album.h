@@ -11,7 +11,6 @@ private:
 	int _countSongs;
 
 public:
-	//TODO: +Строку по ссылке?
 	void SetAlbumTitle(const string &albumTitle);
 	void SetReleaseYear(int releaseYear);
 	void SetSongs(Song* songs);
@@ -23,6 +22,5 @@ public:
 	Song* GetSongs();
 
 	Album();
-	//TODO: +Строку по ссылке?
 	Album(const string &albumTitle, int releaseYear, Song* songs);
 };

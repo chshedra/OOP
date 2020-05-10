@@ -26,7 +26,8 @@ int Band::GetCountAlbum()
 	return this->_countAlbum;
 }
 
-//TODO: +Делегирующий конструктор - описал в Album
+//TODO: Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
+//TODO: это может привести к нарушению логики использования класса.
 Band::Band() : _bandName(" "), _description(" "), _albums(nullptr) {}
 
 Band::Band(string bandName, string description, Album* albums) :
@@ -94,12 +95,9 @@ Song* Band::GetAllSongs(Band* band, int& allSongsCount)
 	{
 		return nullptr;
 	}	
-	//TODO: +Во-первых комментарий надо писать над комментируемым блоком
-	//TODO: +Если возникает необходимость поставить комментарий - может быть вынести это в метод и поименовать по-человечески?
 	CountAllSongs(allSongsCount);
 
 	Song* allSongs = new Song[allSongsCount];
-	//TODO: +Тоже, что и выше
 	CopyAllSongs(allSongs);
 
 	return allSongs;
@@ -111,7 +109,6 @@ void DemoBand()
 	const int countSong = 4;
 	Song** songs = new Song*[countAlbum];
 
-	//TODO: +Опять же, почему i и j не поименовать по смыслу, чтобы не писать комментарии?
 	for (int albumAmount = 0; albumAmount < countAlbum; albumAmount++)
 	{
 		songs[albumAmount] = new Song[countSong];

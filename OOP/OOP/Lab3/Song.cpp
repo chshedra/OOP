@@ -34,7 +34,8 @@ SongGenre Song::GetSongGenre()
 	return this->_genre;
 }
 
-//TODO: +Делегирующий конструктор - описал в Album
+//TODO: Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
+//TODO: это может привести к нарушению логики использования класса.
 Song::Song() : _songTitle(" "), _songTiming(0.0), _genre(Rock) {}
 
 Song::Song(string &songTitle, double songTiming, SongGenre genre) :
@@ -52,6 +53,8 @@ ostream& operator<<(ostream& writeSong, Song& song)
 // вывод значений перечисления на экран
 void WriteSongGenre(SongGenre genre)
 {
+	//TODO Неправильно тут привязываться к консоли, по идее этот метод должен тоже вернуть ostream,
+	//TODO: который будет передан в ostream вызывающего метода и только потом выведен в консоль
 	switch (genre)
 	{
 		case Rock:
