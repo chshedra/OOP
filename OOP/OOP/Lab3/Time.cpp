@@ -41,13 +41,19 @@ void Time::SetMinute(int minute)
 	this->_minute = minute;
 }
 
-//TODO: Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
-//TODO: это может привести к нарушению логики использования класса.
+//TODO:+ Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
+//TODO: +это может привести к нарушению логики использования класса.
 Time::Time() : _year(0), _month(0), _day(0), _hour(0), _minute(0) {}
 
 
-Time::Time(int year, int month, int day, int hour, int minute) :
-	_year(year), _month(month), _day(day), _hour(hour), _minute(minute) {}
+Time::Time(int year, int month, int day, int hour, int minute)
+{
+	this->SetYear(year);
+	this->SetMonth(month);
+	this->SetDay(day);
+	this->SetHour(hour);
+	this->SetMinute(minute);
+}
 
 
 int Time::GetYear()

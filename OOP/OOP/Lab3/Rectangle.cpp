@@ -41,13 +41,17 @@ Point Rectangle::GetCenter()
 	return this->_center;
 }
 
-//TODO: Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
-//TODO: это может привести к нарушению логики использования класса.
+//TODO:+ Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
+//TODO: +это может привести к нарушению логики использования класса.
 Rectangle::Rectangle() : _length(0.0), _width(0.0), _center(0.0, 0.0) {}
 
 
-Rectangle::Rectangle(double length, double width, double x, double y) :
-	_length(length), _width(width), _center(x, y) {}
+Rectangle::Rectangle(double length, double width, double x, double y)
+{
+	this->SetLength(length);
+	this->SetWidth(width);
+	this->SetCenter(x, y);
+}
 
 
 void DemoRectangleWithPoint()

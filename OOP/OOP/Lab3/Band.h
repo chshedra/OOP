@@ -16,6 +16,7 @@ public:
 	void SetCountAlbum(int countAlbum);
 
 	int GetCountAlbum();
+	Album* GetAlbums();
 
 	Song* FindSong(string &songTitle);
 	Album* FindAlbum(Song* song);

@@ -34,58 +34,58 @@ SongGenre Song::GetSongGenre()
 	return this->_genre;
 }
 
-//TODO: Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
-//TODO: это может привести к нарушению логики использования класса.
+//TODO: +Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
+//TODO: +это может привести к нарушению логики использования класса.
 Song::Song() : _songTitle(" "), _songTiming(0.0), _genre(Rock) {}
 
-Song::Song(string &songTitle, double songTiming, SongGenre genre) :
-	_songTitle(songTitle), _songTiming(songTiming), _genre(genre) {}
+Song::Song(string& songTitle, double songTiming, SongGenre genre)
+{
+	this->SetSongTitle(songTitle);
+	this->SetSongTiming(songTiming);
+	this->SetGenre(genre);
+}
 
 
 ostream& operator<<(ostream& writeSong, Song& song)
 {
 	writeSong << song._songTitle << " Time:"
 		<< song._songTiming << "; Genre:";
-	WriteSongGenre(song._genre);
+	switch (song._genre)
+	{
+	case Rock:
+	{
+		cout << "Rock";
+		break;
+	}
+	case Rap:
+	{
+		cout << "Rap";
+		break;
+	}
+	case Classic:
+	{
+		cout << "Classic";
+		break;
+	}
+	case Club:
+	{
+		cout << "Club";
+		break;
+	}
+	case DubStep:
+	{
+		cout << "Dubstep";
+		break;
+	}
+	default:
+	{
+		cout << "Unknown genre";
+		break;
+	}
+	}
 	return writeSong;
 }
 
-// вывод значений перечисления на экран
-void WriteSongGenre(SongGenre genre)
-{
-	//TODO Неправильно тут привязываться к консоли, по идее этот метод должен тоже вернуть ostream,
-	//TODO: который будет передан в ostream вызывающего метода и только потом выведен в консоль
-	switch (genre)
-	{
-		case Rock:
-		{
-			cout << "Rock";
-			break;
-		}
-		case Rap:
-		{
-			cout << "Rap";
-			break;
-		}
-		case Classic:
-		{
-			cout << "Classic";
-			break;
-		}
-		case Club:
-		{
-			cout << "Club";
-			break;
-		}
-		case DubStep:
-		{
-			cout << "Dubstep";
-			break;
-		}
-		default:
-		{
-			cout << "Unknown genre";
-			break;
-		}
-	}
-}
+	//TODO +Неправильно тут привязываться к консоли, по идее этот метод должен тоже вернуть ostream,
+	//TODO: +который будет передан в ostream вызывающего метода и только потом выведен в консоль
+	

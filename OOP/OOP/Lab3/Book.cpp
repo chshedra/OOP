@@ -34,15 +34,13 @@ void ReadBookFromConsole(Book& book)
 	cout << "Введите название книги: ";
 	//используется getline для возможности вводить строку с пробелом
 	getline(cin, book.Title);
-	//cin.ignore();
 	cout << "Введите год издания: ";
 	book.PublicationYear = InputValidation();
-	//cin.ignore();
 	cout << "Введите количество страниц: ";
 	book.Page = InputValidation();
-	//cin.ignore();
 	cout << "Введите количество авторов: ";
 	book.AuthorNumber = InputValidation();
+
 	while (book.AuthorNumber > 10 || book.AuthorNumber < 1)
 	{
 		cout << "Количество авторов должно быть меньше 10!"

@@ -1,26 +1,39 @@
 #include <iostream>
+#include <string>
 #include "Common.h"
+
 using namespace std;
+
 
 int InputValidation()
 {
-	int number = 0;
-
+	string checkNumber;
+	int resultNumber;
+	
 	while (true)
 	{
-		cin >> number;
-		if (cin.fail())
+		bool isCorrect = true;
+		cin >> checkNumber;
+		int bufsize = checkNumber.length();
+		int i = 0;
+		while (i < bufsize)
 		{
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Try again!\n";
+			if (checkNumber[i] < '0' || checkNumber[i] > '9')
+			{
+				isCorrect = false;
+				break;
+			}
+			i++;
+		}
+		resultNumber = atoi(checkNumber.c_str());
+		if (isCorrect == true)
+		{
+			return atoi(checkNumber.c_str());
 		}
 		else
 		{
-			break;
+			cout << "Введите целочисленное значение!" << endl;
 		}
 	}
-	
-	return number;
 }
 

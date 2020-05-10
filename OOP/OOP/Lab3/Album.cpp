@@ -44,12 +44,15 @@ Song* Album::GetSongs()
 	return this->_songs;
 }
 
-//TODO: Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
-//TODO: это может привести к нарушению логики использования класса.
+//TODO:+ Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
+//TODO: +это может привести к нарушению логики использования класса.
 Album::Album() : _albumTitle(" "), _releaseYear(0), 
 	_songs(nullptr), _countSongs(0) {}
 
-Album::Album(const string& albumTitle, int releaseYear, Song* songs) :
-	_albumTitle(albumTitle), _releaseYear(releaseYear), 
-		_songs(songs), _countSongs(0) {}
+Album::Album(const string& albumTitle, int releaseYear, Song* songs)
+{
+	this->SetAlbumTitle(albumTitle);
+	this->SetReleaseYear(releaseYear);
+	this->SetSongs(songs);
+}
 

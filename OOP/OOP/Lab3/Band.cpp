@@ -26,12 +26,23 @@ int Band::GetCountAlbum()
 	return this->_countAlbum;
 }
 
-//TODO: Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
-//TODO: это может привести к нарушению логики использования класса.
-Band::Band() : _bandName(" "), _description(" "), _albums(nullptr) {}
+Album* Band::GetAlbums()
+{
+	return this->_albums;
+}
 
-Band::Band(string bandName, string description, Album* albums) :
-	_bandName(bandName), _description(description), _albums(albums) {}
+//TODO: +Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
+//TODO: +это может привести к нарушению логики использования класса.
+Band::Band() : _bandName(" "), _description(" "),
+	_albums(nullptr), _countAlbum(0) {}
+
+Band::Band(string bandName, string description, Album* albums)
+{
+	this->SetBandName(bandName);
+	this->SetDescription(description);
+	this->SetAlbums(albums);
+	this->SetCountAlbum(0);
+}
 
 
 Song* Band::FindSong(string &songTitle)
@@ -138,7 +149,19 @@ void DemoBand()
 	band->SetAlbums(albums);
 	band->SetCountAlbum(countAlbum);
 
-	cout << "Введите название искомой песни (например, song23): ";
+
+	cout << "Имеющиеся песни: " << endl;
+	for (int i = 0; i < band->GetCountAlbum(); i++)
+	{
+		for (int j = 0; j < band->GetAlbums()->GetCountSongs(); j++)
+		{
+			cout << band->GetAlbums()[i].GetSongs()[j].GetSongTitle()
+				<< " ";
+		}
+		cout << endl;
+	}
+
+	cout << "Введите название искомой песни : ";
 	string songTitle;
 	cin >> songTitle;
 	Song* findedSong = band->FindSong(songTitle);
@@ -150,6 +173,7 @@ void DemoBand()
 	{
 		cout << "Песня с таким названием не найдена" << endl;
 	}
+
 
 	Album* findedAlbum = band->FindAlbum(findedSong);
 	if (findedAlbum)
