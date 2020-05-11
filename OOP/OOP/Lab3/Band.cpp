@@ -33,10 +33,9 @@ Album* Band::GetAlbums()
 
 //TODO: +Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
 //TODO: +это может привести к нарушению логики использования класса.
-Band::Band() : _bandName(" "), _description(" "),
-	_albums(nullptr), _countAlbum(0) {}
+Band::Band() : Band(" ", " ", nullptr) {}
 
-Band::Band(string bandName, string description, Album* albums)
+Band::Band(const string &bandName, string description, Album* albums)
 {
 	this->SetBandName(bandName);
 	this->SetDescription(description);

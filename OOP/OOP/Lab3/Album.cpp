@@ -46,8 +46,7 @@ Song* Album::GetSongs()
 
 //TODO:+ Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
 //TODO: +это может привести к нарушению логики использования класса.
-Album::Album() : _albumTitle(" "), _releaseYear(0), 
-	_songs(nullptr), _countSongs(0) {}
+Album::Album() : Album(" ", 0, nullptr) {}
 
 Album::Album(const string& albumTitle, int releaseYear, Song* songs)
 {

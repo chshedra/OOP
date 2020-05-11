@@ -16,8 +16,8 @@ public:
 	void SetFlightNumber(const string &flightNumber);
 	void SetDeparturePoint(const string &departurePoint);
 	void SetDestination(const string &destination);
-	void SetArriveTime(Time arriveTime);
-	void SetDepartureTime(Time departureTime);
+	void SetArriveTime(Time *arriveTime);
+	void SetDepartureTime(Time *departureTime);
 
 	string GetFlightNumber();
 	string GetDeparturePoint();

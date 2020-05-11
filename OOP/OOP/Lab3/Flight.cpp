@@ -16,33 +16,51 @@ void Flight::SetDestination(const string &destination)
 	this->_destination = destination;
 }
 
-void Flight::SetDepartureTime(Time departureTime)
+void Flight::SetDepartureTime(Time *departureTime)
 {
-	this->_departureTime = departureTime;
-}
-
-void Flight::SetArriveTime(Time arriveTime)
-{
-	if (this->_departureTime > arriveTime)
+	if (departureTime == nullptr)
 	{
-		throw("Время вылета не может быть больше времени прибытия");
+		Time nullTime(0, 0, 0, 0, 0);
+		this->_departureTime = nullTime;
 	}
-	this->_arriveTime = arriveTime;
+	else
+	{
+		this->_departureTime = *departureTime;
+	}
 }
 
-Flight::Flight() : _flightNumber(" "), _departurePoint(" "), _destination(" ")
+void Flight::SetArriveTime(Time *arriveTime)
 {
-	Time arriveTime; 
-	this->SetArriveTime(arriveTime);
-	Time departureTime;
-	this->SetDepartureTime(departureTime);
+	if (arriveTime == nullptr)
+	{
+		Time nullTime(0, 0 , 0 , 0 ,0);
+		this->_arriveTime = nullTime;
+	}
+	else
+	{
+		if (this->_departureTime > * arriveTime)
+		{
+			throw("Время вылета не может быть больше времени прибытия");
+		}
+		else
+		{
+			this->_arriveTime = *arriveTime;
+		}
+	}
 }
+
+Flight::Flight() : Flight(" ", " ", " ", nullptr, nullptr) {}
+
 
 Flight::Flight(const string& flightNumber, const string& departurePoint,
-	const string& destination, Time* arriveTime, Time* departureTime) :
-	_flightNumber(flightNumber), _departurePoint(departurePoint),
-	_destination(destination), _arriveTime(*arriveTime),
-	_departureTime(*departureTime) {}
+	const string& destination, Time* arriveTime, Time* departureTime) 
+{
+	this->SetFlightNumber(flightNumber);
+	this->SetDeparturePoint(departurePoint);
+	this->SetDestination(destination);
+	this->SetArriveTime(arriveTime);
+	this->SetDepartureTime(departureTime);
+}
 
 string Flight::GetFlightNumber()
 {
@@ -81,9 +99,9 @@ void DemoFlightWithTime()
 		flights[i].SetDeparturePoint("Moscow" + writeI);
 		flights[i].SetDestination("Tomsk" + writeI);
 		Time departureTime(2020, 1 + i, 10 + i, 12 + i, 30 + i);
-		flights[i].SetDepartureTime(departureTime);
+		flights[i].SetDepartureTime(&departureTime);
 		Time arriveTime(2020, 1 + i, 10 + i, 16 + i, 59 - i);
-		flights[i].SetArriveTime(arriveTime);
+		flights[i].SetArriveTime(&arriveTime);
 	}
 
 	for (int i = 0; i < size; i++)

@@ -20,7 +20,7 @@ public:
 	SongGenre GetSongGenre();
 
 	Song();
-	Song(string &songTitle, double songTiming, SongGenre genre);
+	Song(const string &songTitle, double songTiming, SongGenre genre);
 
 	//оператор вывода песни на экран
 	friend ostream& operator<<(ostream& writeSong, Song& song);  

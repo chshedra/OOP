@@ -25,8 +25,8 @@ public:
 	void CopyAllSongs(Song* allSongs);
 	
 	Band();
-	//TODO: Строку по ссылке?
-	Band(string bandName, string description, Album* albums);
+	//TODO: +Строку по ссылке?
+	Band(const string &bandName, string description, Album* albums);
 };
 
 void DemoBand();

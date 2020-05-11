@@ -43,8 +43,7 @@ Point Rectangle::GetCenter()
 
 //TODO:+ Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
 //TODO: +это может привести к нарушению логики использования класса.
-Rectangle::Rectangle() : _length(0.0), _width(0.0), _center(0.0, 0.0) {}
-
+Rectangle::Rectangle() : Rectangle(0.0, 0.0, 0.0, 0.0) {}
 
 Rectangle::Rectangle(double length, double width, double x, double y)
 {
