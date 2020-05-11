@@ -52,6 +52,7 @@ ostream& operator<<(ostream& writeSong, Song& song)
 		<< song._songTiming << "; Genre:";
 	switch (song._genre)
 	{
+		//TODO: RSDN
 	case Rock:
 	{
 		cout << "Rock";
@@ -85,7 +86,4 @@ ostream& operator<<(ostream& writeSong, Song& song)
 	}
 	return writeSong;
 }
-
-	//TODO +Неправильно тут привязываться к консоли, по идее этот метод должен тоже вернуть ostream,
-	//TODO: +который будет передан в ostream вызывающего метода и только потом выведен в консоль
 	
