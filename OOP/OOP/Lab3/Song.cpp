@@ -34,8 +34,6 @@ SongGenre Song::GetSongGenre()
 	return this->_genre;
 }
 
-//TODO: +Не правильно сделано, сейчас все параметры передаются напрямую в поля, без всяких проверок в методах-сетерах
-//TODO: +это может привести к нарушению логики использования класса.
 Song::Song() : Song(" ", 0, Rock) {}
 
 Song::Song(const string& songTitle, double songTiming, SongGenre genre)
