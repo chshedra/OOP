@@ -49,38 +49,37 @@ ostream& operator<<(ostream& writeSong, Song& song)
 	writeSong << song._songTitle << " Time:"
 		<< song._songTiming << "; Genre:";
 	switch (song._genre)
-	{
-		//TODO: RSDN
-	case Rock:
-	{
-		cout << "Rock";
-		break;
-	}
-	case Rap:
-	{
-		cout << "Rap";
-		break;
-	}
-	case Classic:
-	{
-		cout << "Classic";
-		break;
-	}
-	case Club:
-	{
-		cout << "Club";
-		break;
-	}
-	case DubStep:
-	{
-		cout << "Dubstep";
-		break;
-	}
-	default:
-	{
-		cout << "Unknown genre";
-		break;
-	}
+	{	
+		case Rock:
+		{
+			cout << "Rock";
+			break;
+		}
+		case Rap:
+		{
+			cout << "Rap";
+			break;
+		}
+		case Classic:
+		{
+			cout << "Classic";
+			break;
+		}
+		case Club:
+		{
+			cout << "Club";
+			break;
+		}
+		case DubStep:
+		{
+			cout << "Dubstep";
+			break;
+		}
+		default:
+		{
+			cout << "Unknown genre";
+			break;
+		}
 	}
 	return writeSong;
 }

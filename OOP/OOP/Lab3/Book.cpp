@@ -1,4 +1,5 @@
 #include "Book.h"
+#define _CRT_SECURE_NO_WARNINGS
 #include "../Common/Common.h"
 
 void DemoBook()
@@ -28,6 +29,15 @@ void DemoBook()
 	}
 }
 
+int GetPresentYear()
+{
+	struct tm newtime;
+	time_t now = time(0);
+	localtime_s(&newtime, &now);
+	int year = newtime.tm_year + 1900;
+	return year;
+}
+
 void ReadBookFromConsole(Book& book)
 {
 	cin.ignore(); //игнорируетя /n 
@@ -36,6 +46,12 @@ void ReadBookFromConsole(Book& book)
 	getline(cin, book.Title);
 	cout << "Введите год издания: ";
 	book.PublicationYear = InputValidation();
+	while (book.PublicationYear > GetPresentYear())
+	{
+		cout << "Год издания не может быть больше текущего!"
+			<< " Попробуйте ещё раз: ";
+		book.PublicationYear = InputValidation();
+	}
 	cout << "Введите количество страниц: ";
 	book.Page = InputValidation();
 	cout << "Введите количество авторов: ";
@@ -47,7 +63,7 @@ void ReadBookFromConsole(Book& book)
 			<< " Попробуйте ещё раз: ";
 		cin >> book.AuthorNumber;
 	}
-	
+
 	book.Authors = new string[book.AuthorNumber];
 	cin.ignore(); 
 	for (int i = 0; i < book.AuthorNumber; i++)
