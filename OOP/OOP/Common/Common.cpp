@@ -26,9 +26,13 @@ int InputValidation()
 			i++;
 		}
 		resultNumber = atoi(checkNumber.c_str());
+		if (resultNumber > 2147483646)
+		{
+			isCorrect = false;
+		}
 		if (isCorrect == true)
 		{
-			return atoi(checkNumber.c_str());
+			return resultNumber;
 		}
 		else
 		{
