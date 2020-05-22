@@ -14,15 +14,16 @@ void Album::SetReleaseYear(int releaseYear)
 	this->_releaseYear = releaseYear;
 }
 
-void Album::SetSongs(Song* songs)
+void Album::SetSongs(Song* songs, int countSongs)
 {
 	this->_songs = songs;
-}
-
-void Album::SetCountSongs(int countSongs)
-{
+	if (countSongs < 0)
+	{
+		throw("Размер массива песен не может быть отрицательным");
+	}
 	this->_countSongs = countSongs;
 }
+
 
 int Album::GetCountSongs()
 {
@@ -44,12 +45,12 @@ Song* Album::GetSongs()
 	return this->_songs;
 }
 
-Album::Album() : Album(" ", 0, nullptr) {}
+Album::Album() : Album(" ", 0, nullptr, 0) {}
 
-Album::Album(const string& albumTitle, int releaseYear, Song* songs)
+Album::Album(const string& albumTitle, int releaseYear, Song* songs, int countSongs)
 {
 	this->SetAlbumTitle(albumTitle);
 	this->SetReleaseYear(releaseYear);
-	this->SetSongs(songs);
+	this->SetSongs(songs, countSongs);
 }
 

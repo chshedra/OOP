@@ -87,29 +87,6 @@ Time Flight::GetArriveTime()
 	return this->_arriveTime;
 }
 
-void DemoFlightWithTime()
-{
-	const int size = 5;
-	Flight* flights = new Flight[size];
-
-	for (int i = 0; i < size; i++)
-	{
-		string writeI = std::to_string(i);
-		flights[i].SetFlightNumber("S105" + writeI);
-		flights[i].SetDeparturePoint("Moscow" + writeI);
-		flights[i].SetDestination("Tomsk" + writeI);
-		Time departureTime(2020, 1 + i, 10 + i, 12 + i, 30 + i);
-		flights[i].SetDepartureTime(&departureTime);
-		Time arriveTime(2020, 1 + i, 10 + i, 16 + i, 59 - i);
-		flights[i].SetArriveTime(&arriveTime);
-	}
-
-	for (int i = 0; i < size; i++)
-	{
-		cout << flights[i] << endl;
-	}
-}
-
 Time Flight::GetFlightTimeMinutes()
 {
 	return  _arriveTime - _departureTime;

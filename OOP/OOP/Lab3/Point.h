@@ -6,13 +6,14 @@ class Point
 private:
 	double _x;
 	double _y;
-public:
-	void SetX(int x);
-	void SetY(int y);
 
+	void SetX(double x);
+	void SetY(double y);
+
+public:
 	double GetX();
 	double GetY();
 
 	Point();
-	Point(int x, int y);
+	Point(double x, double y);
 };

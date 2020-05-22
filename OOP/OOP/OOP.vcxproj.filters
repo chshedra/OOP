@@ -16,9 +16,6 @@
     <Filter Include="Header Files\Lab1">
       <UniqueIdentifier>{c12d6e43-1d77-41f5-b4f3-b00da631e1b2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Lab1">
-      <UniqueIdentifier>{c9d7f89e-4e2e-4d34-935d-76ae71926fe0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Lab2">
       <UniqueIdentifier>{16372c41-c8cd-45fd-8370-5c233cb97348}</UniqueIdentifier>
     </Filter>
@@ -36,6 +33,15 @@
     </Filter>
     <Filter Include="Source Files\Lab3">
       <UniqueIdentifier>{1e875b2a-37c0-4030-8de7-e6ba80eab6e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lab4">
+      <UniqueIdentifier>{feb965fa-972c-4ccb-9712-dc8b8c4d81e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab4">
+      <UniqueIdentifier>{d11206e9-ac42-46d9-a7f7-3d4de78c84a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab1">
+      <UniqueIdentifier>{c9d7f89e-4e2e-4d34-935d-76ae71926fe0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -99,9 +105,6 @@
     <ClInclude Include="Lab3\Book.h">
       <Filter>Header Files\Lab3</Filter>
     </ClInclude>
-    <ClInclude Include="Lab3\Lab3Menu.h">
-      <Filter>Header Files\Lab3</Filter>
-    </ClInclude>
     <ClInclude Include="Lab3\Route.h">
       <Filter>Header Files\Lab3</Filter>
     </ClInclude>
@@ -136,6 +139,21 @@
       <Filter>Header Files\Lab3</Filter>
     </ClInclude>
     <ClInclude Include="Lab3\Band.h">
+      <Filter>Header Files\Lab3</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab4\Ring.h">
+      <Filter>Header Files\Lab4</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DoubleValidator.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab4\CollisionManager.h">
+      <Filter>Header Files\Lab4</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab4\GeometricProgram.h">
+      <Filter>Header Files\Lab4</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab3\Lab3Program.h">
       <Filter>Header Files\Lab3</Filter>
     </ClInclude>
   </ItemGroup>
@@ -179,9 +197,6 @@
     <ClCompile Include="Lab3\Book.cpp">
       <Filter>Source Files\Lab3</Filter>
     </ClCompile>
-    <ClCompile Include="Lab3\Lab3Menu.cpp">
-      <Filter>Source Files\Lab3</Filter>
-    </ClCompile>
     <ClCompile Include="Lab3\Route.cpp">
       <Filter>Source Files\Lab3</Filter>
     </ClCompile>
@@ -213,6 +228,21 @@
       <Filter>Source Files\Lab3</Filter>
     </ClCompile>
     <ClCompile Include="Lab3\Point.cpp">
+      <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab4\Ring.cpp">
+      <Filter>Source Files\Lab4</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DoubleValidator.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab4\CollisionManager.cpp">
+      <Filter>Source Files\Lab4</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab4\GeometricProgram.cpp">
+      <Filter>Source Files\Lab4</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab3\Lab3Program.cpp">
       <Filter>Source Files\Lab3</Filter>
     </ClCompile>
   </ItemGroup>

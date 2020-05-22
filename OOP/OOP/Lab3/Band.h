@@ -12,8 +12,7 @@ private:
 public:
 	void SetBandName(const string &bandName);
 	void SetDescription(const string &description);
-	void SetAlbums(Album* albums);
-	void SetCountAlbum(int countAlbum);
+	void SetAlbums(Album* albums, int countAlbum);
 
 	int GetCountAlbum();
 	Album* GetAlbums();
@@ -25,7 +24,7 @@ public:
 	void CopyAllSongs(Song* allSongs);
 	
 	Band();
-	Band(const string &bandName, string description, Album* albums);
+	Band(const string &bandName, string description, Album* albums, int countAlbum);
 };
 
 void DemoBand();

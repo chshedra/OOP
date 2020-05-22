@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\Common.h" />
+    <ClInclude Include="Common\DoubleValidator.h" />
     <ClInclude Include="Lab1\Arrays.h" />
     <ClInclude Include="Lab1\Breakpoints.h" />
     <ClInclude Include="Lab1\DynamicMemory.h" />
@@ -45,16 +46,20 @@
     <ClInclude Include="Lab3\Band.h" />
     <ClInclude Include="Lab3\Book.h" />
     <ClInclude Include="Lab3\Flight.h" />
-    <ClInclude Include="Lab3\Lab3Menu.h" />
+    <ClInclude Include="Lab3\Lab3Program.h" />
     <ClInclude Include="Lab3\Point.h" />
     <ClInclude Include="Lab3\Rectangle.h" />
     <ClInclude Include="Lab3\Route.h" />
     <ClInclude Include="Lab3\Song.h" />
     <ClInclude Include="Lab3\SongGenre.h" />
     <ClInclude Include="Lab3\Time.h" />
+    <ClInclude Include="Lab4\CollisionManager.h" />
+    <ClInclude Include="Lab4\GeometricProgram.h" />
+    <ClInclude Include="Lab4\Ring.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Common.cpp" />
+    <ClCompile Include="Common\DoubleValidator.cpp" />
     <ClCompile Include="Lab1\Arrays.cpp" />
     <ClCompile Include="Lab1\Breakpoints.cpp" />
     <ClCompile Include="Lab1\DynamicMemory.cpp" />
@@ -72,12 +77,15 @@
     <ClCompile Include="Lab3\Band.cpp" />
     <ClCompile Include="Lab3\Book.cpp" />
     <ClCompile Include="Lab3\Flight.cpp" />
-    <ClCompile Include="Lab3\Lab3Menu.cpp" />
+    <ClCompile Include="Lab3\Lab3Program.cpp" />
     <ClCompile Include="Lab3\Point.cpp" />
     <ClCompile Include="Lab3\Rectangle.cpp" />
     <ClCompile Include="Lab3\Route.cpp" />
     <ClCompile Include="Lab3\Song.cpp" />
     <ClCompile Include="Lab3\Time.cpp" />
+    <ClCompile Include="Lab4\CollisionManager.cpp" />
+    <ClCompile Include="Lab4\GeometricProgram.cpp" />
+    <ClCompile Include="Lab4\Ring.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

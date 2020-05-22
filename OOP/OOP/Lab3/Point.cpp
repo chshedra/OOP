@@ -1,11 +1,11 @@
 #include "Point.h"
 
-void Point::SetX(int x)
+void Point::SetX(double x)
 {
 		this->_x = x;
 }
 
-void Point::SetY(int y)
+void Point::SetY(double y)
 {
 	this->_y = y;
 }
@@ -20,9 +20,9 @@ double Point::GetY()
 	return this->_y;
 }
 
-Point::Point() : Point(0, 0) {}
+Point::Point() : Point(0.0, 0.0) {}
 
-Point::Point(int x, int y)
+Point::Point(double x, double y)
 {
 	SetX(x);
 	SetY(y);

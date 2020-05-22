@@ -13,8 +13,7 @@ private:
 public:
 	void SetAlbumTitle(const string &albumTitle);
 	void SetReleaseYear(int releaseYear);
-	void SetSongs(Song* songs);
-	void SetCountSongs(int countSongs);
+	void SetSongs(Song* songs, int countSong);
 
 	int GetCountSongs();
 	string GetAlbumTitle();
@@ -22,5 +21,5 @@ public:
 	Song* GetSongs();
 
 	Album();
-	Album(const string &albumTitle, int releaseYear, Song* songs);
+	Album(const string &albumTitle, int releaseYear, Song* songs, int countSongs);
 };

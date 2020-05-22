@@ -1,32 +1,6 @@
 #include "Route.h"
 
-void DemoRoute()
-{
-	const int size = 3;
-	Route routes[size];
 
-	cin.ignore(); // игнорируется /n
-	for (int i = 0; i < size; i++)
-	{
-		ReadRouteFromConsole(routes[i]);
-	}
-	for (int i = 0; i < size; i++)
-	{
-		WriteRouteToConsole(routes[i]);
-	}
-	cout << "Введите остановку для поиска маршрута: ";
-	string author;
-	cin >> author;
-	int index = FindRouteByStop(routes, size, author);
-	if (index == -1)
-	{
-		cout << "Маршрут не найден" << endl;
-	}
-	else
-	{
-		WriteRouteToConsole(routes[index]);
-	}
-}
 
 void ReadRouteFromConsole(Route& route)
 {

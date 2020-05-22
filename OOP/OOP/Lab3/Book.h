@@ -13,8 +13,6 @@ struct Book
 	int AuthorNumber;
 };
 
-void DemoBook();
-
 void ReadBookFromConsole(Book& book);
 
 void WriteBookToConsole(Book& book);

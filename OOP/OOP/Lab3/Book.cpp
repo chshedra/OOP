@@ -2,40 +2,14 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "../Common/Common.h"
 
-void DemoBook()
-{
-	const int size = 1;
-	Book books[size];
-	for (int i = 0; i < size; i++)
-	{
-		ReadBookFromConsole(books[i]);
-	}
-	for (int i = 0; i < size; i++)
-	{
-		WriteBookToConsole(books[i]);
-	}
 
-	cout << "Введите автора для поиска книги: ";
-	string author;
-	cin >> author;
-	int index = FindBookByAuthor(books, size, author);
-	if (index == -1)
-	{
-		cout << "Книга не найдена" << endl;
-	}
-	else
-	{
-		WriteBookToConsole(books[index]);
-	}
-}
-
-int GetPresentYear()
+bool CheckPresentYear(int year)
 {
 	struct tm newtime;
 	time_t now = time(0);
 	localtime_s(&newtime, &now);
-	int year = newtime.tm_year + 1900;
-	return year;
+	int presentYear = newtime.tm_year + 1900;
+	return presentYear < year ? false : true;
 }
 
 void ReadBookFromConsole(Book& book)
@@ -46,7 +20,7 @@ void ReadBookFromConsole(Book& book)
 	getline(cin, book.Title);
 	cout << "Введите год издания: ";
 	book.PublicationYear = InputValidation();
-	while (book.PublicationYear > GetPresentYear())
+	while (CheckPresentYear(book.PublicationYear) != true)
 	{
 		cout << "Год издания не может быть больше текущего!"
 			<< " Попробуйте ещё раз: ";
