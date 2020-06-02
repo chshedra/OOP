@@ -1,17 +1,17 @@
 #pragma once
 
-//TODO: Почему не сделать статическим?
-class DoubleValidator
+//TODO:+Почему не сделать статическим?
+static class DoubleValidator
 {
 public:
 
-	class NegativeValue {};
-	class OutOfRange {};
+	static class NegativeValue {};
+	static class OutOfRange {};
 
-	bool IsValuePositive(double value);
-	bool IsValueInRange(double value, double min, double max);
-	void AssertPositiveValue(double value);
-	void AssertValueInRange(double value, double min, double max);
+	static bool IsValuePositive(double value);
+	static bool IsValueInRange(double value, double min, double max);
+	static void AssertPositiveValue(double value);
+	static void AssertValueInRange(double value, double min, double max);
 };
 
 

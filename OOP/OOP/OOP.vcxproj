@@ -56,6 +56,10 @@
     <ClInclude Include="Lab4\CollisionManager.h" />
     <ClInclude Include="Lab4\GeometricProgram.h" />
     <ClInclude Include="Lab4\Ring.h" />
+    <ClInclude Include="Lab5\Lab5Program.h" />
+    <ClInclude Include="Lab5\Person.h" />
+    <ClInclude Include="Lab5\Student.h" />
+    <ClInclude Include="Lab5\Teacher.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Common.cpp" />
@@ -86,6 +90,10 @@
     <ClCompile Include="Lab4\CollisionManager.cpp" />
     <ClCompile Include="Lab4\GeometricProgram.cpp" />
     <ClCompile Include="Lab4\Ring.cpp" />
+    <ClCompile Include="Lab5\Lab5Program.cpp" />
+    <ClCompile Include="Lab5\Person.cpp" />
+    <ClCompile Include="Lab5\Student.cpp" />
+    <ClCompile Include="Lab5\Teacher.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

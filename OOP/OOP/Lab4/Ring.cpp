@@ -10,31 +10,21 @@ int Ring::GetAllRingsCount()
 	return AllRingsCount;
 }
 
-
 void Ring::SetOuterRadius(double outerRadius)
 {
-	DoubleValidator* positiveValidator = new DoubleValidator();
-	positiveValidator->AssertPositiveValue(outerRadius);
-
-	DoubleValidator* rangeValidator = new DoubleValidator();
-	rangeValidator->AssertValueInRange(outerRadius, this->_innerRadius, outerRadius);
+	
+	DoubleValidator::AssertPositiveValue(outerRadius);
+	DoubleValidator::AssertValueInRange(outerRadius, 
+		this->_innerRadius, outerRadius);
 	this->_outerRadius = outerRadius;
-
-	delete positiveValidator;
-	delete rangeValidator;
 }
 
 void Ring::SetInnerRadius(double innerRadius)
 {
-	DoubleValidator* positiveValidator = new DoubleValidator();
-	positiveValidator->AssertPositiveValue(_innerRadius);
+	DoubleValidator::AssertPositiveValue(_innerRadius);
 	
-	DoubleValidator* rangeValidator = new DoubleValidator();
-	rangeValidator->AssertValueInRange(innerRadius, innerRadius, this->_outerRadius);
+	DoubleValidator::AssertValueInRange(innerRadius, innerRadius, this->_outerRadius);
 	this->_innerRadius = innerRadius;
-
-	delete positiveValidator;
-	delete rangeValidator;
 }
 
 void Ring::SetCenter(double x, double y)

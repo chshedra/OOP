@@ -42,3 +42,12 @@ int InputValidation()
 	}
 }
 
+
+int GetPresentYear()
+{
+	struct tm newtime;
+	time_t now = time(0);
+	localtime_s(&newtime, &now);
+	return newtime.tm_year + 1900;
+}
+

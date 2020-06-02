@@ -43,6 +43,12 @@
     <Filter Include="Source Files\Lab1">
       <UniqueIdentifier>{c9d7f89e-4e2e-4d34-935d-76ae71926fe0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Lab5">
+      <UniqueIdentifier>{1c4acdf8-dfe8-4e8f-8d98-183be5029a5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lab5">
+      <UniqueIdentifier>{d3af23fb-6be1-4a79-b3a0-e2ee63425b72}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lab1\Arrays.h">
@@ -156,6 +162,18 @@
     <ClInclude Include="Lab3\Lab3Program.h">
       <Filter>Header Files\Lab3</Filter>
     </ClInclude>
+    <ClInclude Include="Lab5\Person.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Student.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Teacher.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Lab5Program.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab1\Arrays.cpp">
@@ -244,6 +262,18 @@
     </ClCompile>
     <ClCompile Include="Lab3\Lab3Program.cpp">
       <Filter>Source Files\Lab3</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\Person.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\Student.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\Teacher.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\Lab5Program.cpp">
+      <Filter>Source Files\Lab5</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

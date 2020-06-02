@@ -3,14 +3,6 @@
 #include "../Common/Common.h"
 
 
-bool CheckPresentYear(int year)
-{
-	struct tm newtime;
-	time_t now = time(0);
-	localtime_s(&newtime, &now);
-	int presentYear = newtime.tm_year + 1900;
-	return presentYear < year ? false : true;
-}
 
 void ReadBookFromConsole(Book& book)
 {
@@ -20,7 +12,7 @@ void ReadBookFromConsole(Book& book)
 	getline(cin, book.Title);
 	cout << "Введите год издания: ";
 	book.PublicationYear = InputValidation();
-	while (CheckPresentYear(book.PublicationYear) != true)
+	while (GetPresentYear() > book.PublicationYear)
 	{
 		cout << "Год издания не может быть больше текущего!"
 			<< " Попробуйте ещё раз: ";
