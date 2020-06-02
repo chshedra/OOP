@@ -1,5 +1,6 @@
 #pragma once
 
+//TODO: Почему не сделать статическим?
 class DoubleValidator
 {
 public:

@@ -76,8 +76,10 @@ void GeometricProgram::DemoRing()
 template <class T>
 void ShowCollisionResult(T& shape1, T& shape2)
 {
+	//TODO: Он же статический... Надо использовать без создания экземпляра
 	CollisionManager* manageCollision = new CollisionManager();
 
+	//TODO: Можно не сравнивать с true
 	if (manageCollision->IsCollision(shape1, shape2) == true)
 	{
 		cout << "Столкновение есть" << endl;
