@@ -269,10 +269,10 @@
     <ClCompile Include="Lab5\Student.cpp">
       <Filter>Source Files\Lab5</Filter>
     </ClCompile>
-    <ClCompile Include="Lab5\Teacher.cpp">
+    <ClCompile Include="Lab5\Lab5Program.cpp">
       <Filter>Source Files\Lab5</Filter>
     </ClCompile>
-    <ClCompile Include="Lab5\Lab5Program.cpp">
+    <ClCompile Include="Lab5\Teacher.cpp">
       <Filter>Source Files\Lab5</Filter>
     </ClCompile>
   </ItemGroup>
