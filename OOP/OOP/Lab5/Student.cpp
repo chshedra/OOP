@@ -2,8 +2,6 @@
 
 void Student::SetRecordBookNumber(int recordBookNumber)
 {
-	DoubleValidator::AssertPositiveValue(recordBookNumber);
-
 	const int maxRecordBookNumber = 99999999;
 	DoubleValidator::AssertValueInRange(recordBookNumber, 0,
 		maxRecordBookNumber);
@@ -13,7 +11,6 @@ void Student::SetRecordBookNumber(int recordBookNumber)
 
 void Student::SetEntranceYear(int entranceYear)
 {
-	DoubleValidator::AssertPositiveValue(entranceYear);
 	DoubleValidator::AssertValueInRange(entranceYear, 0, GetPresentYear());
 
 	this->_entranceYear = entranceYear;

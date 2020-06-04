@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Common\Common.h" />
     <ClInclude Include="Common\DoubleValidator.h" />
+    <ClInclude Include="Common\SymbolValidator.h" />
     <ClInclude Include="Lab1\Arrays.h" />
     <ClInclude Include="Lab1\Breakpoints.h" />
     <ClInclude Include="Lab1\DynamicMemory.h" />
@@ -56,14 +57,23 @@
     <ClInclude Include="Lab4\CollisionManager.h" />
     <ClInclude Include="Lab4\GeometricProgram.h" />
     <ClInclude Include="Lab4\Ring.h" />
+    <ClInclude Include="Lab5\CategoryType.h" />
+    <ClInclude Include="Lab5\CertificateDiscount.h" />
+    <ClInclude Include="Lab5\DiscountBase.h" />
     <ClInclude Include="Lab5\Lab5Program.h" />
+    <ClInclude Include="Lab5\PaidUser.h" />
+    <ClInclude Include="Lab5\PercentDiscount.h" />
     <ClInclude Include="Lab5\Person.h" />
+    <ClInclude Include="Lab5\Post.h" />
+    <ClInclude Include="Lab5\Product.h" />
     <ClInclude Include="Lab5\Student.h" />
     <ClInclude Include="Lab5\Teacher.h" />
+    <ClInclude Include="Lab5\User.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\Common.cpp" />
     <ClCompile Include="Common\DoubleValidator.cpp" />
+    <ClCompile Include="Common\SymbolValidator.cpp" />
     <ClCompile Include="Lab1\Arrays.cpp" />
     <ClCompile Include="Lab1\Breakpoints.cpp" />
     <ClCompile Include="Lab1\DynamicMemory.cpp" />
@@ -90,10 +100,17 @@
     <ClCompile Include="Lab4\CollisionManager.cpp" />
     <ClCompile Include="Lab4\GeometricProgram.cpp" />
     <ClCompile Include="Lab4\Ring.cpp" />
+    <ClCompile Include="Lab5\CertificateDiscount.cpp" />
+    <ClCompile Include="Lab5\DiscountBase.cpp" />
     <ClCompile Include="Lab5\Lab5Program.cpp" />
+    <ClCompile Include="Lab5\PaidUser.cpp" />
+    <ClCompile Include="Lab5\PercentDiscount.cpp" />
     <ClCompile Include="Lab5\Person.cpp" />
+    <ClCompile Include="Lab5\Post.cpp" />
+    <ClCompile Include="Lab5\Product.cpp" />
     <ClCompile Include="Lab5\Student.cpp" />
     <ClCompile Include="Lab5\Teacher.cpp" />
+    <ClCompile Include="Lab5\User.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

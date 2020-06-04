@@ -174,6 +174,33 @@
     <ClInclude Include="Lab5\Lab5Program.h">
       <Filter>Header Files\Lab5</Filter>
     </ClInclude>
+    <ClInclude Include="Lab5\User.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Post.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\PaidUser.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\SymbolValidator.h">
+      <Filter>Header Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\Product.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\CategoryType.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\DiscountBase.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\PercentDiscount.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
+    <ClInclude Include="Lab5\CertificateDiscount.h">
+      <Filter>Header Files\Lab5</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lab1\Arrays.cpp">
@@ -273,6 +300,30 @@
       <Filter>Source Files\Lab5</Filter>
     </ClCompile>
     <ClCompile Include="Lab5\Teacher.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\User.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\Post.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\PaidUser.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\SymbolValidator.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\Product.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\DiscountBase.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\PercentDiscount.cpp">
+      <Filter>Source Files\Lab5</Filter>
+    </ClCompile>
+    <ClCompile Include="Lab5\CertificateDiscount.cpp">
       <Filter>Source Files\Lab5</Filter>
     </ClCompile>
   </ItemGroup>
