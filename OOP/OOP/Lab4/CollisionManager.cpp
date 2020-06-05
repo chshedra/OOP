@@ -16,9 +16,7 @@ bool CollisionManager::IsCollision(Rectangle& rectangle1,
 
 	//TODO: +ћожно сразу возвращать условие под if-ом
 	return (dX < abs(rectangle1.GetLength() - rectangle2.GetLength()) &&
-		dY < abs(rectangle1.GetWidth() - rectangle2.GetWidth()))
-		? true
-		: false;
+		dY < abs(rectangle1.GetWidth() - rectangle2.GetWidth()));
 }
 
 bool CollisionManager::IsCollision(Ring& ring1, Ring& ring2)
@@ -28,9 +26,7 @@ bool CollisionManager::IsCollision(Ring& ring1, Ring& ring2)
 	double C = sqrt(pow(dX, 2) + pow(dY, 2));
 
 	//TODO: +ћожно сразу возвращать условие под if-ом
-	return (C < ring1.GetOuterRadius() + ring2.GetOuterRadius())
-		? true
-		: false;
+	return (C < ring1.GetOuterRadius() + ring2.GetOuterRadius());
 }
 
 
