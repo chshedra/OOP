@@ -24,10 +24,8 @@ bool CollisionManager::IsCollision(Ring& ring1, Ring& ring2)
 	double dY = CountDelta(ring1.GetY(), ring2.GetY());
 	double C = sqrt(pow(dX, 2) + pow(dY, 2));
 
-	//TODO: ћожно сразу возвращать условие под if-ом
-	return (C < ring1.GetOuterRadius() + ring2.GetOuterRadius())
-		? true
-		: false;
+	//TODO:+ ћожно сразу возвращать условие под if-ом
+	return (C < ring1.GetOuterRadius() + ring2.GetOuterRadius());
 }
 
 
