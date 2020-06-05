@@ -13,6 +13,7 @@ protected:
 	string _patronymic;
 
 public:
+	//TODO: Константные ссылки?
 	void SetName(string name);
 	void SetSurname(string surname);
 	void SetPatronymic(string patronymic);

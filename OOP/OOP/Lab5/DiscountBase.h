@@ -12,6 +12,7 @@ public:
 
 	CategoryType GetCategory();
 
+	//TODO: Почему указатель?
 	virtual double Calculate(Product* product) = 0;
 
 protected:

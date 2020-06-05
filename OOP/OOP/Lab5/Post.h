@@ -9,6 +9,7 @@ private:
 	string _text;
 
 public:
+	//TODO: Константные ссылки?
 	void SetTitle(string title);
 	void SetText(string text);
 

@@ -12,6 +12,7 @@ void Product::SetCategory(CategoryType category)
 
 void Product::SetPrice(double price)
 {
+	//TODO: Не используется
 	const int maxPrice = 100000;
 	DoubleValidator::AssertValueInRange(price, 0, 100000);
 	_price = price;

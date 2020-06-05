@@ -6,7 +6,7 @@ void CertificateDiscount::SetAmount(double amount)
 	DoubleValidator::AssertValueInRange(amount, 0, maxCertificateAmount);
 	_amount = amount;
 }
-
+//TODO: RSDN
 double CertificateDiscount::GetAmount() { return _amount; }
 
 CertificateDiscount::CertificateDiscount(CategoryType category, double amount) :

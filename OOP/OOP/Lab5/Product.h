@@ -11,6 +11,7 @@ private:
 	CategoryType _category;
 
 public:
+	//TODO: Константные ссылки?
 	void SetName(string name);
 	void SetPrice(double price);
 	void SetCategory(CategoryType category);

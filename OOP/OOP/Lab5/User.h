@@ -12,6 +12,7 @@ protected:
 	void SetId(int id);
 
 public:
+	//TODO: Константные ссылки?
 	void SetLogin(string login);
 	void SetPassword(string password);
 

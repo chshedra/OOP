@@ -7,6 +7,7 @@ private:
 	string _position;
 
 public:
+	//TODO: Константные ссылки?
 	void SetPosition(string position);
 
 	string GetPosition();
