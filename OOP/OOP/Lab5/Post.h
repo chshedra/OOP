@@ -9,12 +9,12 @@ private:
 	string _text;
 
 public:
-	//TODO: Константные ссылки?
-	void SetTitle(string title);
-	void SetText(string text);
+	//TODO:+ Константные ссылки?
+	void SetTitle(const string& title);
+	void SetText(const string& text);
 
 	string GetTitle();
 	string GetText();
 
-	Post(string title, string text);
+	Post(const string& title, const string& text);
 };

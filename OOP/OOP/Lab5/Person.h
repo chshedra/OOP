@@ -13,15 +13,15 @@ protected:
 	string _patronymic;
 
 public:
-	//TODO: Константные ссылки?
-	void SetName(string name);
-	void SetSurname(string surname);
-	void SetPatronymic(string patronymic);
+	//TODO:+ Константные ссылки?
+	void SetName(const string &name);
+	void SetSurname(const string &surname);
+	void SetPatronymic(const string &patronymic);
 
 	string GetName();
 	string GetSurname();
 	string GetPatronymic();
 
 	Person();
-	Person(string surname, string name, string patronymic);
+	Person(const string &surname, const string& name, const string& patronymic);
 };

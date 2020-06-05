@@ -18,18 +18,18 @@ void Student::SetEntranceYear(int entranceYear)
 
 int Student::GetRecordBookNumber()
 {
-	return this->_recordBookNumber;
+	return _recordBookNumber;
 }
 
 int Student::GetEntranceYear()
 {
-	return this->_entranceYear;
+	return _entranceYear;
 }
 
 Student::Student() : Student(" ", " ", " ", 0, 0) {}
 
-Student::Student(string surname, string name, string patronymic,
-	int recordBookNumber, int entranceYear) :
+Student::Student(const string &surname, const string& name, 
+	const string& patronymic, int recordBookNumber, int entranceYear) :
 	Person(surname, name, patronymic)
 {
 	this->SetRecordBookNumber(recordBookNumber);

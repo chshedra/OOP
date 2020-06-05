@@ -6,7 +6,10 @@ void PercentDiscount::SetPercent(double percent)
 	_percent = percent;
 }
 
-double PercentDiscount::GetPercent() { return _percent; }
+double PercentDiscount::GetPercent() 
+{ 
+	return _percent;
+}
 
 PercentDiscount::PercentDiscount(CategoryType category, double percent) :
 	DiscountBase(category)

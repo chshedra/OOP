@@ -10,15 +10,21 @@ void PaidUser::SetPosts(Post* posts, int postsCount)
 	_postsCount = postsCount;
 }
 
-Post* PaidUser::GetPosts() { return _posts; }
+Post* PaidUser::GetPosts() 
+{ 
+	return _posts; 
+}
 
-int PaidUser::GetPostsCount() { return _postsCount; }
+int PaidUser::GetPostsCount() 
+{ 
+	return _postsCount; 
+}
 
-PaidUser::PaidUser(int id, string login, string password,
+PaidUser::PaidUser(int id, const string& login, const string& password,
 	Post* posts, int postsCount) : User(id, login, password)
 {
 	SetPosts(posts, postsCount);
 }
 
-PaidUser::PaidUser(int id, string login, string password) :
+PaidUser::PaidUser(int id, const string& login, const string& password) :
 	User(id, login, password) {}

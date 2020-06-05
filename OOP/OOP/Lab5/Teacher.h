@@ -7,12 +7,12 @@ private:
 	string _position;
 
 public:
-	//TODO: Константные ссылки?
-	void SetPosition(string position);
+	//TODO:+ Константные ссылки?
+	void SetPosition(const string& position);
 
 	string GetPosition();
 
 	Teacher();
-	Teacher(string surname, string name, string patronymic,
-		string position);
+	Teacher(const string& surname, const string& name, const string& patronymic,
+		const string& position);
 };

@@ -12,14 +12,14 @@ protected:
 	void SetId(int id);
 
 public:
-	//TODO: Константные ссылки?
-	void SetLogin(string login);
-	void SetPassword(string password);
+	//TODO: +Константные ссылки?
+	void SetLogin(const string& login);
+	void SetPassword(const string& password);
 
 	int GetId();
 	string GetLogin();
 	string GetPassword();
 
-	User(int id, string login, string password);
-	bool IsCorrectPassword(string password);
+	User(int id, const string& login, const string& password);
+	bool IsCorrectPassword(const string& password);
 };

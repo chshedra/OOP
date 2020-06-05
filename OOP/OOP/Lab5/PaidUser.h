@@ -13,8 +13,9 @@ public:
 	Post* GetPosts();
 	int GetPostsCount();
 
-	//TODO: Константные ссылки?
-	PaidUser(int id, string login, string password, Post* posts, int postsCount);
-	PaidUser(int id, string login, string password);
+	//TODO: +Константные ссылки?
+	PaidUser(int id, const string& login, const string& password,
+		Post* posts, int postsCount);
+	PaidUser(int id, const string& login, const string& password);
 };
 

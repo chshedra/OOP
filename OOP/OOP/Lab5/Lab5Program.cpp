@@ -113,7 +113,8 @@ void Lab5Program::ShowName(Person* person)
 		<< person->GetPatronymic() << endl;
 }
 
-User* Lab5Program::Login(User** users, int usersCount, string enteredLogin, string enteredPassword)
+User* Lab5Program::Login(User** users, int usersCount, const string& enteredLogin, 
+	const string &enteredPassword)
 {
 	for (int i = 0; i < usersCount; i++)
 	{

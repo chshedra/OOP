@@ -8,14 +8,14 @@
 #include "PercentDiscount.h"
 #include "CertificateDiscount.h"
 
-//TODO: Логичнее сделать статическим
-class Lab5Program
+//TODO: +Логичнее сделать статическим
+static class Lab5Program
 {
 public:
-	void ShowName(Person* person);
-	void Lab5Menu();
-	User* Login(User** users, int usersCount, 
-		string enteredLogin, string enteredPassword);
-	void ShowCheckWithDiscount(DiscountBase* discount,
+	static void ShowName(Person* person);
+	static void Lab5Menu();
+	static User* Login(User** users, int usersCount, 
+		const string& enteredLogin, const string& enteredPassword);
+	static void ShowCheckWithDiscount(DiscountBase* discount,
 		Product** products, int productsCount);
 };

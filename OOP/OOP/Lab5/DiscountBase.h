@@ -12,7 +12,9 @@ public:
 
 	CategoryType GetCategory();
 
-	//TODO: Почему указатель?
+	//TODO: Почему указатель? 
+	// потому что передаем объект класса, в прошлых лабах вы так говорили делать 
+	// да и в методичке так написано
 	virtual double Calculate(Product* product) = 0;
 
 protected:
