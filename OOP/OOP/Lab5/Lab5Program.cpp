@@ -92,6 +92,11 @@ void Lab5Program::Lab5Menu()
 
 					ShowCheckWithDiscount(&percentDiscount, products, productsCount);
 					ShowCheckWithDiscount(&certificateDiscount, products, productsCount);
+
+					for (int i = 0; i < productsCount; i++)
+					{
+						delete products[i];
+					}
 				}
 				catch (DoubleValidator::OutOfRange)
 				{
