@@ -13,5 +13,5 @@ public:
 
 	CertificateDiscount(CategoryType category, double amount);
 
-	double Calculate(Product* product);
+	double Calculate(Product& product);
 };

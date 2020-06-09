@@ -12,9 +12,9 @@ public:
 	void SetTitle(const string& title);
 	void SetText(const string& text);
 
-	//TODO: Возврат по ссылке?
-	string GetTitle();
-	string GetText();
+	//TODO: +Возврат по ссылке?
+	string& GetTitle();
+	string& GetText();
 
 	Post(const string& title, const string& text);
 };

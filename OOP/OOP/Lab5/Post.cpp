@@ -10,12 +10,12 @@ void Post::SetText(const string& text)
 	_text = text;
 }
 
-string Post::GetTitle() 
+string& Post::GetTitle() 
 { 
 	return _title; 
 }
 
-string Post::GetText()
+string& Post::GetText()
 { 
 	return _text; 
 }

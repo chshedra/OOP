@@ -5,7 +5,7 @@ void Teacher::SetPosition(const string& position)
 	this->_position = position;
 }
 
-string Teacher::GetPosition()
+string& Teacher::GetPosition()
 {
 	return this->_position;
 }

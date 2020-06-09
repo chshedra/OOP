@@ -16,9 +16,9 @@ public:
 	void SetPassword(const string& password);
 
 	int GetId();
-	//TODO: Возврат по ссылке?
-	string GetLogin();
-	string GetPassword();
+	//TODO:+ Возврат по ссылке?
+	string& GetLogin();
+	string& GetPassword();
 
 	User(int id, const string& login, const string& password);
 	bool IsCorrectPassword(const string& password);

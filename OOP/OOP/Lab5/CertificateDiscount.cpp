@@ -18,11 +18,11 @@ CertificateDiscount::CertificateDiscount(CategoryType category, double amount) :
 	SetAmount(amount);
 }
 
-double CertificateDiscount::Calculate(Product* product)
+double CertificateDiscount::Calculate(Product& product)
 {
-	if (product->GetCategory() == DiscountBase::GetCategory())
+	if (product.GetCategory() == DiscountBase::GetCategory())
 	{
-		double discountPrice = product->GetPrice() - _amount;
+		double discountPrice = product.GetPrice() - _amount;
 		SetAmount(0.0);
 
 		return (discountPrice < 0.0)
@@ -30,5 +30,5 @@ double CertificateDiscount::Calculate(Product* product)
 			: discountPrice;
 	}
 
-	return product->GetPrice();
+	return product.GetPrice();
 }

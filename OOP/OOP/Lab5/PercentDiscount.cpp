@@ -17,9 +17,9 @@ PercentDiscount::PercentDiscount(CategoryType category, double percent) :
 	SetPercent(percent);
 }
 
-double PercentDiscount::Calculate(Product* product)
+double PercentDiscount::Calculate(Product& product)
 {
-	return (DiscountBase::GetCategory() == product->GetCategory())
-		? product->GetPrice() * 0.01 * (100 -_percent)
-		: product->GetPrice();
+	return (DiscountBase::GetCategory() == product.GetCategory())
+		? product.GetPrice() * 0.01 * (100 -_percent)
+		: product.GetPrice();
 }

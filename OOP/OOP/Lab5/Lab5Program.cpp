@@ -148,9 +148,9 @@ void Lab5Program::ShowCheckWithDiscount(DiscountBase* discount,
 
 		cout << products[i]->GetName() << "   Old cost: "
 			<< products[i]->GetPrice() << "   New cost: " 
-			<< discount->Calculate(products[i]) << endl;
+			<< discount->Calculate(*products[i]) << endl;
 		 
-		totalCost += discount->Calculate(products[i]);
+		totalCost += discount->Calculate(*products[i]);
 	}
 	cout << "Total cost: " << totalCost << endl;
 }

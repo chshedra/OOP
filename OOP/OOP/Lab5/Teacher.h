@@ -10,7 +10,7 @@ public:
 	//TODO:+ Константные ссылки?
 	void SetPosition(const string& position);
 
-	string GetPosition();
+	string& GetPosition();
 
 	Teacher();
 	Teacher(const string& surname, const string& name, const string& patronymic,

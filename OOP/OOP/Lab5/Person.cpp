@@ -15,17 +15,17 @@ void Person::SetPatronymic(const string &patronymic)
 	this->_patronymic = patronymic;
 }
 
-string Person::GetName()
+string& Person::GetName()
 {
 	return _name;
 }
 
-string Person::GetSurname()
+string& Person::GetSurname()
 {
 	return _surname;
 }
 
-string Person::GetPatronymic()
+string& Person::GetPatronymic()
 {
 	return _patronymic;
 }

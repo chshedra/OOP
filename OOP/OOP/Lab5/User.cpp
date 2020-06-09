@@ -21,12 +21,12 @@ int User::GetId()
 	return _id; 
 }
 
-string User::GetLogin() 
+string& User::GetLogin() 
 { 
 	return _login; 
 }
 
-string User::GetPassword() 
+string& User::GetPassword() 
 { 
 	return _password;
 }

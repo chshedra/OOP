@@ -7,7 +7,7 @@ class Product
 {
 private:
 	string _name;
-	int _price;
+	double _price;
 	CategoryType _category;
 
 public:

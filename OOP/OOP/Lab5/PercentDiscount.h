@@ -13,5 +13,5 @@ public:
 
 	PercentDiscount(CategoryType category, double percent);
 
-	double Calculate(Product* product);
+	double Calculate(Product& product);
 };
