@@ -15,7 +15,7 @@ string Post::GetTitle()
 	return _title; 
 }
 
-string Post::GetText() 
+string Post::GetText()
 { 
 	return _text; 
 }

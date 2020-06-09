@@ -8,7 +8,6 @@
 #include "PercentDiscount.h"
 #include "CertificateDiscount.h"
 
-//TODO: +Логичнее сделать статическим
 static class Lab5Program
 {
 public:

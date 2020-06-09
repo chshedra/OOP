@@ -12,11 +12,11 @@ protected:
 	void SetId(int id);
 
 public:
-	//TODO: +Константные ссылки?
 	void SetLogin(const string& login);
 	void SetPassword(const string& password);
 
 	int GetId();
+	//TODO: Возврат по ссылке?
 	string GetLogin();
 	string GetPassword();
 

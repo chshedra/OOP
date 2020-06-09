@@ -13,11 +13,11 @@ protected:
 	string _patronymic;
 
 public:
-	//TODO:+ Константные ссылки?
 	void SetName(const string &name);
 	void SetSurname(const string &surname);
 	void SetPatronymic(const string &patronymic);
 
+	//TODO: Возврат по ссылке?
 	string GetName();
 	string GetSurname();
 	string GetPatronymic();

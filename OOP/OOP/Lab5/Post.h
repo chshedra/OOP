@@ -9,10 +9,10 @@ private:
 	string _text;
 
 public:
-	//TODO:+ Константные ссылки?
 	void SetTitle(const string& title);
 	void SetText(const string& text);
 
+	//TODO: Возврат по ссылке?
 	string GetTitle();
 	string GetText();
 

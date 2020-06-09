@@ -16,19 +16,16 @@ void User::SetPassword(const string& password)
 	_password = password;
 }
 
-//TODO: +RSDN
 int User::GetId() 
 {
 	return _id; 
 }
 
-//TODO: +RSDN
 string User::GetLogin() 
 { 
 	return _login; 
 }
 
-//TODO: +RSDN
 string User::GetPassword() 
 { 
 	return _password;
