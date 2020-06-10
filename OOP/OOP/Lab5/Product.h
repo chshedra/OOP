@@ -11,11 +11,11 @@ private:
 	CategoryType _category;
 
 public:
-	//TODO: +Константные ссылки?
 	void SetName(const string& name);
 	void SetPrice(double price);
 	void SetCategory(CategoryType category);
 
+	//TODO: Ссылка?
 	string GetName();
 	double GetPrice();
 	CategoryType GetCategory();

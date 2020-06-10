@@ -14,7 +14,6 @@ void Product::SetPrice(double price)
 {
 	const int maxPrice = 100000;
 	DoubleValidator::AssertValueInRange(price, 0, maxPrice);
-	//TODO: +ѕреобрабование double в int с потерей точности
 	_price = price;
 }
 

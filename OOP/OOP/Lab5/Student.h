@@ -16,7 +16,7 @@ public:
 	int GetEntranceYear();
 
 	Student();
-	//TODO: +Константные ссылки?
+	
 	Student(const string& surname, const string& name, const string& patronymic,
 		int recordBookNumber, int entranceYear);
 };

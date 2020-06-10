@@ -16,7 +16,7 @@ public:
 	void SetPassword(const string& password);
 
 	int GetId();
-	//TODO:+ Возврат по ссылке?
+	
 	string& GetLogin();
 	string& GetPassword();
 
