@@ -17,7 +17,7 @@ void Product::SetPrice(double price)
 	_price = price;
 }
 
-string Product::GetName() 
+string& Product::GetName() 
 {
 	return _name; 
 }

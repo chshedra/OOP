@@ -16,7 +16,7 @@ public:
 	void SetCategory(CategoryType category);
 
 	//TODO: —сылка?
-	string GetName();
+	string& GetName();
 	double GetPrice();
 	CategoryType GetCategory();
 
